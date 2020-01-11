@@ -43,10 +43,11 @@
   # $ nix search wget
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
-    wget vim zsh vscode firefox git oh-my-zsh #ghc cabal-install
-    partition-manager
+    wget vim zsh vscode firefox git oh-my-zsh 
+    # ghc cabal-install stack cabal2nix
+    # partition-manager
     # ghcide
-    (import (builtins.fetchTarball "https://github.com/hercules-ci/ghcide-nix/tarball/master") {}).ghcide-ghc865
+    # (import (builtins.fetchTarball "https://github.com/hercules-ci/ghcide-nix/tarball/master") {}).ghcide-ghc865
   ];
 
   # (oh-my-)zsh
@@ -83,16 +84,32 @@
   hardware.pulseaudio.enable = true;
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
-  services.xserver.layout = "us";
-  # services.xserver.xkbOptions = "eurosign:e";
+  environment.pathsToLink = [ "/libexec" ];
+  services.xserver = {
+    enable = true;
+    layout = "us";
+    
+    # Enable the KDE Desktop Environment.
+    displayManager.sddm.enable = true;
+    desktopManager.plasma5.enable = true;
 
-  # Enable touchpad support.
-  # services.xserver.libinput.enable = true;
-
-  # Enable the KDE Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
+    #desktopManager = {
+    #  default = "xfce";
+    #  xterm.enable = false;
+    #  xfce = {
+    #    enable = true;
+    #    noDesktop = true;
+    #    enableXfwm = false;
+    #  };
+    #};
+    #windowManager.i3 = {
+    #  enable = true;
+    #  package = pkgs.i3-gaps;
+    #  extraPackages = with pkgs; [
+    #    dmenu i3status i3lock i3blocks
+    #  ];
+    #};
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.beko = {
@@ -109,6 +126,8 @@
 
   # Make VirtualBox happy
   security.rngd.enable = false;
-  virtualisation.virtualbox.host.enable = true;
-  virtualisation.virtualbox.host.enableExtensionPack = true;
+  virtualisation.virtualbox.guest.enable = true;
+  virtualisation.virtualbox.guest.x11 = true;
+  # virtualisation.virtualbox.host.enable = true;
+  # virtualisation.virtualbox.host.enableExtensionPack = true;
 }
