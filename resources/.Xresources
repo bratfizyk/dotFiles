@@ -1,0 +1,11 @@
+!###############
+! Colors
+!###############
+*background: black
+*foreground: white
+
+!###############
+! URxvt Settings
+!###############
+URxvt.font: xft:Hermit Light:size=10
+URxvt.scrollBar: false
