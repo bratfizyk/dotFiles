@@ -9,7 +9,10 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./cachix.nix
+      (import "${builtins.fetchTarball https://github.com/rycee/home-manager/archive/master.tar.gz}/nixos") 
     ];
+
+  home-manager.users.beko = (import ./home.nix);
 
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
@@ -31,6 +34,7 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Select internationalisation properties.
+
   console = {
     keyMap = "pl";
     font = "Lat2-Terminus16";
@@ -66,7 +70,6 @@
       theme = "agnoster";
     };
   };
-  environment.variables.EDITOR = "urxvt";
 
   fonts.fonts = with pkgs; [
     hermit
