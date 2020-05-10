@@ -1,14 +1,11 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, ... }:
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
       ./cachix.nix
+      ./nix/fonts.nix
       (import "${builtins.fetchTarball https://github.com/rycee/home-manager/archive/master.tar.gz}/nixos") 
     ];
 
@@ -20,20 +17,9 @@
   boot.loader.grub.device = "/dev/sda";
   boot.initrd.checkJournalingFS = false;
 
-  networking.hostName = "nixos-beko"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # The global useDHCP flag is deprecated, therefore explicitly set to false here.
-  # Per-interface useDHCP will be mandatory in the future, so this generated config
-  # replicates the default behaviour.
+  networking.hostName = "nixos-beko";
   networking.useDHCP = false;
   networking.interfaces.enp0s3.useDHCP = true;
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Select internationalisation properties.
 
   console = {
     keyMap = "pl";
@@ -47,34 +33,12 @@
   # Set your time zone.
   time.timeZone = "Europe/Warsaw";
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
-    curl vim zsh vscode firefox git oh-my-zsh qutebrowser
-    gcc ghc cabal-install
+    curl vim vscode firefox oh-my-zsh qutebrowser
+    gcc
     rxvt_unicode
     clipmenu
-    (import (builtins.fetchTarball "https://cachix.org/api/v1/install") {}).cachix
-    (import (builtins.fetchTarball "https://github.com/hercules-ci/ghcide-nix/tarball/master") {}).ghcide-ghc865
-  ];
-
-  # (oh-my-)zsh
-  programs.zsh = {
-    enable = true;
-    autosuggestions.enable = true;
-    enableCompletion = true;
-    ohMyZsh = {
-      enable = true;
-      plugins = [ "git" "sudo" ];
-      theme = "agnoster";
-    };
-  };
-
-  fonts.fonts = with pkgs; [
-    hermit
-    source-code-pro
-    terminus_font
   ];
 
   # Enable sound.
