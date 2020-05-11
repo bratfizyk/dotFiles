@@ -5,11 +5,6 @@
         clipmenu
     ];
 
-    xresources.properties = {
-        "*background" = "#586e75";
-        "*foreground" = "white";
-    };
-
     programs.urxvt = {
         enable = true;
         fonts = [
