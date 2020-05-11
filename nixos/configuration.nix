@@ -5,6 +5,7 @@
       [
         ./hardware-configuration.nix
         ./cachix.nix
+        ./nix/network.nix
         ./nix/local.nix
         ./nix/sound.nix
         ./nix/gui.nix
@@ -17,10 +18,6 @@
     boot.loader.grub.version = 2;
     boot.loader.grub.device = "/dev/sda";
     boot.initrd.checkJournalingFS = false;
-
-    networking.hostName = "nixos-beko";
-    networking.useDHCP = false;
-    networking.interfaces.enp0s3.useDHCP = true;
 
     users.users.beko = {
         shell = pkgs.zsh;

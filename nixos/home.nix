@@ -14,6 +14,8 @@
         ./home/vscode.nix
     ];
 
+    services.network-manager-applet.enable = true;
+
     home.packages = with pkgs; [
         kate
         ranger
