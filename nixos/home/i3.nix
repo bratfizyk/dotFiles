@@ -19,7 +19,7 @@ in {
         
         config = {
             modifier = mod;
-            fonts = ["FontAwesome 6"];
+            fonts = ["pango:DejaVu Sans Mono" "FontAwesome 12"];
 
             #   keybindings = lib.mkOptionDefault {
             #     "${mod}+p" = "exec ${pkgs.dmenu}/bin/dmenu_run";
