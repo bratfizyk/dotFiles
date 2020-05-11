@@ -5,6 +5,7 @@
       [
         ./hardware-configuration.nix
         ./cachix.nix
+        ./nix/local.nix
         ./nix/sound.nix
         ./nix/gui.nix
         ./nix/fonts.nix
@@ -20,17 +21,6 @@
     networking.hostName = "nixos-beko";
     networking.useDHCP = false;
     networking.interfaces.enp0s3.useDHCP = true;
-
-    console = {
-        keyMap = "pl";
-        font = "Lat2-Terminus16";
-    };
-
-    i18n = {
-        defaultLocale = "en_US.UTF-8";
-    };
-
-    time.timeZone = "Europe/Zurich";
 
     users.users.beko = {
         shell = pkgs.zsh;
