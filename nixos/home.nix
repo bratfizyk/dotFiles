@@ -10,6 +10,7 @@
         ./home/shell.nix
         ./home/i3.nix
         ./home/git.nix
+        ./home/chromium.nix
         ./home/haskell.nix
         ./home/vscode.nix
     ];
@@ -20,7 +21,6 @@
         kate
         ranger
         vim
-        firefox
         qutebrowser
     ];
 
