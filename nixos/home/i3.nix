@@ -8,6 +8,7 @@ in {
     home.packages = with pkgs; [
         dmenu
         i3status
+        i3status-rust
         i3lock
         i3blocks
     ];
@@ -48,7 +49,7 @@ in {
             bars = [
                 {
                 position = "top";
-                #   statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ${./i3status-rust.toml}";
+                statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ${./i3status.toml}";
                 }
             ];
         };
