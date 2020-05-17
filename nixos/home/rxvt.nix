@@ -8,7 +8,7 @@
     programs.urxvt = {
         enable = true;
         fonts = [
-            xft:Hermit Light:size=10
+            xft:Hack:size=10
         ];
         keybindings = {
             "Shift-Control-C" = "CM_ONESHOT=1 clipmenud";

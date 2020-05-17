@@ -1,4 +1,4 @@
-{ pkgs, ...}:
+{ pkgs, lib, ...}:
 
 {
     environment.pathsToLink = [ "/libexec" ];
@@ -17,5 +17,6 @@
         };
 
         windowManager.i3.enable = true;
+        resolutions = lib.mkOverride 9 [{ x = 1600; y = 900; }];
     };
 }

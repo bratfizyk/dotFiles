@@ -10,11 +10,13 @@ in {
         i3status-rust
         i3lock
         i3blocks
+        pulsemixer
+        #pasystray
     ];
 
     xsession.windowManager.i3 = {
         enable = true;
-        #package = pkgs.i3-gaps;
+        package = pkgs.i3-gaps;
         
         config = {
             modifier = mod;
@@ -40,6 +42,10 @@ in {
         extraConfig = ''
             for_window [class="floating"] floating enable;
             for_window [class=^.*"] border pixel 0;
+
+            bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +2%
+            bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -2%
+            bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
         '';
     };
 }

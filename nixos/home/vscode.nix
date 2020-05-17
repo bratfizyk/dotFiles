@@ -10,6 +10,8 @@
         ];
         userSettings = {
             "terminal.integrated.fontFamily" = "Hack";
+            "workbench.colorTheme" = "Material Theme High Contrast";
+            "workbench.iconTheme" = "eq-material-theme-icons-palenight";
         };
     };
 }
