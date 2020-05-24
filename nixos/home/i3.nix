@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 let 
     mod = "Mod4";
@@ -27,9 +27,10 @@ in {
                 # smartGaps = true;
             };
 
-            #   keybindings = lib.mkOptionDefault {
-            #     "${mod}+p" = "exec ${pkgs.dmenu}/bin/dmenu_run";
-            #   };
+            #keybindings = lib.mkOptionDefault {
+                # on VM: fix resolution
+                #"${mod}+Shift+x" = "exec xrandr -s 1600x900; exec xrandr -s 1920x1080";
+            #};
 
             bars = [
                 {

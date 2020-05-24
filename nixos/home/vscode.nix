@@ -7,6 +7,7 @@
         extensions = with pkgs.vscode-extensions; [
             bbenoist.Nix
             justusadam.language-haskell
+            #digitalassetholdingsllc.ghcide
         ];
         userSettings = {
             "terminal.integrated.fontFamily" = "Hack";

@@ -17,6 +17,6 @@
         };
 
         windowManager.i3.enable = true;
-        resolutions = lib.mkOverride 9 [{ x = 1600; y = 900; }];
+        resolutions = lib.mkOverride 9 [{ x = 1920; y = 1080; }];
     };
 }
