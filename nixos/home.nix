@@ -22,6 +22,7 @@
         ranger
         vim
         qutebrowser
+        discord
     ];
 
     home.sessionVariables = {

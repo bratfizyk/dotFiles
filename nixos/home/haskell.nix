@@ -7,9 +7,9 @@
         gcc-unwrapped
         ghc 
         cabal-install
-        binutils-unwrapped
-        haskellPackages.digest
-        zlib
-        haskellPackages.zlib
+        cabal2nix
+        #zlib
+        #binutils-unwrapped
+        #haskellPackages.zlib
     ];
 }
