@@ -8,7 +8,9 @@
         #videoDrivers = [ "NVidia" ];
 
         displayManager = {
-            lightdm.enable = true;
+            lightdm = {
+                enable = true;
+            };
             defaultSession =  "none+i3";
         };
 

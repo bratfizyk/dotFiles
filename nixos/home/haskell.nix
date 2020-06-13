@@ -8,9 +8,6 @@
         ghc 
         cabal-install
         cabal2nix
-        zlib
-        zlib.dev
-        haskellPackages.zlib
-        haskellPackages.zlib-bindings
+        stack
     ];
 }

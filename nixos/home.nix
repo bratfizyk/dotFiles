@@ -5,6 +5,7 @@
     nixpkgs.config.allowUnfree = true;
 
     imports = [
+        ./home/background.nix
         ./home/xresources.nix
         ./home/rxvt.nix
         ./home/shell.nix
