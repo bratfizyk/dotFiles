@@ -8,8 +8,9 @@
         ghc 
         cabal-install
         cabal2nix
-        #zlib
-        #binutils-unwrapped
-        #haskellPackages.zlib
+        zlib
+        zlib.dev
+        haskellPackages.zlib
+        haskellPackages.zlib-bindings
     ];
 }
