@@ -22,9 +22,9 @@ in {
             modifier = mod;
             fonts = ["Hack 12"];
             gaps = {
-                # inner = 20;
-                # outer = 30;
-                # smartGaps = true;
+                inner = 15;
+                outer = 10;
+                smartGaps = true;
             };
 
             #keybindings = lib.mkOptionDefault {
