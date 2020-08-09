@@ -24,6 +24,7 @@
         vim
         qutebrowser
         discord
+        slack-dark
     ];
 
     home.sessionVariables = {

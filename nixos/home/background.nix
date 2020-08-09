@@ -3,11 +3,12 @@
 {
     services.random-background = {
         enable = true;
-        imageDirectory = "%h/dotFiles/nixos/resources";
+        imageDirectory = "/home/beko/dotfiles/nixos/resources/";
         display = "fill";
     };
 
     home.packages = with pkgs; [
         feh
+        imlib2
     ];
 }
