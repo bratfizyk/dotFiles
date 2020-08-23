@@ -25,6 +25,11 @@
         qutebrowser
         discord
         slack-dark
+        pcmanfm
+
+        # dev
+        yarn
+        yarn2nix
     ];
 
     home.sessionVariables = {

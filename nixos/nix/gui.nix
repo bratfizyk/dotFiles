@@ -4,7 +4,7 @@
     environment.pathsToLink = [ "/libexec" ];
     services.xserver = {
         enable = true;
-        layout = "us";
+        layout = "pl";
         #videoDrivers = [ "NVidia" ];
 
         displayManager = {

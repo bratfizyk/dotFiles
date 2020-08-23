@@ -15,5 +15,7 @@
             "Shift-Control-V" = "clipmenu";
         };
         scroll.bar.enable = false;
+        transparent = true;
+        shading = 15;
     };
 }
