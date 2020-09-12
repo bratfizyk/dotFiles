@@ -11,6 +11,7 @@ in {
         i3lock
         i3blocks
         pulsemixer
+        gsimplecal
         #pasystray
     ];
 
