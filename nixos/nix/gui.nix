@@ -1,7 +1,10 @@
 { pkgs, lib, ...}:
 
 {
-    environment.pathsToLink = [ "/libexec" ];
+    environment = {
+        pathsToLink = [ "/libexec" ];
+    };
+
     services.xserver = {
         enable = true;
         layout = "pl";
