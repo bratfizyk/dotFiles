@@ -3,7 +3,14 @@
 {
     home.packages = with pkgs; [
         dconf
+        lxappearance
     ];
+
+    xsession.pointerCursor = {
+        package = pkgs.capitaine-cursors;
+        name = "capitaine-cursors";
+        size = 22;
+    };
 
     gtk = {
         enable = true;
