@@ -9,7 +9,7 @@
     xsession.pointerCursor = {
         package = pkgs.capitaine-cursors;
         name = "capitaine-cursors";
-        size = 22;
+        size = 18;
     };
 
     gtk = {
