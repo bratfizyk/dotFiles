@@ -8,11 +8,16 @@
             bbenoist.Nix
             justusadam.language-haskell
             #digitalassetholdingsllc.ghcide
+            #arrterian.nix-env-selector
+            #devine-davies.make-hidden
+            #ecmel.vscode-html-css
+            #pkief.material-icon-theme
+            #equinusocio.vsc-community-material-theme
         ];
         userSettings = {
             "terminal.integrated.fontFamily" = "Hack";
-            "workbench.colorTheme" = "Material Theme High Contrast";
-            "workbench.iconTheme" = "eq-material-theme-icons-palenight";
+            "workbench.colorTheme" = "Community Material Theme Ocean High Contrast";
+            "workbench.iconTheme" = "material-icon-theme";
         };
     };
 }

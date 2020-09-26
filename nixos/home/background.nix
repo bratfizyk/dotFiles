@@ -3,7 +3,7 @@
 {
     services.random-background = {
         enable = true;
-        imageDirectory = "/home/beko/dotfiles/nixos/resources/";
+        imageDirectory = "/home/beko/dotFiles/nixos/resources/";
         display = "fill";
     };
 
