@@ -4,7 +4,6 @@
     imports =
       [
         ./hardware-configuration.nix
-        ./cachix.nix
         ./nix/network.nix
         ./nix/local.nix
         ./nix/sound.nix

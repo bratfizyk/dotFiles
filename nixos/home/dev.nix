@@ -5,5 +5,7 @@
         yarn
         yarn2nix
         nodejs-12_x
+        sqlite
+        sqlitebrowser
     ];
 }

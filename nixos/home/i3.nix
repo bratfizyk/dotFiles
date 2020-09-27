@@ -15,6 +15,11 @@ in {
         #pasystray
     ];
 
+    programs.rofi = {
+        enable = true;
+        theme = "solarized_alternate";
+    };
+
     xsession.windowManager.i3 = {
         enable = true;
         package = pkgs.i3-gaps;
@@ -28,10 +33,9 @@ in {
                 smartGaps = true;
             };
 
-            #keybindings = lib.mkOptionDefault {
-                # on VM: fix resolution
-                #"${mod}+Shift+x" = "exec xrandr -s 1600x900; exec xrandr -s 1920x1080";
-            #};
+            keybindings = lib.mkOptionDefault {
+                "${mod}+Shift+d" = ''exec "${pkgs.rofi}/bin/rofi -modi window,drun -show drun"'';
+            };
 
             bars = [
                 {
@@ -48,6 +52,8 @@ in {
             bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +2%
             bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -2%
             bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+
+            exec i3-msg workspace 1
         '';
     };
 }
