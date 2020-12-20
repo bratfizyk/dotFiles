@@ -9,7 +9,7 @@
         ./nix/sound.nix
         ./nix/gui.nix
         ./nix/fonts.nix
-        (import "${builtins.fetchTarball https://github.com/rycee/home-manager/archive/master.tar.gz}/nixos") 
+        (import "${builtins.fetchTarball https://github.com/rycee/home-manager/archive/release-20.09.tar.gz}/nixos")
       ];
 
     # Use the GRUB 2 boot loader.

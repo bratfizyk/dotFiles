@@ -18,6 +18,7 @@
             "terminal.integrated.fontFamily" = "Hack";
             "workbench.colorTheme" = "Community Material Theme Ocean High Contrast";
             "workbench.iconTheme" = "material-icon-theme";
+            "explorer.confirmDelete" = false;
         };
     };
 }
