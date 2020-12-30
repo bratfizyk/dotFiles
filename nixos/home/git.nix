@@ -9,5 +9,10 @@
         aliases = {
             st = "status";
         };
+        extraConfig = {
+            core = {
+                editor="vim";
+            };
+        };
     };
 }
