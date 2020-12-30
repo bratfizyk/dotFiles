@@ -26,7 +26,7 @@ in {
         
         config = {
             modifier = mod;
-            fonts = ["Hack 12"];
+            fonts = ["Hack 14"];
             gaps = {
                 inner = 15;
                 outer = 10;
