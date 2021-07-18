@@ -19,6 +19,7 @@
             "workbench.colorTheme" = "Community Material Theme Ocean High Contrast";
             "workbench.iconTheme" = "material-icon-theme";
             "explorer.confirmDelete" = false;
+            "terminal.integrated.cursorBlinking" = true;
         };
     };
 }

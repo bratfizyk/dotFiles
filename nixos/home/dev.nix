@@ -4,8 +4,9 @@
     home.packages = with pkgs; [
         yarn
         yarn2nix
-        nodejs-12_x
+        nodejs-14_x
         sqlite
         sqlitebrowser
+        nodePackages.typescript
     ];
 }

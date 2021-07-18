@@ -1,14 +1,16 @@
-theme = "modern"
+theme = "solarized-dark"
 icons = "awesome"
 
 [[block]]
 block = "custom"
-cycle = ["xrandr -s 1920x1080", "xrandr -s 1600x900"]
+json = true
+cycle = ['''echo "{\"icon\":\"ping\",\"text\":\"`xrandr -s 1920x1080`\"}"''', '''echo "{\"icon\":\"ping\",\"text\":\"`xrandr -s 1600x900`\"}"''']
 
 [[block]]
 block = "disk_space"
 path = "/"
 alias = "/"
+format = "{icon} {used}/{total}"
 info_type = "available"
 unit = "GB"
 interval = 20
@@ -18,8 +20,7 @@ alert = 10.0
 [[block]]
 block = "memory"
 display_type = "memory"
-format_mem = "{Mug}GB ({Mup}%)"
-format_swap = "{SUp}%"
+format_mem = "{mem_used}/{mem_total}({mem_used_percents})"
 
 [[block]]
 block = "cpu"
@@ -34,10 +35,8 @@ format = "{1m}"
 [[block]]
 block = "net"
 device = "ens3"
-ssid = true
-ip = false
-speed_up = false
-graph_up = true
+#format = "{ssid} {signal_strength} {speed_up;K*b} {speed_down;K*b}"
+format = "{speed_up;K*b} {speed_down;K*b}"
 interval = 5
 
 [[block]]

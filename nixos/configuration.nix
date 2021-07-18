@@ -9,7 +9,8 @@
         ./nix/sound.nix
         ./nix/gui.nix
         ./nix/fonts.nix
-        (import "${builtins.fetchTarball https://github.com/rycee/home-manager/archive/release-20.09.tar.gz}/nixos")
+        ../../Projects/hwdp/nginx.nix
+        (import "${builtins.fetchTarball https://github.com/rycee/home-manager/archive/release-21.05.tar.gz}/nixos")
       ];
 
     # Use the GRUB 2 boot loader.
@@ -25,5 +26,5 @@
     };
 
     home-manager.users.beko = (import ./home.nix);
-    system.stateVersion = "20.09";
+    system.stateVersion = "21.05";
 }

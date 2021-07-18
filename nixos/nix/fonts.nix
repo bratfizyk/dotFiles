@@ -2,7 +2,10 @@
 
 {
     fonts = {
-        enableFontDir = true;
+        fontDir = {
+            enable = true;
+        };
+        
         fonts = with pkgs; [
             hermit
             source-code-pro

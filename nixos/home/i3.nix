@@ -41,7 +41,7 @@ in {
                 {
                     position = "top";
                     statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ${./i3status.toml}";
-                    fonts = ["Hack 12"];
+                    fonts = ["Hack 14"];
                 }
             ];
         };
