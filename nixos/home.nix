@@ -19,7 +19,7 @@
         ./home/vscode.nix
         ./home/dev.nix
         ./home/apps.nix
-        ./home/tomasz.nix
+        ./home/python.nix
     ];
 
     home.sessionVariables = {
