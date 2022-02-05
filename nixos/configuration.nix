@@ -10,7 +10,7 @@
         ./nix/gui.nix
         ./nix/fonts.nix
         # My personal project
-        ../../Projects/hwdp/nginx.nix
+        # ../../Projects/hwdp/nginx.nix
         (import "${builtins.fetchTarball https://github.com/rycee/home-manager/archive/release-21.05.tar.gz}/nixos")
       ];
 

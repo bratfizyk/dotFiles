@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
 {
+    home.packages = with pkgs; [
+        meld
+    ];
     programs.git = {
         package = pkgs.gitAndTools.gitFull;
         enable = true;
@@ -11,7 +14,13 @@
         };
         extraConfig = {
             core = {
-                editor="vim";
+                editor = "vim";
+            };
+            diff = {
+                tool = "meld";
+            };
+            difftool = {
+                prompt = false;
             };
         };
     };

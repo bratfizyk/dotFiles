@@ -11,5 +11,6 @@
         discord
         slack-dark
         pcmanfm
+        libreoffice
     ];
 }
