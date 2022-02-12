@@ -5,7 +5,7 @@
         enable = true;
         package = pkgs.vscode;
         extensions = with pkgs.vscode-extensions; [
-            bbenoist.Nix
+            bbenoist.nix
             justusadam.language-haskell
             #digitalassetholdingsllc.ghcide
             #arrterian.nix-env-selector

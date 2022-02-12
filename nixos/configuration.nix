@@ -11,7 +11,7 @@
         ./nix/fonts.nix
         # My personal project
         # ../../Projects/hwdp/nginx.nix
-        (import "${builtins.fetchTarball https://github.com/rycee/home-manager/archive/release-21.05.tar.gz}/nixos")
+        (import "${builtins.fetchTarball https://github.com/rycee/home-manager/archive/release-21.11.tar.gz}/nixos")
       ];
 
     # Use the GRUB 2 boot loader.
@@ -30,5 +30,5 @@
 
     # Home-Manager for my user
     home-manager.users.beko = (import ./home.nix);
-    system.stateVersion = "21.05";
+    system.stateVersion = "21.11";
 }
