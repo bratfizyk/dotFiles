@@ -8,7 +8,7 @@
     imports = [
         ./home/background.nix
         ./home/xresources.nix
-        ./home/rxvt.nix
+        ./home/alacritty.nix
         ./home/shell.nix
         ./home/i3.nix
         ./home/gtk.nix
@@ -21,8 +21,4 @@
         ./home/apps.nix
         ./home/python.nix
     ];
-
-    home.sessionVariables = {
-        EDITOR = "urxvt";
-    };
 }

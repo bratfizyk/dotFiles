@@ -12,7 +12,6 @@ in {
         i3blocks
         pulsemixer
         gsimplecal
-        #pasystray
     ];
 
     programs.rofi = {
@@ -32,6 +31,8 @@ in {
                 outer = 10;
                 smartGaps = true;
             };
+
+            terminal = "alacritty";
 
             keybindings = lib.mkOptionDefault {
                 "${mod}+Shift+d" = ''exec "${pkgs.rofi}/bin/rofi -modi window,drun -show drun"'';

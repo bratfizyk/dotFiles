@@ -2,6 +2,7 @@
 
 {
     home.packages = with pkgs; [
+        colmena
         doctl
         yarn
         yarn2nix
