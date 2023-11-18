@@ -11,7 +11,7 @@
         enable = true;
         plugins = [ "git" ];
       };
-      
+
       plugins = [
         {
           name = "powerlevel10k";
