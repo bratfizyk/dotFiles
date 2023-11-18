@@ -17,7 +17,6 @@
     stateVersion = "23.05";
 
     packages = with pkgs; [
-      meslo-lgs-nf
       keepassxc
       signal-desktop
     ];

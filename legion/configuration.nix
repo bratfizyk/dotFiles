@@ -41,6 +41,10 @@
     videoDrivers = [ "nvidia" "amdgpu" ];
   };
 
+  services.gnome = {
+    gnome-keyring.enable = true;
+  };
+
   console.keyMap = "pl2";
 
   services.printing.enable = true;

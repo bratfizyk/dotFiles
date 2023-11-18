@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    meslo-lgs-nf
+  ];
+
   programs = {
     alacritty = {
       enable = true;
