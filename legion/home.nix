@@ -7,6 +7,7 @@
     ../apps/alacritty.nix
     ../apps/chromium.nix
     ../apps/git.nix
+    ../apps/virt-manager.nix
     ../apps/vscode.nix
     ../apps/zsh/zsh.nix
   ];

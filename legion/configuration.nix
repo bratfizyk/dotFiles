@@ -45,9 +45,9 @@
 
   services.printing.enable = true;
 
-  # Enable sound with pipewire.
-  sound.enable = true;
   security.rtkit.enable = true;
+
+  sound.enable = true;
 
   services.pipewire = {
     enable = true;
@@ -60,7 +60,7 @@
     isNormalUser = true;
     description = "beko";
     shell = pkgs.zsh;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     packages = with pkgs; [
       firefox
       kate
@@ -74,7 +74,8 @@
   environment = {
     shells = with pkgs; [ zsh ];
     systemPackages = with pkgs; [
-
+      # Move to home-manager after 23.11
+      virt-manager
     ];
   };
 
@@ -85,6 +86,8 @@
   system.stateVersion = "23.05";
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  virtualisation.libvirtd.enable = true;
 
   hardware = {
     pulseaudio = {
