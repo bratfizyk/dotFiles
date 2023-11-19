@@ -12,7 +12,7 @@
       extensions = with pkgs.vscode-extensions; [
         bbenoist.nix
         pkief.material-icon-theme
-        justusadam.language-haskell
+        haskell.haskell
       ];
       userSettings = {
         terminal = {
