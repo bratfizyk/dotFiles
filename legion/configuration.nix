@@ -71,6 +71,9 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  # Remove after 23.11
+  programs.dconf.enable = true;
+
   environment = {
     shells = with pkgs; [ zsh ];
     systemPackages = with pkgs; [
