@@ -7,9 +7,10 @@
       url = "github:nix-community/home-manager/release-23.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-hardware.url = "github:bratfizyk/nixos-hardware/master";
   };
 
-  outputs = { self, nixpkgs, home-manager, ...  }:
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, ...  }:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -18,7 +19,10 @@
       nixosConfigurations = {
         beko-nixos = lib.nixosSystem {
           inherit system;
-          modules = [ ./legion/configuration.nix ];
+          modules = [ 
+            nixos-hardware.nixosModules.lenovo-legion-16achg6-hybrid
+            ./legion/configuration.nix
+          ];
         };
       };
       homeConfigurations = {

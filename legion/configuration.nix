@@ -38,7 +38,6 @@
     desktopManager.plasma5.enable = true;
     layout = "pl";
     xkbVariant = "";
-    videoDrivers = [ "nvidia" "amdgpu" ];
   };
 
   console.keyMap = "pl2";
@@ -95,23 +94,6 @@
   hardware = {
     pulseaudio = {
       enable = false;
-    };
-
-    opengl = {
-      enable = true;
-      driSupport = true;
-      driSupport32Bit = true;
-    };
-
-    nvidia = {
-      modesetting.enable = true;
-      open = false;
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
-
-      prime = {
-        nvidiaBusId = "PCI:1:0:0";
-        amdgpuBusId = "PCI:5:0:0";
-      };
     };
   };
 }

@@ -21,7 +21,6 @@
     packages = with pkgs; [
       keepassxc
       signal-desktop
-      toybox
     ];
 
     file = {
