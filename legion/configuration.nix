@@ -38,6 +38,7 @@
     desktopManager.plasma5.enable = true;
     layout = "pl";
     xkbVariant = "";
+    videoDrivers = [ "nvidia" "amdgpu" ];
   };
 
   console.keyMap = "pl2";
