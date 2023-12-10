@@ -4,7 +4,6 @@
   imports =
     [ 
       ./hardware-configuration.nix
-      ../hardware/external-display.nix
     ];
 
   # Bootloader.
