@@ -21,6 +21,7 @@
     packages = with pkgs; [
       keepassxc
       signal-desktop
+      efibootmgr
     ];
 
     file = {
