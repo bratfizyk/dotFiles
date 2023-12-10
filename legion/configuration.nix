@@ -4,6 +4,7 @@
   imports =
     [ 
       ./hardware-configuration.nix
+      ../hardware/external-display.nix
     ];
 
   # Bootloader.
@@ -34,7 +35,13 @@
 
   services.xserver = {
     enable = true;
-    displayManager.sddm.enable = true;
+    displayManager.sddm = {
+      enable = true;
+      setupScript = ''
+        xrandr --output eDP-2 --off
+        xrandr --output HDMI-A-1 --mode 1920x1200 --pos 0x0 --rotate normal
+      '';
+    };
     desktopManager.plasma5.enable = true;
     layout = "pl";
     xkbVariant = "";
