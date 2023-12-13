@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    tig
+  ];
+    
   programs = {
     git = {
       package = pkgs.gitAndTools.gitFull;

@@ -16,7 +16,7 @@
   home = {
     username = "beko";
     homeDirectory = "/home/beko";
-    stateVersion = "23.05";
+    stateVersion = "23.11";
 
     packages = with pkgs; [
       keepassxc
