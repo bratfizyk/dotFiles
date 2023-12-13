@@ -37,8 +37,10 @@
     displayManager.sddm = {
       enable = true;
       setupScript = ''
-        xrandr --output eDP-2 --off
-        xrandr --output HDMI-A-1 --mode 1920x1200 --pos 0x0 --rotate normal
+        xrandr --setprovideroutputsource modesetting NVIDIA-0
+        xrandr --auto
+        xrandr --output HDMI-A-1 --auto --primary
+        xrandr --output eDP-1 --left-of HDMI-A-1 --noprimary
       '';
     };
     desktopManager.plasma5.enable = true;
