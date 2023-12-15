@@ -34,11 +34,12 @@
 
   services.xserver = {
     enable = true;
-    displayManager.sddm = {
-      enable = true;
-      setupScript = ''
-        xrandr --setprovideroutputsource modesetting NVIDIA-0
-        xrandr --auto
+    displayManager = {
+      sddm = {
+        enable = true;
+        wayland.enable = true;
+      };
+      setupCommands = ''
         xrandr --output HDMI-A-1 --auto --primary
         xrandr --output eDP-1 --left-of HDMI-A-1 --noprimary
       '';
@@ -78,19 +79,13 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  # Remove after 23.11
-  programs.dconf.enable = true;
-
   environment = {
     shells = with pkgs; [ zsh ];
-    systemPackages = with pkgs; [
-      # Move to home-manager after 23.11
-      virt-manager
-    ];
   };
 
   programs = {
     zsh.enable = true;
+    virt-manager.enable = true;
   };
 
   system.stateVersion = "23.11";
