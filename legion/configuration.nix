@@ -4,21 +4,21 @@
   imports =
     [ 
       ./hardware-configuration.nix
+      ../hardware/monitors/flat.nix
     ];
 
-  # Bootloader.
+  system.stateVersion = "23.11";
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "beko-nixos";
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Enable networking
-  networking.networkmanager.enable = true;
+  networking = {
+    hostName = "beko-nixos";
+    #wireless.enable = true;
+    networkmanager.enable = true;
+  };
 
   time.timeZone = "Europe/Zurich";
-
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "pl_PL.UTF-8";
@@ -35,28 +35,22 @@
   services.xserver = {
     enable = true;
     displayManager = {
-      sddm = {
+      gdm = {
         enable = true;
-        wayland.enable = true;
+        wayland = true;
       };
-      setupCommands = ''
-        xrandr --output HDMI-A-1 --auto --primary
-        xrandr --output eDP-1 --left-of HDMI-A-1 --noprimary
-      '';
+      defaultSession = "plasmawayland";
     };
-    desktopManager.plasma5.enable = true;
+    desktopManager.plasma5 = {
+      enable = true;
+    };
     layout = "pl";
     xkbVariant = "";
   };
-
   console.keyMap = "pl2";
 
-  services.printing.enable = true;
-
   security.rtkit.enable = true;
-
-  sound.enable = true;
-
+  services.printing.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -81,6 +75,15 @@
 
   environment = {
     shells = with pkgs; [ zsh ];
+    plasma5.excludePackages = with pkgs.libsForQt5; [
+      elisa
+      gwenview
+      okular
+      oxygen
+      khelpcenter
+      plasma-browser-integration
+      print-manager
+    ];
   };
 
   programs = {
@@ -88,12 +91,11 @@
     virt-manager.enable = true;
   };
 
-  system.stateVersion = "23.11";
+  virtualisation.libvirtd.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  virtualisation.libvirtd.enable = true;
-
+  sound.enable = true;
   hardware = {
     pulseaudio = {
       enable = false;
