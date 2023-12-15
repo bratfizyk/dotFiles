@@ -47,6 +47,11 @@
     layout = "pl";
     xkbVariant = "";
   };
+
+  services.gnome = {
+    gnome-keyring.enable = true;
+  };
+
   console.keyMap = "pl2";
 
   security.rtkit.enable = true;
