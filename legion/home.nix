@@ -22,6 +22,7 @@
       keepassxc
       signal-desktop
       efibootmgr
+      zoom-us
     ];
 
     file = {
