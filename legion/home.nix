@@ -8,6 +8,7 @@
     ../apps/chromium.nix
     ../apps/git.nix
     ../apps/haskell.nix
+    ../apps/nixvim.nix
     ../apps/virt-manager.nix
     ../apps/vscode.nix
     ../apps/zsh/zsh.nix

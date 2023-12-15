@@ -8,9 +8,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    nixvim = {
+      url = "github:nix-community/nixvim/nixos-23.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, ...  }:
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, nixvim, ...  }:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -31,7 +35,10 @@
       homeConfigurations = {
         beko = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          modules = [ ./legion/home.nix ];
+          modules = [
+            nixvim.homeManagerModules.nixvim
+            ./legion/home.nix
+          ];
         };
       };
   };
