@@ -14,7 +14,6 @@
 
   networking = {
     hostName = "beko-nixos";
-    #wireless.enable = true;
     networkmanager.enable = true;
   };
 

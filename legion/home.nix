@@ -6,7 +6,7 @@
   imports = [
     ../apps/alacritty.nix
     ../apps/chromium.nix
-    ../apps/firefox.nix
+    ../apps/firefox/firefox.nix
     ../apps/git.nix
     ../apps/haskell.nix
     ../apps/nixvim.nix

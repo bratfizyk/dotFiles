@@ -12,9 +12,10 @@
       url = "github:nix-community/nixvim/nixos-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nur.url = github:nix-community/NUR;
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, nixvim, ...  }:
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, nixvim, nur, ...  }:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -37,6 +38,7 @@
           inherit pkgs;
           modules = [
             nixvim.homeManagerModules.nixvim
+            nur.nixosModules.nur
             ./legion/home.nix
           ];
         };
