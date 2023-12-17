@@ -27,6 +27,7 @@
       nixosConfigurations = {
         beko-nixos = lib.nixosSystem {
           inherit system;
+          inherit pkgs;
           modules = [ 
             nixos-hardware.nixosModules.lenovo-legion-16achg6-hybrid
             ./legion/configuration.nix
