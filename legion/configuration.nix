@@ -68,12 +68,7 @@
     description = "beko";
     shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
-    packages = with pkgs; [
-      firefox
-      kate
-      lshw
-      vim
-    ];
+    packages = with pkgs; [ lshw ];
   };
 
   nixpkgs.config.allowUnfree = true;

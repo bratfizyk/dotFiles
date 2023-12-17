@@ -6,6 +6,7 @@
   imports = [
     ../apps/alacritty.nix
     ../apps/chromium.nix
+    ../apps/firefox.nix
     ../apps/git.nix
     ../apps/haskell.nix
     ../apps/nixvim.nix
@@ -20,9 +21,11 @@
     stateVersion = "23.11";
 
     packages = with pkgs; [
+      efibootmgr
       keepassxc
       signal-desktop
-      efibootmgr
+      thunderbird
+      whatsapp-for-linux
       zoom-us
     ];
 
