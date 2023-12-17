@@ -70,8 +70,6 @@
     packages = with pkgs; [ lshw ];
   };
 
-  nixpkgs.config.allowUnfree = true;
-
   environment = {
     shells = with pkgs; [ zsh ];
     plasma5.excludePackages = with pkgs.libsForQt5; [
