@@ -3,5 +3,5 @@
 {
   boot.kernelModules = [ "ecryptfs" ];
   security.pam.enableEcryptfs = true;
-  systemPackages = with pkgs; [ ecryptfs ];
+  environment.systemPackages = with pkgs; [ ecryptfs ];
 }
