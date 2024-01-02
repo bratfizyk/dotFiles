@@ -81,6 +81,11 @@
       plasma-browser-integration
       print-manager
     ];
+    systemPackages = with pkgs; [
+      git
+      ecryptfs
+      libsForQt5.bismuth
+    ];
   };
 
   programs = {
@@ -91,7 +96,7 @@
   virtualisation.libvirtd.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
+  
   sound.enable = true;
   hardware = {
     pulseaudio = {

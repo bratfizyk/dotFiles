@@ -22,6 +22,7 @@
 
     packages = with pkgs; [
       efibootmgr
+      gnucash
       keepassxc
       signal-desktop
       thunderbird
