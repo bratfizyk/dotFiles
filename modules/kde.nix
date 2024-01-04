@@ -16,8 +16,9 @@
       print-manager
     ];
     
-    systemPackages = with pkgs; [
-      libsForQt5.bismuth
+    systemPackages = with pkgs.libsForQt5; [
+      bismuth
+      kcalc
     ];
   };
 }
