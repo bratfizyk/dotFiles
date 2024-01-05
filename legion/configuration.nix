@@ -47,6 +47,7 @@
       alsa.support32Bit = true;
       pulse.enable = true;
     };
+    udev.packages = with pkgs; [ ledger-udev-rules trezor-udev-rules ];
   };
 
   users.users.beko = {
@@ -70,6 +71,8 @@
   virtualisation.libvirtd.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  #hardware.ledger.enable = true;
   
   sound.enable = true;
   hardware = {
