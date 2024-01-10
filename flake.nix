@@ -31,16 +31,19 @@
           modules = [ 
             nixos-hardware.nixosModules.lenovo-legion-16achg6-hybrid
             ./legion/configuration.nix
-          ];
-        };
-      };
-      homeConfigurations = {
-        beko = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          modules = [
-            nixvim.homeManagerModules.nixvim
-            nur.nixosModules.nur
-            ./legion/home.nix
+
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.beko = {
+                imports = [
+                  nixvim.homeManagerModules.nixvim
+                  nur.nixosModules.nur
+                  ./legion/home.nix
+                ];
+              };
+            }
           ];
         };
       };

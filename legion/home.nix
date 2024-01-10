@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, osConfig, ... }:
 
 {
   programs.home-manager.enable = true;
@@ -9,6 +9,7 @@
     ../apps/firefox/firefox.nix
     ../apps/git.nix
     ../apps/haskell.nix
+    ../apps/libreoffice.nix
     ../apps/nixvim.nix
     ../apps/virt-manager.nix
     ../apps/vscode.nix
