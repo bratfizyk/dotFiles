@@ -5,9 +5,12 @@
     [ 
       ./hardware-configuration.nix
       ../hardware/monitors/flat.nix
+      ../modules/audio.nix
+      ../modules/crypto.nix
       ../modules/ecryptfs.nix
       ../modules/kde.nix
       ../modules/locale.nix
+      ../modules/virt-manager.nix
     ];
 
   system.stateVersion = "23.11";
@@ -41,43 +44,20 @@
 
   services = {
     printing.enable = true;
-    pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-    };
-    udev.packages = with pkgs; [ ledger-udev-rules trezor-udev-rules ];
   };
 
+  programs.zsh.enable = true;
   users.users.beko = {
     isNormalUser = true;
     description = "beko";
     shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
-    packages = with pkgs; [ lshw ];
   };
 
   environment = {
     shells = with pkgs; [ zsh ];
-    systemPackages = with pkgs; [ git ];
+    systemPackages = with pkgs; [ git lshw appimage-run ];
   };
-
-  programs = {
-    zsh.enable = true;
-    virt-manager.enable = true;
-  };
-
-  virtualisation.libvirtd.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  #hardware.ledger.enable = true;
-  
-  sound.enable = true;
-  hardware = {
-    pulseaudio = {
-      enable = false;
-    };
-  };
 }
