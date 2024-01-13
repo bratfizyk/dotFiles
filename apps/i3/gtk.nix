@@ -6,7 +6,8 @@
         lxappearance
     ];
 
-    xsession.pointerCursor = {
+    home.pointerCursor = {
+        x11.enable = true;
         package = pkgs.capitaine-cursors;
         name = "capitaine-cursors";
         size = 18;
