@@ -5,6 +5,7 @@
     [ 
       ./hardware-configuration.nix
       ../hardware/monitors/flat.nix
+
       ../modules/audio.nix
       ../modules/crypto.nix
       ../modules/ecryptfs.nix
@@ -12,6 +13,8 @@
       ../modules/locale.nix
       ../modules/virt-manager.nix
       ../modules/zsh.nix
+
+      ../profiles/beko.nix
     ];
 
   system.stateVersion = "23.11";
@@ -36,29 +39,12 @@
     };
   };
 
-  users.users.beko = {
-    isNormalUser = true;
-    description = "beko";
-    shell = if config.programs.zsh.enable == true then pkgs.zsh else pkgs.bash;
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-    ] ++ (
-      if (config.programs.virt-manager.enable == true)
-        then [ "libvirtd" ]
-        else [ ]
-    );
-  };
-
-  environment = {
-    systemPackages = with pkgs; [ git lshw appimage-run ];
-  };
-
-  security = {
-    rtkit.enable = true;
-  };
-
-  services = {
-    printing.enable = true;
-  };
+  environment.systemPackages = with pkgs; [
+    appimage-run
+    git
+    lshw
+  ];
+  
+  security.rtkit.enable = true;
+  services.printing.enable = true;
 }
