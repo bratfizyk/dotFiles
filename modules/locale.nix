@@ -2,6 +2,7 @@
 
 {
   time.timeZone = "Europe/Zurich";
+  
   i18n = {
     defaultLocale = "en_GB.UTF-8";
     extraLocaleSettings = {
@@ -16,4 +17,11 @@
       LC_TIME = "pl_PL.UTF-8";
     };
   };
+
+  services.xserver = {
+    layout = "pl";
+    xkbVariant = "";
+  };
+
+  console.keyMap = "pl2";
 }

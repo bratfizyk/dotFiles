@@ -11,10 +11,16 @@
     ../apps/haskell.nix
     ../apps/libreoffice.nix
     ../apps/nixvim.nix
-    ../apps/virt-manager.nix
     ../apps/vscode.nix
-    ../apps/zsh/zsh.nix
-  ];
+  ] ++ (
+    if (osConfig.programs.zsh.enable == true)
+      then [ ../apps/zsh/zsh.nix ]
+      else [ ]
+  ) ++ (
+    if (osConfig.programs.virt-manager.enable == true)
+      then [ ../apps/virt-manager.nix ]
+      else [ ]
+  );
 
   home = {
     username = "beko";

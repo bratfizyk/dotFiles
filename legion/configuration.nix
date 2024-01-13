@@ -11,9 +11,11 @@
       ../modules/kde.nix
       ../modules/locale.nix
       ../modules/virt-manager.nix
+      ../modules/zsh.nix
     ];
 
   system.stateVersion = "23.11";
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -32,11 +34,25 @@
       };
       defaultSession = "plasma";
     };
-    layout = "pl";
-    xkbVariant = "";
   };
 
-  console.keyMap = "pl2";
+  users.users.beko = {
+    isNormalUser = true;
+    description = "beko";
+    shell = if config.programs.zsh.enable == true then pkgs.zsh else pkgs.bash;
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ] ++ (
+      if (config.programs.virt-manager.enable == true)
+        then [ "libvirtd" ]
+        else [ ]
+    );
+  };
+
+  environment = {
+    systemPackages = with pkgs; [ git lshw appimage-run ];
+  };
 
   security = {
     rtkit.enable = true;
@@ -45,19 +61,4 @@
   services = {
     printing.enable = true;
   };
-
-  programs.zsh.enable = true;
-  users.users.beko = {
-    isNormalUser = true;
-    description = "beko";
-    shell = pkgs.zsh;
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
-  };
-
-  environment = {
-    shells = with pkgs; [ zsh ];
-    systemPackages = with pkgs; [ git lshw appimage-run ];
-  };
-
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
