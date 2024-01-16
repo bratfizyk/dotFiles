@@ -10,6 +10,7 @@
       ../modules/crypto.nix
       ../modules/ecryptfs.nix
       ../modules/kde.nix
+      ../modules/hyprland.nix
       ../modules/locale.nix
       ../modules/virt-manager.nix
       ../modules/zsh.nix

@@ -1,4 +1,4 @@
-{ config, pkgs, osConfig, ... }:
+{ config, pkgs, lib, osConfig, ... }:
 
 {
   programs.home-manager.enable = true;
@@ -12,15 +12,10 @@
     ../apps/libreoffice.nix
     ../apps/nixvim.nix
     ../apps/vscode.nix
-  ] ++ (
-    if (osConfig.programs.zsh.enable == true)
-      then [ ../apps/zsh/zsh.nix ]
-      else [ ]
-  ) ++ (
-    if (osConfig.programs.virt-manager.enable == true)
-      then [ ../apps/virt-manager.nix ]
-      else [ ]
-  );
+  ]
+  ++ (lib.optionals (osConfig.programs.zsh.enable) [ ../apps/zsh/zsh.nix ])
+  ++ (lib.optionals (osConfig.programs.virt-manager.enable) [ ../apps/virt-manager.nix ])
+  ++ (lib.optionals (osConfig.programs.hyprland.enable) [ ../apps/hyprland.nix ]);
 
   home = {
     username = "beko";
@@ -52,8 +47,15 @@
 
     sessionVariables = {
       EDITOR = "vim";
-      TERM = "alacritty";
+      TERMINAL = "alacritty";
       BROWSER = "firefox";
+
+      WLR_NO_HARDWARE_CURSORS = "1";
+      LIBVA_DRIVER_NAME = "nvidia";
+      XDG_SESSION_TYPE = "wayland";
+      GBM_BACKEND = "nvidia-drm";
+      __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+      NIXOS_OZONE_WL = "1";
     };
   };
 }
