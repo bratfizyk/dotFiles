@@ -5,12 +5,13 @@
       position = "top";
       height = 30;
       max-length = 20;
-      # margin-left = 2;
-      # margin-right = 2;
+      margin-left = 2;
+      margin-right = 2;
       spacing = 10;
       modules-left = [
         "custom/launcher"
-        "custom/keyboard"
+        #"custom/keyboard"
+        "custom/separator"
         "hyprland/workspaces"
         "custom/separator"
         "tray"
@@ -19,16 +20,15 @@
         "wlr/taskbar"
       ];
       modules-right = [
-        "idle_inhibitor"
+        #"idle_inhibitor"
         "pulseaudio"
-        "network"
+        #"network"
         "cpu"
         "memory"
-        "backlight"
+        #"backlight"
         "battery"
-        "hyprland/language"
+        #"hyprland/language"
         "clock"
-        #"custom/poweroff"
       ];
       # Modules configuration
       "hyprland/workspaces" = {
@@ -75,7 +75,7 @@
         calendar-weeks-pos = "left";
         format-calendar = "<b>{}</b>";
         # format-calendar-weeks = "<span>Week: <i>{}</i></span>";
-        format = " {:%H:%M    %Y-%m-%d}";
+        format = " {%Y-%m-%d  :%H:%M}";
       };
       cpu = {
         format = " {usage}%";
@@ -150,8 +150,8 @@
         tooltip-format = "{icon} {desc}\nVolume: {volume}\n{format_source}";
       };
       "custom/launcher" = {
-        # format = " ";
-        background-image = "url('$HOME/.config/waybar/white-snowflake.png')";
+        #+format = " ";
+        background-image = "url('$HOME/white.png')";
         on-click = "rofi -show drun";
         max-length = 50;
         tooltip = false;

@@ -47,7 +47,7 @@
     #custom-weather.default {
       color: #e5e5e5;
       border-radius: 6px;
-      padding: 2px 10px;
+      padding: 0px 10px;
       background-color: #252733;
     }
 
@@ -74,6 +74,10 @@
       color: #7a95c9;
     }
 
+    #custom-keyboard {
+      padding: 2px 10px;
+    }
+
     #backlight,
     #battery,
     #pulseaudio,
@@ -83,6 +87,7 @@
 
     #pulseaudio {
       color: #81A1C1;
+      padding: 2px 10px;
     }
 
     #pulseaudio.muted {
@@ -91,21 +96,21 @@
 
     #backlight {
       color: #8a909e;
+      padding: 0px 10px;
     }
 
     #network {
       color: #5E81AC;
-      padding: 0px 10px
+      padding: 0px 20px;
     }
 
     #network.disconnected {
       color: #fb958b;
-      padding: 0px 10px
     }
 
     #battery {
       color: #8fbcbb;
-      padding: 0px 15px
+      padding: 0px 15px;
     }
 
     #battery.critical,

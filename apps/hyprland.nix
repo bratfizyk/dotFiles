@@ -1,12 +1,10 @@
 { pkgs, config, ... }:
 
 {
-  programs.waybar = {
-    enable = true;
-    style = (import ./style.nix).style;
-    settings = (import ./settings.nix {inherit config;}).settings;
-  };
-
+  imports = [
+    ./waybar
+  ];
+  
   services.dunst = {
     enable = true;
     package = pkgs.dunst;
@@ -28,11 +26,16 @@
       decoration = {
         rounding = 3;
       };
+      input = {
+        kb_layout = "pl";
+        kb_options = "compose:menu";
+      };
       bind = [
         "$mod, M, exit,"
         "$mod, C, killactive,"
         "$mod, D, exec, rofi -show drun -show-icons"
         "$mod, Return, exec, alacritty"
+        "$mod, F, exec, firefox"
 
         # Switch workspaces with mainMod + [0-9]
         "$mod, 1, workspace, 1"
