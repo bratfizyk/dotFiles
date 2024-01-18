@@ -9,10 +9,20 @@
     };
   };
 
-  fonts.fontDir.enable = true;
-  fonts.packages = with pkgs; [
-    meslo-lgs-nf
-  ];
+  fonts = {
+    fontDir.enable = true;
+    packages = with pkgs; [
+      meslo-lgs-nf
+      font-awesome
+    ];
+  };
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+    ];
+  };
 
   environment.systemPackages = with pkgs; [
     rofi-wayland
