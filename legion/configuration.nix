@@ -44,6 +44,7 @@
     appimage-run
     git
     lshw
+    networkmanager
   ];
   
   security.rtkit.enable = true;

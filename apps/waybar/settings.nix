@@ -75,7 +75,7 @@
         calendar-weeks-pos = "left";
         format-calendar = "<b>{}</b>";
         # format-calendar-weeks = "<span>Week: <i>{}</i></span>";
-        format = " {%Y-%m-%d  :%H:%M}";
+        format = "{:%Y-%m-%d  %H:%M}";
       };
       cpu = {
         format = " {usage}%";
@@ -90,15 +90,7 @@
       backlight = {
         format = "{icon} {percent}%";
         format-icons = [
-          ""
-          ""
-          ""
-          ""
-          ""
-          ""
-          ""
-          ""
-          ""
+          "" "" "" "" "" "" "" "" ""
         ];
       };
       battery = {
@@ -139,19 +131,15 @@
           phone = "";
           portable = "";
           car = "";
-          default = [
-            ""
-            ""
-            ""
-          ];
+          default = [ "" "" "" ];
         };
         on-click = "kitty -e alsamixer";
         tooltip = true;
         tooltip-format = "{icon} {desc}\nVolume: {volume}\n{format_source}";
       };
       "custom/launcher" = {
-        #+format = " ";
-        background-image = "url('$HOME/white.png')";
+        format = "";
+        #background-image = "url('./icon/white.png')";
         on-click = "rofi -show drun";
         max-length = 50;
         tooltip = false;

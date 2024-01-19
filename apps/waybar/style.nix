@@ -22,6 +22,13 @@
       color: #64727d;
     }
 
+    #custom-launcher {
+      font-size: 26px;
+      margin: 0;
+      padding: 0px 10px;
+      font-family: NotoSans Nerd Font Mono;
+    }
+
     #clock,
     #cpu,
     #memory,
@@ -32,7 +39,6 @@
     #workspaces,
     #idle_inhibitor,
     #custom-power-menu,
-    #custom-launcher,
     #custom-spotify,
     #custom-weather,
     #custom-weather.severe,
@@ -68,10 +74,6 @@
     #workspaces button.active {
       color: #ecd3a0;
       transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
-    }
-
-    #custom-launcher {
-      color: #7a95c9;
     }
 
     #custom-keyboard {
