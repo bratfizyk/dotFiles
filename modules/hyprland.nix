@@ -13,6 +13,12 @@
     enable = true;
   }; 
 
+  # for mounting USB drives
+  services = {
+    gvfs.enable = true;
+    udisks2.enable = true;
+  };
+
   fonts = {
     fontDir.enable = true;
     packages = with pkgs; [
