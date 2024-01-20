@@ -11,8 +11,9 @@
       package = pkgs.vscodium-fhs;
       extensions = with pkgs.vscode-extensions; [
         bbenoist.nix
-        pkief.material-icon-theme
         haskell.haskell
+        jnoortheen.nix-ide
+        pkief.material-icon-theme
       ];
       userSettings = {
         terminal = {

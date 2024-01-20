@@ -143,7 +143,15 @@
       font-weight: bold;
     }
 
+    #custom-logout {
+      font-family: Meslo LGS NF;
+      font-weight: bold;
+      font-size: 24px;
+      padding-right: 5px;
+    }
+
     #custom-launcher {
+      font-family: Meslo LGS NF;
       font-size: 32px;
     }
 

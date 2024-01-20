@@ -1,10 +1,14 @@
 { pkgs, config, ... }:
 
 {
+    imports = [
+    ../wlogout
+  ];
+
   programs.waybar = {
     enable = true;
     style = (import ./style.nix).style;
-    settings = (import ./settings.nix {inherit config;}).settings;
+    settings = import ./settings.nix;
   };
 
   home.packages = with pkgs; [
