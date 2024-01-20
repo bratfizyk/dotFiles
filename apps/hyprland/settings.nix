@@ -25,7 +25,7 @@
 
     "$mod SHIFT, M, exec, wlogout"
     "$mod SHIFT, R, forcerendererreload,"
-    "$mod SHIFT, C, killactive,"
+    "$mod SHIFT, Q, killactive,"
 
     # Switch workspaces with mainMod + [0-9]
     "$mod, 1, workspace, 1"
