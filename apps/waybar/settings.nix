@@ -1,35 +1,39 @@
 {config, ...}: {
   settings = {
     mainBar = {
+      name = "mainBar";
       layer = "top";
       position = "top";
-      height = 30;
+      height = 45;
+
       max-length = 20;
       margin-left = 2;
       margin-right = 2;
+      
       spacing = 10;
+
       modules-left = [
         "custom/launcher"
-        #"custom/keyboard"
         "custom/separator"
         "hyprland/workspaces"
         "custom/separator"
         "tray"
       ];
+
       modules-center = [
         "wlr/taskbar"
       ];
+
       modules-right = [
-        #"idle_inhibitor"
         "pulseaudio"
         #"network"
         "cpu"
         "memory"
-        #"backlight"
         "battery"
-        #"hyprland/language"
+        "custom/separator"
         "clock"
       ];
+
       # Modules configuration
       "hyprland/workspaces" = {
         format = "{name}";
@@ -37,6 +41,7 @@
         on-scroll-down = "hyprctl dispatch workspace e-1";
         on-click = "activate";
       };
+
       "wlr/taskbar" = {
         all-outputs = true;
         format = "{icon}";
@@ -47,28 +52,14 @@
         tooltip-format = "{icon} {title}: {app_id}";
         on-click = "minimize-raise";
       };
-      "hyprland/language" = {
-        format = "  {}";
-        "format-en" = "ENG US";
-        # "format-en" = "ENG GB";
-        keyboard-name = "at-translated-set-2-keyboard";
-      };
-      idle_inhibitor = {
-        format = "{icon} ";
-        format-icons = {
-          activated = "";
-          deactivated = "";
-        };
-        tooltip = true;
-        tooltip-format = "Sleep: {status}";
-      };
+
       tray = {
         icon-size = 20;
         spacing = 15;
         smooth-scolling-threshold = 1.0;
         show-passive-icons = true;
-        # on-update = "makoctl invoke";
       };
+
       clock = {
         timezone = "Europe/Zurich";
         tooltip-format = "<big>{:%Y %B}</big>\n{calendar}";
@@ -77,22 +68,19 @@
         # format-calendar-weeks = "<span>Week: <i>{}</i></span>";
         format = "{:%Y-%m-%d  %H:%M}";
       };
+
       cpu = {
         format = " {usage}%";
         tooltip = true;
         tooltip-format = "{load}\n{usage}\n{avg_frequency}GHz";
       };
+
       memory = {
         format = " {percentage}%";
         tooltip = true;
         tooltip-format = "Used: {used}GiB/{total}GiB\nAvailable: {avail}GiB";
       };
-      backlight = {
-        format = "{icon} {percent}%";
-        format-icons = [
-          "" "" "" "" "" "" "" "" ""
-        ];
-      };
+
       battery = {
         interval = 80;
         states = {
@@ -103,13 +91,9 @@
         format-charging = " {capacity}%";
         format-plugged = " {capacity}%";
         format-alt = "{time} {icon}";
-        format-icons = [
-          " "
-          " "
-          " "
-          " "
-        ];
+        format-icons = [ "" "" "" "" ];
       };
+
       network = {
         format-wifi = " {essid}";
         format-ethernet = " {essid}";
@@ -117,13 +101,12 @@
         format-linked = "{ifname} (No IP)";
         format-disconnected = "(No Internet)";
       };
+
       pulseaudio = {
-        format = "{icon} {volume}% {format_source}";
-        format-bluetooth = "{volume}% {icon} {format_source}";
-        format-bluetooth-muted = " {icon} {format_source}";
-        format-muted = "M {format_source}";
-        format-source = " {volume}%";
-        format-source-muted = "M";
+        format = "{icon} {volume}%";
+        format-bluetooth = "{volume}% {icon}";
+        format-bluetooth-muted = " {icon}";
+        format-muted = "🔇";
         format-icons = {
           headphone = "";
           hands-free = "";
@@ -133,33 +116,20 @@
           car = "";
           default = [ "" "" "" ];
         };
-        on-click = "kitty -e alsamixer";
+        on-click = "pavucontrol";
         tooltip = true;
         tooltip-format = "{icon} {desc}\nVolume: {volume}\n{format_source}";
       };
+
       "custom/launcher" = {
         format = "";
-        #background-image = "url('./icon/white.png')";
         on-click = "rofi -show drun";
-        max-length = 50;
         tooltip = false;
       };
+
       "custom/separator" = {
         format = "|";
         tooltip = false;
-      };
-      "custom/keyboard" = {
-        format = " ";
-        tooltip = false;
-        # exec = "exec $HOME/.config/waybar/wvkbd.sh";
-        on-click = "exec $HOME/.config/waybar/wvkbd.sh";
-        exec-on-event = false;
-      };
-      "custom/poweroff" = {
-        format = "";
-        tooltip = false;
-        on-click = "poweroff";
-        exec-on-event = false;
       };
     };
   };

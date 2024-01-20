@@ -9,11 +9,16 @@
     };
   };
 
+  programs.thunar = {
+    enable = true;
+  }; 
+
   fonts = {
     fontDir.enable = true;
     packages = with pkgs; [
       meslo-lgs-nf
       font-awesome
+      terminus-nerdfont
     ];
   };
 

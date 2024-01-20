@@ -1,68 +1,66 @@
 {
   style = ''
+    @define-color base   #24273a;
+    @define-color mantle #1e2030;
+    @define-color crust  #181926;
+
+    @define-color text     #cad3f5;
+    @define-color subtext0 #a5adcb;
+    @define-color subtext1 #b8c0e0;
+
+    @define-color surface0 #363a4f;
+    @define-color surface1 #494d64;
+    @define-color surface2 #5b6078;
+
+    @define-color overlay0 #6e738d;
+    @define-color overlay1 #8087a2;
+    @define-color overlay2 #939ab7;
+
+    @define-color blue      #8aadf4;
+    @define-color lavender  #b7bdf8;
+    @define-color sapphire  #7dc4e4;
+    @define-color sky       #91d7e3;
+    @define-color teal      #8bd5ca;
+    @define-color green     #a6da95;
+    @define-color yellow    #eed49f;
+    @define-color peach     #f5a97f;
+    @define-color maroon    #ee99a0;
+    @define-color red       #ed8796;
+    @define-color mauve     #c6a0f6;
+    @define-color pink      #f5bde6;
+    @define-color flamingo  #f0c6c6;
+    @define-color rosewater #f4dbd6;
+
     * {
-      /* `otf-font-awesome` is required to be installed for icons */
-      font-family: Material Design Icons, JetBrainsMono Nerd Font, Iosevka Nerd Font;
-      font-size: 14px;
-      border-radius: 8px;
+      border: none;
     }
 
-    window#waybar {
-      background-color: rgba(26, 27, 38, 0.5);
-      color: #ffffff;
-      transition-property: background-color;
-      transition-duration: 0.5s;
+    window.mainBar#waybar {
+      background-color: alpha(@base, 0.7);
+      border: solid alpha(@surface1, 0.7) 2;
+      border-radius: 15;
+      padding: 0px 20px;
     }
 
-    window#waybar.hidden {
-      opacity: 0.1;
+    window.mainBar .modules-left {
+      padding: 0px 20px;
+      margin-top: 2;
+      margin-bottom: 2;
     }
 
-    #window {
-      color: #64727d;
-    }
-
-    #custom-launcher {
-      font-size: 26px;
-      margin: 0;
+    window.mainBar .modules-center {
+      background-color: alpha(@surface1, 0.7);
+      color: @green;
+      border-radius: 15;
       padding: 0px 10px;
-      font-family: NotoSans Nerd Font Mono;
+      margin-top: 5;
+      margin-bottom: 5;
     }
 
-    #clock,
-    #cpu,
-    #memory,
-    #custom-media,
-    #tray,
-    #mode,
-    #custom-lock,
-    #workspaces,
-    #idle_inhibitor,
-    #custom-power-menu,
-    #custom-spotify,
-    #custom-weather,
-    #custom-weather.severe,
-    #custom-weather.sunnyDay,
-    #custom-weather.clearNight,
-    #custom-weather.cloudyFoggyDay,
-    #custom-weather.cloudyFoggyNight,
-    #custom-weather.rainyDay,
-    #custom-weather.rainyNight,
-    #custom-weather.showyIcyDay,
-    #custom-weather.snowyIcyNight,
-    #custom-weather.default {
-      color: #e5e5e5;
-      border-radius: 6px;
-      padding: 0px 10px;
-      background-color: #252733;
-    }
-
-    #cpu {
-      color: #fb958b;
-    }
-
-    #memory {
-      color: #a1c999;
+    window.mainBar .modules-right {
+      padding: 0px 20px;
+      margin-top: 2;
+      margin-bottom: 2;
     }
 
     #workspaces button {
@@ -76,20 +74,16 @@
       transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
     }
 
-    #custom-keyboard {
-      padding: 2px 10px;
+    #cpu {
+      color: #fb958b;
     }
 
-    #backlight,
-    #battery,
-    #pulseaudio,
-    #network {
-      background-color: #252733;
+    #memory {
+      color: #a1c999;
     }
 
     #pulseaudio {
       color: #81A1C1;
-      padding: 2px 10px;
     }
 
     #pulseaudio.muted {
@@ -98,12 +92,10 @@
 
     #backlight {
       color: #8a909e;
-      padding: 0px 10px;
     }
 
     #network {
       color: #5E81AC;
-      padding: 0px 20px;
     }
 
     #network.disconnected {
@@ -112,7 +104,6 @@
 
     #battery {
       color: #8fbcbb;
-      padding: 0px 15px;
     }
 
     #battery.critical,
@@ -146,28 +137,24 @@
       color: #fb958b;
     }
 
-    #custom-lock {
-      color: #ecd3a0;
-    }
-
     #clock {
       color: #8a909e;
-      font-family: Iosevka Nerd Font;
+      font-family: Meslo LGS NF;
       font-weight: bold;
     }
 
-    #custom-power-menu {
-      color: #e78284;
+    #custom-launcher {
+      font-size: 32px;
     }
 
     tooltip {
-      font-family: Iosevka Nerd Font;
+      font-family: Meslo LGS NF;
       border-radius: 15px;
       background-color: #1f232b;
     }
 
     tooltip label {
-      font-family: Iosevka Nerd Font;
+      font-family: Meslo LGS NF;
     }
 
     label:focus {
@@ -184,55 +171,6 @@
     #tray > .needs-attention {
       -gtk-icon-effect: highlight;
       background-color: #eb4d4b;
-    }
-
-    #idle_inhibitor {
-      background-color: #242933;
-    }
-
-    #idle_inhibitor.activated {
-      background-color: #ecf0f1;
-      color: #2d3436;
-    }
-
-    #custom-spotify {
-      color: #abb2bf;
-    }
-
-    #custom-weather {
-      font-family: Iosevka Nerd Font;
-      color: #8a909e;
-    }
-
-    #custom-weather.severe {
-      color: #eb937d;
-    }
-
-    #custom-weather.sunnyDay {
-      color: #c2ca76;
-    }
-
-    #custom-weather.clearNight {
-      color: #cad3f5;
-    }
-
-    #custom-weather.cloudyFoggyDay,
-    #custom-weather.cloudyFoggyNight {
-      color: #c2ddda;
-    }
-
-    #custom-weather.rainyDay,
-    #custom-weather.rainyNight {
-      color: #5aaca5;
-    }
-
-    #custom-weather.showyIcyDay,
-    #custom-weather.snowyIcyNight {
-      color: #d6e7e5;
-    }
-
-    #custom-weather.default {
-      color: #dbd9d8;
     }
   '';
 }

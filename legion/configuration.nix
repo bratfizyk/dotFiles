@@ -36,7 +36,7 @@
         enable = true;
         wayland = true;
       };
-      defaultSession = "plasma";
+      defaultSession = "hyprland";
     };
   };
 
