@@ -49,12 +49,10 @@
     }
 
     window.mainBar .modules-center {
-      background-color: alpha(@surface1, 0.7);
-      color: @green;
       border-radius: 15;
-      padding: 0px 10px;
       margin-top: 5;
       margin-bottom: 5;
+      padding: 0px 10px;
     }
 
     window.mainBar .modules-right {
@@ -67,6 +65,10 @@
       color: #7a95c9;
       box-shadow: inset 0 -3px transparent;
       transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
+    }
+
+    #taskbar {
+      
     }
 
     #workspaces button.active {

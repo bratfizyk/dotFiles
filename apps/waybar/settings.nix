@@ -47,8 +47,8 @@
       all-outputs = true;
       format = "{icon}";
       max-length = 20;
-      icon-size = 20;
-      icon-theme = "Nordzy";
+      icon-size = 28;
+      icon-theme = "Flat-Remix-Blue-Dark";
       tooltip = false;
       tooltip-format = "{icon} {title}: {app_id}";
       on-click = "minimize-raise";
