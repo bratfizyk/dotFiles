@@ -124,7 +124,7 @@
 
     "custom/launcher" = {
       format = "";
-      on-click = "rofi -show drun";
+      on-click = "rofi -show drun -show-icons -icon-theme Flat-Remix-Blue-Dark";
       tooltip = false;
     };
 

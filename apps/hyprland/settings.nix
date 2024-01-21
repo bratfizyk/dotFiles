@@ -18,7 +18,7 @@
     "$mod, Return, exec, alacritty"
     "$mod, Space, swapactiveworkspaces, current +1"
     
-    "$mod, D, exec, rofi -show drun -show-icons"
+    "$mod, D, exec, rofi -show drun -show-icons -icon-theme Flat-Remix-Blue-Dark"
     "$mod, E, exec, thunar"
     "$mod, F, exec, firefox"
     "$mod, T, exec, thunderbird"
@@ -72,5 +72,12 @@
     #"__GLX_VENDOR_LIBRARY_NAME,nvidia"
     #"GBM_BACKEND=nvidia-drm"
     #"NIXOS_OZONE_WL,1"
+  ];
+  windowrulev2 = [
+    # Firefox picture-in-picture fix
+    "float,class:^(firefox)$,title:^(Firefox)$"
+    "float,class:^(firefox)$,title:^(Picture-in-Picture)$"
+    "size 35% 35%,class:^(firefox)$,title:^(Firefox)$"
+    "size 35% 35%,class:^(firefox)$,title:^(Picture-in-Picture)$"
   ];
 }

@@ -23,14 +23,15 @@
     stateVersion = "23.11";
 
     packages = with pkgs; [
+      calc
       efibootmgr
       gnucash
       keepassxc
+      ranger
       signal-desktop
       thunderbird
       whatsapp-for-linux
       zoom-us
-      ranger
     ];
 
     file = {
