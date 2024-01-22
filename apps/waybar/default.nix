@@ -13,6 +13,6 @@
 
   home.packages = with pkgs; [
     pavucontrol
-    flat-remix-icon-theme
+    qogir-icon-theme
   ];
 }

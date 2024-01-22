@@ -27,6 +27,7 @@
       efibootmgr
       gnucash
       keepassxc
+      lxappearance-gtk2
       ranger
       signal-desktop
       thunderbird

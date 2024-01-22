@@ -18,7 +18,7 @@
     "$mod, Return, exec, alacritty"
     "$mod, Space, swapactiveworkspaces, current +1"
     
-    "$mod, D, exec, rofi -show drun -show-icons -icon-theme Flat-Remix-Blue-Dark"
+    "$mod, D, exec, rofi -show drun -show-icons -icon-theme Qogir-dark"
     "$mod, E, exec, thunar"
     "$mod, F, exec, firefox"
     "$mod, T, exec, thunderbird"
@@ -26,6 +26,7 @@
     "$mod SHIFT, M, exec, wlogout"
     "$mod SHIFT, R, forcerendererreload,"
     "$mod SHIFT, Q, killactive,"
+    "$mod SHIFT, P, exit,"
 
     # Switch workspaces with mainMod + [0-9]
     "$mod, 1, workspace, 1"
@@ -64,6 +65,9 @@
     "hyprctl setcursor Bibata-Modern-Classic 20"
     "waybar &"
     "dunst"
+    "nm-applet --indicator"
+    "pasystray --always-notify &"
+    "udiskie --no-automount --tray &"
   ];
   env = [
     "LIBVA_DRIVER_NAME,nvidia"

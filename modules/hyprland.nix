@@ -34,8 +34,4 @@
       xdg-desktop-portal-gtk
     ];
   };
-
-  environment.systemPackages = with pkgs; [
-    rofi-wayland
-  ];
 }

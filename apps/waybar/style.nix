@@ -67,37 +67,37 @@
       transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
     }
 
-    #taskbar {
-      
-    }
-
     #workspaces button.active {
       color: #ecd3a0;
       transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
     }
 
+    #taskbar {
+      
+    }
+
     #cpu {
       color: #fb958b;
+      font-size: 14px;
     }
 
     #memory {
       color: #a1c999;
+      font-size: 14px;
     }
 
     #pulseaudio {
       color: #81A1C1;
+      font-size: 14px;
     }
 
     #pulseaudio.muted {
       color: #fb958b;
     }
 
-    #backlight {
-      color: #8a909e;
-    }
-
     #network {
       color: #5E81AC;
+      font-size: 14px;
     }
 
     #network.disconnected {
@@ -106,6 +106,7 @@
 
     #battery {
       color: #8fbcbb;
+      font-size: 14px;
     }
 
     #battery.critical,
@@ -124,6 +125,15 @@
 
     }
 
+    #battery.warning {
+      color: #ecd3a0;
+    }
+
+
+    #battery.critical:not(.charging) {
+      color: #fb958b;
+    }
+
     @keyframes blink {
       to {
         background-color: rgba(30, 34, 42, 0.5);
@@ -131,18 +141,15 @@
       }
     }
 
-    #battery.warning {
-      color: #ecd3a0;
-    }
-
-    #battery.critical:not(.charging) {
-      color: #fb958b;
-    }
-
     #clock {
+      background-color: alpha(@surface0, 0.9);
+      padding: 0px 10px;
+      border: solid alpha(@surface2, 0.7) 1;
+      border-radius: 10px;
       color: #8a909e;
       font-family: Meslo LGS NF;
       font-weight: bold;
+      font-size: 15px;
     }
 
     #custom-logout {
@@ -172,6 +179,7 @@
     }
 
     #tray {
+
     }
 
     #tray > .passive {

@@ -16,21 +16,21 @@
       "custom/separator"
       "hyprland/workspaces"
       "custom/separator"
-      "tray"
-    ];
-
-    modules-center = [
       "wlr/taskbar"
     ];
 
+    modules-center = [
+      "clock"
+    ];
+
     modules-right = [
+      "tray"
+      "custom/separator"
       "pulseaudio"
       #"network"
       "cpu"
       "memory"
       "battery"
-      "custom/separator"
-      "clock"
       "custom/separator"
       "custom/logout"
     ];
@@ -47,18 +47,19 @@
       all-outputs = true;
       format = "{icon}";
       max-length = 20;
-      icon-size = 28;
-      icon-theme = "Flat-Remix-Blue-Dark";
-      tooltip = false;
+      icon-size = 24;
+      icon-theme = "Qogir-dark";
+      tooltip = true;
       tooltip-format = "{icon} {title}: {app_id}";
       on-click = "minimize-raise";
     };
 
     tray = {
-      icon-size = 20;
-      spacing = 15;
+      icon-size = 22;
+      spacing = 12;
       smooth-scolling-threshold = 1.0;
       show-passive-icons = true;
+      reverse-direction = true;
     };
 
     clock = {
@@ -67,7 +68,7 @@
       calendar-weeks-pos = "left";
       #format-calendar = "<b>{}</b>";
       format-calendar-weeks = "<span>Week: <i>{}</i></span>";
-      format = "{:%Y-%m-%d  %H:%M}";
+      format = "{:%d-%m-%Y  %H:%M}";
     };
 
     cpu = {
@@ -124,7 +125,7 @@
 
     "custom/launcher" = {
       format = "";
-      on-click = "rofi -show drun -show-icons -icon-theme Flat-Remix-Blue-Dark";
+      on-click = "rofi -show drun -show-icons -icon-theme Qogir-dark";
       tooltip = false;
     };
 
