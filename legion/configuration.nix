@@ -29,14 +29,16 @@
     networkmanager.enable = true;
   };
 
-  services.xserver = {
-    enable = true;
-    displayManager = {
-      gdm = {
-        enable = true;
-        wayland = true;
+  services = {
+    xserver = {
+      enable = true;
+      displayManager = {
+        gdm = {
+          enable = true;
+          wayland = true;
+        };
+        defaultSession = "hyprland";
       };
-      defaultSession = "hyprland";
     };
   };
 
@@ -49,4 +51,8 @@
   
   security.rtkit.enable = true;
   services.printing.enable = true;
+
+  security = {
+    polkit.enable = true;
+  };
 }

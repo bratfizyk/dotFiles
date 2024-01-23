@@ -16,11 +16,27 @@
   };
 
   home.packages = with pkgs; [
-    flat-remix-icon-theme
+    # applets
     networkmanagerapplet
-    numix-icon-theme
     pasystray
-    qogir-icon-theme
     udiskie
+
+    # icons
+    flat-remix-icon-theme
+    numix-icon-theme
+    qogir-icon-theme
+
+    # screenshots
+    grim
+    slurp
+    swappy
+    wl-clipboard
+
+    # screen sharing
+    pipewire
+    wireplumber
+
+    # A tool for reading key codes
+    # wev
   ];
 }

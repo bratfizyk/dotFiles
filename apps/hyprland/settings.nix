@@ -23,6 +23,7 @@
     "$mod, F, exec, firefox"
     "$mod, T, exec, thunderbird"
 
+    "$mod SHIFT, F, fullscreen,"
     "$mod SHIFT, M, exec, wlogout"
     "$mod SHIFT, R, forcerendererreload,"
     "$mod SHIFT, Q, killactive,"
@@ -40,6 +41,13 @@
     "$mod, 9, workspace, 9"
     "$mod, 0, workspace, 10"
 
+    "$mod, Left, workspace, e-1"
+    "$mod, Right, workspace, e+1"
+
+    # mouse wheel for switching workspaces
+    "$mod, mouse_down, workspace, e-1"
+    "$mod, mouse_up, workspace, e+1"
+
     # Move active window to a workspace with mainMod + SHIFT + [0-9]
     "$mod SHIFT, 1, movetoworkspacesilent, 1"
     "$mod SHIFT, 2, movetoworkspacesilent, 2"
@@ -52,9 +60,13 @@
     "$mod SHIFT, 9, movetoworkspacesilent, 9"
     "$mod SHIFT, 0, movetoworkspacesilent, 10"
 
+    # Audio
     ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
     ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+    ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 
+    # Other
+    ", Print, exec, grim -g \"$(slurp)\" - | swappy -f -"
   ];
   bindm = [
     # Move/resize windows with mainMod + LMB/RMB and dragging
