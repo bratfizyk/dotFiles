@@ -64,7 +64,7 @@
 
     clock = {
       timezone = "Europe/Zurich";
-      tooltip-format = "<big>{:%Y %B}</big>\n{calendar}";
+      tooltip-format = "{calendar}";
       calendar-weeks-pos = "left";
       #format-calendar = "<b>{}</b>";
       format-calendar-weeks = "<span>Week: <i>{}</i></span>";
