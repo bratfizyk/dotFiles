@@ -7,6 +7,16 @@
       enable = true;
       style = "night";
     };
+    keymaps = [
+      {
+        action = "<cmd>Neotree toggle<CR>";
+        key = "C-b";
+        mode = "n";
+        options = {
+          desc = "Toggle Tree View.";
+        };
+      }
+    ];
     plugins = {
       lsp = {
         enable = true;
@@ -14,6 +24,7 @@
           hls.enable = true;
         };
       };
+
       nvim-cmp = {
         enable = true;
         autoEnableSources = true;
@@ -22,6 +33,10 @@
           { name = "path"; }
           { name = "buffer"; }
         ];
+      };
+
+      neo-tree = {
+        enable = true;
       };
     };
     extraPlugins = [ ];
