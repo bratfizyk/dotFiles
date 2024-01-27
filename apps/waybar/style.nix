@@ -38,27 +38,28 @@
     window.mainBar#waybar {
       background-color: alpha(@base, 0.7);
       border: solid alpha(@surface1, 0.7) 2;
-      border-radius: 15;
+      border-radius: 20px;
       padding: 0px 20px;
+      margin: 10px 0px 0px 0px;
     }
 
     window.mainBar .modules-left {
       padding: 0px 20px;
-      margin-top: 2;
-      margin-bottom: 2;
+      margin-top: 2px;
+      margin-bottom: 2px;
     }
 
     window.mainBar .modules-center {
-      border-radius: 15;
-      margin-top: 5;
-      margin-bottom: 5;
+      border-radius: 15px;
+      margin-top: 5px;
+      margin-bottom: 5px;
       padding: 0px 10px;
     }
 
     window.mainBar .modules-right {
       padding: 0px 20px;
-      margin-top: 2;
-      margin-bottom: 2;
+      margin-top: 2px;
+      margin-bottom: 2px;
     }
 
     #workspaces button {
