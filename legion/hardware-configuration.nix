@@ -18,6 +18,11 @@
       fsType = "ext4";
     };
 
+  fileSystems."/vm" =
+    { device = "/dev/disk/by-label/vm";
+      fsType = "ext4";
+    };
+
   fileSystems."/boot" =
     { device = "/dev/disk/by-label/SYSTEM_DRV";
       fsType = "vfat";

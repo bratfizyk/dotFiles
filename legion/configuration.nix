@@ -43,10 +43,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    appimage-run
-    git
-    lshw
-    networkmanager
+    appimage-run git lshw
   ];
   
   security.rtkit.enable = true;
