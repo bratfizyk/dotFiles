@@ -36,6 +36,9 @@
     pipewire
     wireplumber
 
+    # wallpaper
+    swww
+
     # A tool for reading key codes
     # wev
   ];

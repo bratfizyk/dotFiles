@@ -68,6 +68,7 @@ listview {
   spacing:  48px;
   columns:  6;
   fixed-columns: true;
+  background-color: @bg0;
 }
 
 element, element-text, element-icon {

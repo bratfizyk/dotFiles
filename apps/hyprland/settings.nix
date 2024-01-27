@@ -44,6 +44,9 @@
     "$mod, Left, workspace, e-1"
     "$mod, Right, workspace, e+1"
 
+    "$mod SHIFT, Left, movetoworkspace, e-1"
+    "$mod SHIFT, Right, movetoworkspace, e+1"
+
     # mouse wheel for switching workspaces
     "$mod, mouse_down, workspace, e-1"
     "$mod, mouse_up, workspace, e+1"
@@ -80,6 +83,8 @@
     "nm-applet --indicator"
     "pasystray --always-notify &"
     "udiskie --no-automount --tray &"
+    "swww init & sleep 0.1"
+    "swww img ${../../assets/wallpapers/Road.jpg}"
   ];
   env = [
     "LIBVA_DRIVER_NAME,nvidia"
