@@ -16,7 +16,7 @@
   ++ (lib.optionals (osConfig.programs.zsh.enable) [ ../apps/zsh ])
   ++ (lib.optionals (osConfig.programs.virt-manager.enable) [ ../apps/virt-manager.nix ])
   ++ (lib.optionals (osConfig.programs.hyprland.enable) [ ../apps/hyprland ]);
-
+  
   home = {
     username = "beko";
     homeDirectory = "/home/beko";
