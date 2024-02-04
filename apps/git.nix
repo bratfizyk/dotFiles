@@ -13,7 +13,7 @@
       userEmail = "aleszcz@pm.me";
       extraConfig = {
         core = {
-            editor = "vim";
+            editor = "nvim";
         };
         diff = {
             tool = "gitui";
@@ -21,6 +21,9 @@
         difftool = {
             prompt = false;
         };
+	pull = {
+	    rebase = false;
+	};
       };
     };
 
