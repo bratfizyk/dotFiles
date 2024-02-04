@@ -4,6 +4,7 @@
   imports = [
     ../dunst
     ../rofi
+    ../swaylock.nix
     ../waybar
     ../wlogout
   ];

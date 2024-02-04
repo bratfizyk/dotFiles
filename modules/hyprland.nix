@@ -34,4 +34,6 @@
       xdg-desktop-portal-gtk
     ];
   };
+
+  security.pam.services.swaylock.fprintAuth = false;
 }

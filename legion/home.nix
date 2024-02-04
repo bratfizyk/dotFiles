@@ -24,8 +24,10 @@
 
     packages = with pkgs; [
       calc
+      discord
       efibootmgr
       gnucash
+      jq
       keepassxc
       lxappearance-gtk2
       ranger
