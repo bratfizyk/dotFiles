@@ -8,9 +8,23 @@
     extraLocaleSettings = { };
   };
 
-  services.xserver = {
-    layout = "pl";
-    xkbVariant = "";
+  services = { 
+    xserver = {
+      layout = "pl";
+      xkbVariant = "";
+      xkbOptions = "kpdl:dot";
+    };
+    keyd = {
+      enable = true;
+      keyboards.default = {
+        ids = [ "*" ];
+	settings = {
+	  main = {
+	    kpdot = ".";
+	  };
+	};
+      };
+    };
   };
 
   console.keyMap = "pl2";
