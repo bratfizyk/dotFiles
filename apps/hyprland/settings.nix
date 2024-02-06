@@ -25,11 +25,12 @@
     "$mod, F, exec, firefox"
     "$mod, T, exec, thunderbird"
 
+    "$mod SHIFT, B, exec, virsh --connect qemu:///system start Bank && virt-viewer --connect qemu:///system Bank"
     "$mod SHIFT, F, fullscreen,"
     "$mod SHIFT, M, exec, wlogout"
-    "$mod SHIFT, R, forcerendererreload,"
-    "$mod SHIFT, Q, killactive,"
     "$mod SHIFT, P, exit,"
+    "$mod SHIFT, Q, killactive,"
+    "$mod SHIFT, R, forcerendererreload,"
 
     # Switch workspaces with mainMod + [0-9]
     "$mod, 1, workspace, 1"
