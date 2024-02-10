@@ -2,41 +2,9 @@
 
 {
   programs.nixvim = {
-    enable = true;
-
-    options = {
-      number = true;
-      relativenumber = true;
-      shiftwidth = 2;
-    };
-
-    colorschemes.tokyonight = {
-      enable = true;
-      style = "night";
-    };
-
-    keymaps = [
-      {
-        action = "<cmd>Neotree toggle<CR>";
-        key = "<C-b>";
-        mode = "n";
-        options = {
-          desc = "Toggle Tree View.";
-        };
-      }
-    ];
-
     plugins = {
-      lualine.enable = true;
-      luasnip.enable = true;
       cmp_luasnip.enable = true;
-
-      lsp = {
-        enable = true;
-        servers = {
-          hls.enable = true;
-        };
-      };
+      luasnip.enable = true;
 
       nvim-cmp = {
         enable = true;
@@ -71,13 +39,7 @@
           };
         };
       };
-
-      neo-tree = {
-        enable = true;
-      };
     };
-
-    extraPlugins = [ ];
 
     extraConfigLua = ''
       require('luasnip.loaders.from_vscode').lazy_load()

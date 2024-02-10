@@ -10,7 +10,7 @@
     ../apps/git.nix
     ../apps/haskell.nix
     ../apps/libreoffice.nix
-    ../apps/nixvim.nix
+    ../apps/nixvim
     ../apps/vscode.nix
   ]
   ++ (lib.optionals (osConfig.programs.zsh.enable) [ ../apps/zsh ])
@@ -24,6 +24,7 @@
 
     packages = with pkgs; [
       calc
+      calcurse
       discord
       efibootmgr
       gnucash
