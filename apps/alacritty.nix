@@ -13,7 +13,6 @@
           startup_mode = "Maximized";
           opacity = 0.8;
           padding = { x = 10; y = 10; };
-          #decorations = "None";
         };
 
         font = {
@@ -23,7 +22,6 @@
 
         scrolling = {
           history = 10000;
-          #autoscroll = false;
         };
 
         selection = {
@@ -34,7 +32,6 @@
           primary = {
             foreground = "#839496";
             background = "#002b36";
-            #draw_bold_text_with_bright_colors = true;
           };
 
           cursor = {
