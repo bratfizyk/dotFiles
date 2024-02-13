@@ -12,21 +12,20 @@
     xserver = {
       xkb = {
         layout = "pl";
-        variant = "";
         options = "kpdl:dot";
       };
     };
-    keyd = {
-      enable = true;
-      keyboards.default = {
-        ids = [ "*" ];
-	settings = {
-	  main = {
-	    kpdot = ".";
-	  };
-	};
-      };
-    };
+ #    keyd = {
+ #      enable = true;
+ #      keyboards.default = {
+ #        ids = [ "*" ];
+	# settings = {
+	#   main = {
+	#     kpdot = ".";
+	#   };
+	# };
+ #      };
+ #    };
   };
 
   console.keyMap = "pl2";
