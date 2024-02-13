@@ -13,9 +13,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nur.url = github:nix-community/NUR;
+    hyprland.url = "github:hyprwm/Hyprland";
+    hycov = {
+      url = "github:DreamMaoMao/hycov";
+      inputs.hyprland.follows = "hyprland";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, nixvim, nur, ...  }:
+  outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, nixvim, nur, ...  }:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -28,6 +33,9 @@
         beko-nixos = lib.nixosSystem {
           inherit system;
           inherit pkgs;
+          specialArgs = {
+            inherit inputs;
+          };
           modules = [ 
             nixos-hardware.nixosModules.lenovo-legion-16achg6-hybrid
             ./legion/configuration.nix
@@ -36,6 +44,9 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = {
+                inherit inputs;
+              };
               home-manager.users.beko = {
                 imports = [
                   nixvim.homeManagerModules.nixvim

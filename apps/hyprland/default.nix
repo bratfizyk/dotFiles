@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, config, inputs, ... }:
 
 {
   imports = [
@@ -14,7 +14,11 @@
     enableNvidiaPatches = true;
     xwayland.enable = true;
     settings = import ./settings.nix;
+    plugins = [
+      inputs.hycov.packages.${pkgs.system}.hycov
+    ];
   };
+
 
   home.packages = with pkgs; [
     # applets
