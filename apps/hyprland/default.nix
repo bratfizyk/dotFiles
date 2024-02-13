@@ -1,4 +1,4 @@
-{ pkgs, config, inputs, ... }:
+{ pkgs, config, extra, ... }:
 
 {
   imports = [
@@ -11,14 +11,12 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    enableNvidiaPatches = true;
     xwayland.enable = true;
     settings = import ./settings.nix;
     plugins = [
-      inputs.hycov.packages.${pkgs.system}.hycov
+      extra.hyprland.plugins.hycov
     ];
   };
-
 
   home.packages = with pkgs; [
     # applets

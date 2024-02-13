@@ -2,14 +2,14 @@
   description = "Beko Legion NixOS config";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-23.11";
+    nixpkgs.url = "nixpkgs/nixos-unstable";
     home-manager = {
-      url = "github:nix-community/home-manager/release-23.11";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-hardware.url = "github:nixos/nixos-hardware/master";
     nixvim = {
-      url = "github:nix-community/nixvim/nixos-23.11";
+      url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nur.url = github:nix-community/NUR;
@@ -24,9 +24,14 @@
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
-      pkgs = import nixpkgs { 
-        inherit system;
-        config.allowUnfree = true;
+      pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
+      extra = {
+        hyprland = {
+          package = inputs.hyprland.packages."${system}".hyprland;
+          plugins = {
+            hycov = inputs.hycov.packages.${system}.hycov;
+          };
+        };
       };
     in {
       nixosConfigurations = {
@@ -34,7 +39,7 @@
           inherit system;
           inherit pkgs;
           specialArgs = {
-            inherit inputs;
+            inherit extra;
           };
           modules = [ 
             nixos-hardware.nixosModules.lenovo-legion-16achg6-hybrid
@@ -45,7 +50,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = {
-                inherit inputs;
+                inherit extra;
               };
               home-manager.users.beko = {
                 imports = [

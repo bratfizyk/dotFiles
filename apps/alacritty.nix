@@ -23,7 +23,7 @@
 
         scrolling = {
           history = 10000;
-          autoscroll = false;
+          #autoscroll = false;
         };
 
         selection = {
@@ -34,7 +34,7 @@
           primary = {
             foreground = "#839496";
             background = "#002b36";
-            draw_bold_text_with_bright_colors = true;
+            #draw_bold_text_with_bright_colors = true;
           };
 
           cursor = {

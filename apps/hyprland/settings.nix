@@ -7,13 +7,16 @@
     ];
     no_cursor_warps = true;
   };
+
   decoration = {
     rounding = 3;
   };
+
   input = {
     kb_layout = "pl";
     kb_options = "compose:menu";
   };
+
   bind = [
     "$mod, Return, exec, alacritty"
     "$mod, Space, swapactiveworkspaces, current +1"
@@ -73,22 +76,32 @@
 
     # Other
     ", Print, exec, grim -g \"$(slurp)\" - | swappy -f -"
+
+    # hycov
+    "$mod, tab, hycov:toggleoverview"
+    # "ALT, left,hycov:movefocus,l"
+    # "ALT, right,hycov:movefocus,r"
+    # "ALT, up,hycov:movefocus,u"
+    # "ALT, down,hycov:movefocus,d"
   ];
+
   bindm = [
     # Move/resize windows with mainMod + LMB/RMB and dragging
     "$mod, mouse:272, movewindow"
     "$mod, mouse:273, resizewindow"
   ];
+
   exec-once = [
+    "swww init & sleep 0.5" # it doesn't wait for initialization to complete, so let's put it at the top and hope that it'll finish before reaching the last line
     "hyprctl setcursor Bibata-Modern-Classic 20"
     "waybar &"
     "dunst"
     "nm-applet --indicator"
     "pasystray --always-notify &"
     "udiskie --no-automount --tray &"
-    "swww init & sleep 0.2"
     "swww img ${../../assets/wallpapers/Road.jpg}"
   ];
+
   env = [
     "LIBVA_DRIVER_NAME,nvidia"
     "XDG_SESSION_TYPE,wayland"
@@ -97,6 +110,7 @@
     #"GBM_BACKEND=nvidia-drm"
     #"NIXOS_OZONE_WL,1"
   ];
+
   windowrulev2 = [
     # Firefox picture-in-picture fix
     "float,class:^(firefox)$,title:^(Firefox)$"
@@ -104,20 +118,13 @@
     "size 35% 35%,class:^(firefox)$,title:^(Firefox)$"
     "size 35% 35%,class:^(firefox)$,title:^(Picture-in-Picture)$"
   ];
-  extraConfig = ''
-    bind = ALT,tab,hycov:toggleoverview
-    bind=ALT,left,hycov:movefocus,l
-    bind=ALT,right,hycov:movefocus,r
-    bind=ALT,up,hycov:movefocus,u
-    bind=ALT,down,hycov:movefocus,d
-
-    plugin {
-        hycov {
-          overview_gappo = 60 #gaps width from screen
-          overview_gappi = 24 #gaps width from clients
-          hotarea_size = 10 #hotarea size in bottom left,10x10
-          enable_hotarea = 1 # enable mouse cursor hotarea
-        }
-    }
-  ''; 
+  
+  plugin = {
+    hycov = {
+      overview_gappo = 60; #gaps width from screen
+      overview_gappi = 24; #gaps width from clients
+      hotarea_size = 10; #hotarea size in bottom left,10x10
+      enable_hotarea = 1; # enable mouse cursor hotarea
+    };
+  };
 }

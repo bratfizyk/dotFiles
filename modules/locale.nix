@@ -10,9 +10,11 @@
 
   services = { 
     xserver = {
-      layout = "pl";
-      xkbVariant = "";
-      xkbOptions = "kpdl:dot";
+      xkb = {
+        layout = "pl";
+        variant = "";
+        options = "kpdl:dot";
+      };
     };
     keyd = {
       enable = true;
