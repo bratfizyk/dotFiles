@@ -12,7 +12,9 @@
   };
 
   home.packages = with pkgs; [
+    nerdfonts
     pavucontrol
     qogir-icon-theme
+    swaynotificationcenter
   ];
 }

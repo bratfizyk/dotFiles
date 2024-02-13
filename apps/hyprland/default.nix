@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ../dunst
     ../rofi
     ../swaylock.nix
     ../waybar
@@ -40,7 +39,10 @@
     wireplumber
 
     # wallpaper
-    swww
+    swaybg
+
+    # notifications
+    swaynotificationcenter
 
     # A tool for reading key codes
     # wev

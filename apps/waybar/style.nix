@@ -165,6 +165,12 @@
       font-size: 32px;
     }
 
+    #custom-notification {
+      font-family: "NotoSansMono Nerd Font";
+      font-size: 18px;
+      padding-right: 8px;
+    }
+
     tooltip {
       font-family: Meslo LGS NF;
       border-radius: 15px;

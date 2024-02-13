@@ -8,13 +8,18 @@
     no_cursor_warps = true;
   };
 
+  debug = {
+    disable_logs = false;
+    enable_stdout_logs = true;
+  };
+
   decoration = {
     rounding = 3;
   };
 
   input = {
     kb_layout = "pl";
-    kb_options = "compose:menu";
+    kb_options = "compose:menu,kpdl:dot";
   };
 
   bind = [
@@ -23,6 +28,7 @@
     
     "$mod, D, exec, rofi -show drun -show-icons -icon-theme Qogir-dark"
     "$mod, E, exec, thunar"
+    "$mod, I, exec, swaync-client -t -sw"
     "$mod, K, exec, keepassxc"
     "$mod, L, exec, swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2"
     "$mod, F, exec, firefox"
@@ -70,7 +76,7 @@
     "$mod SHIFT, 0, movetoworkspacesilent, 10"
 
     # Audio
-    ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+    ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ --limit 1.5"
     ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
     ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 
@@ -92,14 +98,12 @@
   ];
 
   exec-once = [
-    "swww init & sleep 0.5" # it doesn't wait for initialization to complete, so let's put it at the top and hope that it'll finish before reaching the last line
-    "hyprctl setcursor Bibata-Modern-Classic 20"
     "waybar &"
-    "dunst"
+    "swaync &"
     "nm-applet --indicator"
-    "pasystray --always-notify &"
+    "pasystray --notify=sink --volume-max=150 &"
     "udiskie --no-automount --tray &"
-    "swww img ${../../assets/wallpapers/Road.jpg}"
+    "swaybg -i ${../../assets/wallpapers/Elementary-OS.jpg} &"
   ];
 
   env = [
