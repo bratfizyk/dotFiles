@@ -6,6 +6,7 @@
     ./neo-tree.nix
     ./nvim-cmp.nix
     ./telescope.nix
+    ./treesitter.nix
   ];
 
   programs.nixvim = {
@@ -28,10 +29,9 @@
  
     plugins = {
       comment-nvim.enable = true;
-      lualine.enable = true;
       lightline.enable = true;
+      lualine.enable = true;
       neo-tree.enable = true;
-
       lsp = {
         enable = true;
         servers = {
