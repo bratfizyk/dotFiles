@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./bufferline.nix
     ./neogit.nix
     ./neo-tree.nix
     ./nvim-cmp.nix
