@@ -28,6 +28,7 @@
     
     "$mod, D, exec, rofi -show drun -show-icons -icon-theme Qogir-dark"
     "$mod, E, exec, thunar"
+    "$mod, G, exec, gnucash"
     "$mod, I, exec, swaync-client -t -sw"
     "$mod, K, exec, keepassxc"
     "$mod, L, exec, swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2"
@@ -101,7 +102,7 @@
     "waybar &"
     "swaync &"
     "nm-applet --indicator"
-    "pasystray --notify=sink --volume-max=150 &"
+    "pasystray --notify=none --volume-max=150 &"
     "udiskie --no-automount --tray &"
     "swaybg -i ${../../assets/wallpapers/Elementary-OS.jpg} &"
   ];
