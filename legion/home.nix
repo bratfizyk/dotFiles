@@ -30,6 +30,7 @@
       gnucash
       jq
       keepassxc
+      lunarvim
       lxappearance-gtk2
       ranger
       signal-desktop
