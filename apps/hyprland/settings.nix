@@ -25,6 +25,8 @@
   bind = [
     "$mod, Return, exec, alacritty"
     "$mod, Space, swapactiveworkspaces, current +1"
+    "$mod, F7, exec, busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 1500"
+    "$mod, F8, exec, busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500"
     
     "$mod, D, exec, rofi -show drun -show-icons -icon-theme Qogir-dark"
     "$mod, E, exec, thunar"
@@ -101,6 +103,7 @@
   exec-once = [
     "waybar &"
     "swaync &"
+    "wl-gammarelay-rs &"
     "nm-applet --indicator"
     "pasystray --notify=none --volume-max=150 &"
     "udiskie --no-automount --tray &"

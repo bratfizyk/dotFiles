@@ -44,7 +44,10 @@
     # notifications
     swaynotificationcenter
 
+    #
+    wl-gammarelay-rs
+
     # A tool for reading key codes
-    # wev
+    wev
   ];
 }
