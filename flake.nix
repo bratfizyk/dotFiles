@@ -14,10 +14,10 @@
     };
     nur.url = github:nix-community/NUR;
     hyprland.url = "github:hyprwm/Hyprland";
-    hycov = {
-      url = "github:DreamMaoMao/hycov";
-      inputs.hyprland.follows = "hyprland";
-    };
+    # hycov = {
+    #   url = "github:DreamMaoMao/hycov";
+    #   inputs.hyprland.follows = "hyprland";
+    # };
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, nixvim, nur, ...  }:
@@ -29,7 +29,7 @@
         hyprland = {
           package = inputs.hyprland.packages."${system}".hyprland;
           plugins = {
-            hycov = inputs.hycov.packages.${system}.hycov;
+            # hycov = inputs.hycov.packages.${system}.hycov;
           };
         };
       };

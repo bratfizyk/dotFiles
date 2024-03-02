@@ -87,7 +87,7 @@
     ", Print, exec, grim -g \"$(slurp)\" - | swappy -f -"
 
     # hycov
-    "$mod, tab, hycov:toggleoverview"
+    # "$mod, tab, hycov:toggleoverview"
     # "ALT, left,hycov:movefocus,l"
     # "ALT, right,hycov:movefocus,r"
     # "ALT, up,hycov:movefocus,u"
