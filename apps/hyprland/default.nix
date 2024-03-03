@@ -12,9 +12,7 @@
     enable = true;
     xwayland.enable = true;
     settings = import ./settings.nix;
-    plugins = [
-      # extra.hyprland.plugins.hycov
-    ];
+    plugins = [ ];
   };
 
   home.packages = with pkgs; [
