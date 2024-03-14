@@ -5,7 +5,7 @@
     ./bufferline.nix
     ./neogit.nix
     ./neo-tree.nix
-    ./nvim-cmp.nix
+    # ./nvim-cmp.nix
     ./telescope.nix
     ./treesitter.nix
   ];

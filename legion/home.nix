@@ -6,11 +6,13 @@
   imports = [
     ../apps/alacritty.nix
     ../apps/chromium.nix
+    ../apps/crypto.nix
     ../apps/firefox
     ../apps/git.nix
     ../apps/haskell.nix
     ../apps/libreoffice.nix
     ../apps/nixvim
+    ../apps/obs.nix
     ../apps/vscode.nix
   ]
   ++ (lib.optionals (osConfig.programs.zsh.enable) [ ../apps/zsh ])
@@ -27,11 +29,14 @@
       calcurse
       discord
       efibootmgr
+      ffmpeg_5-full
       gnucash
       jq
       keepassxc
+      loupe
       lunarvim
       lxappearance-gtk2
+      mpv
       ranger
       signal-desktop
       thunderbird

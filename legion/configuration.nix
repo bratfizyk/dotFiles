@@ -70,10 +70,10 @@
     appimage-run git lshw
   ];
   
-  security.rtkit.enable = true;
   services.printing.enable = true;
 
   security = {
+    rtkit.enable = true;
     polkit.enable = true;
   };
 }
