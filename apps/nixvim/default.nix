@@ -29,7 +29,7 @@
     };
  
     plugins = {
-      comment-nvim.enable = true;
+      comment.enable = true;
       lightline.enable = true;
       lualine.enable = true;
       neo-tree.enable = true;
