@@ -46,6 +46,7 @@
   networking = {
     hostName = "beko-nixos";
     networkmanager.enable = true;
+    firewall.enable = true;
   };
 
   services = {
