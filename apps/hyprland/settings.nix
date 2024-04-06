@@ -20,6 +20,7 @@
   input = {
     kb_layout = "pl";
     kb_options = "compose:menu,kpdl:dot";
+    numlock_by_default = true;
   };
 
   bind = [
@@ -61,6 +62,9 @@
 
     "$mod SHIFT, Left, movetoworkspace, e-1"
     "$mod SHIFT, Right, movetoworkspace, e+1"
+
+    "$mod CONTROL, Left, swapwindow, l"
+    "$mod CONTROL, Right, swapwindow, r"
 
     # mouse wheel for switching workspaces
     "$mod, mouse_down, workspace, e-1"
