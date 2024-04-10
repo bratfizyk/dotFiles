@@ -30,6 +30,7 @@
       discord
       efibootmgr
       ffmpeg_5-full
+      gimp
       gnucash
       jq
       keepassxc
