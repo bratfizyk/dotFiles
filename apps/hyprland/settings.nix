@@ -29,13 +29,14 @@
     "$mod, F7, exec, busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 1500"
     "$mod, F8, exec, busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500"
     
-    "$mod, D, exec, rofi -show drun -show-icons -icon-theme Qogir-dark"
-    "$mod, E, exec, thunar"
+    "$mod, D, exec, rofi -show drun -show-icons -icon-theme Kora"
+    "$mod, E, exec, pcmanfm"
+    "$mod, F, exec, firefox"
     "$mod, G, exec, gnucash"
     "$mod, I, exec, swaync-client -t -sw"
     "$mod, K, exec, keepassxc"
     "$mod, L, exec, swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2"
-    "$mod, F, exec, firefox"
+    "$mod, Q, exec, qalculate-gtk"
     "$mod, T, exec, thunderbird"
 
     "$mod SHIFT, B, exec, virsh --connect qemu:///system start Bank && virt-viewer --connect qemu:///system Bank"

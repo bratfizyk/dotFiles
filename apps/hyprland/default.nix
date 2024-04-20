@@ -21,10 +21,17 @@
     pasystray
     udiskie
 
+    # file explorer
+    pcmanfm
+
+    # calculator
+    qalculate-gtk
+
     # icons
     flat-remix-icon-theme
     numix-icon-theme
     qogir-icon-theme
+    kora-icon-theme
 
     # screenshots
     grim
