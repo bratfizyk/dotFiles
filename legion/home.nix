@@ -38,6 +38,7 @@
       lunarvim
       lxappearance-gtk2
       mpv
+      nh
       ranger
       signal-desktop
       thunderbird
@@ -62,6 +63,7 @@
       EDITOR = "vim";
       TERMINAL = "alacritty";
       BROWSER = "firefox";
+      FLAKE = "/home/beko/Projects/dotFiles";
     };
   };
 }
