@@ -25,7 +25,9 @@
 
     colorschemes.tokyonight = {
       enable = true;
-      style = "night";
+      settings = {
+        style = "night";
+      };
     };
  
     plugins = {
