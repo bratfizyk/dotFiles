@@ -43,6 +43,7 @@
       signal-desktop
       thunderbird
       whatsapp-for-linux
+      yarn
       zoom-us
     ];
 

@@ -13,7 +13,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nur.url = github:nix-community/NUR;
-    hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, nixvim, nur, ...  }:
@@ -21,12 +20,7 @@
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
-      extra = {
-        hyprland = {
-          package = inputs.hyprland.packages."${system}".hyprland;
-          plugins = { };
-        };
-      };
+      extra = { };
     in {
       nixosConfigurations = {
         beko-nixos = lib.nixosSystem {

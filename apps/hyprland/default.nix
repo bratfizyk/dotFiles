@@ -12,7 +12,7 @@
     enable = true;
     xwayland.enable = true;
     settings = import ./settings.nix;
-    plugins = [ ];
+    plugins = with pkgs; [ ];
   };
 
   home.packages = with pkgs; [
