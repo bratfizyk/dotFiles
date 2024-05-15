@@ -49,7 +49,7 @@
     # notifications
     swaynotificationcenter
 
-    #
+    # night vision (blue filter)
     wl-gammarelay-rs
 
     # A tool for reading key codes
