@@ -66,6 +66,7 @@
               };
               home-manager.users.beko = {
                 imports = [
+                  nur.nixosModules.nur
                   ./configs/scaffold/home.nix
                 ];
               };

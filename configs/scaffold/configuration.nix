@@ -57,9 +57,6 @@
         };
       };
     };
-    # displayManager = {
-    #   defaultSession = "hyprland";
-    # };
   };
 
   programs.gnupg.agent = {
@@ -77,4 +74,6 @@
     rtkit.enable = true;
     polkit.enable = true;
   };
+
+  home-manager.backupFileExtension = "backup";
 }
