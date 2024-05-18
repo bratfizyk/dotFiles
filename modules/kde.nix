@@ -17,8 +17,6 @@
     
     systemPackages = with pkgs.libsForQt5; [
       kate
-      bismuth
-      kcalc
     ];
   };
 }

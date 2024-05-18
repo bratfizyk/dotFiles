@@ -31,7 +31,7 @@
           };
           modules = [ 
             nixos-hardware.nixosModules.lenovo-legion-16achg6-hybrid
-            ./legion/configuration.nix
+            ./configs/legion/configuration.nix
 
             home-manager.nixosModules.home-manager
             {
@@ -44,7 +44,7 @@
                 imports = [
                   nixvim.homeManagerModules.nixvim
                   nur.nixosModules.nur
-                  ./legion/home.nix
+                  ./configs/legion/home.nix
                 ];
               };
             }

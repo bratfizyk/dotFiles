@@ -4,18 +4,18 @@
   imports =
     [ 
       ./hardware-configuration.nix
-      ../hardware/monitors/flat.nix
+      ../../hardware/monitors/flat.nix
 
-      ../modules/audio.nix
-      ../modules/crypto.nix
-      ../modules/ecryptfs.nix
-      ../modules/kde.nix
-      ../modules/hyprland.nix
-      ../modules/locale.nix
-      ../modules/virt-manager.nix
-      ../modules/zsh.nix
+      ../../modules/audio.nix
+      ../../modules/crypto.nix
+      ../../modules/ecryptfs.nix
+      ../../modules/kde.nix
+      ../../modules/hyprland.nix
+      ../../modules/locale.nix
+      ../../modules/virt-manager.nix
+      ../../modules/zsh.nix
 
-      ../profiles/beko.nix
+      ../../profiles/beko.nix
     ];
 
   system.stateVersion = "23.11";
