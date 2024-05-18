@@ -50,6 +50,28 @@
             }
           ];
         };
+        beko-scaffold = lib.nixosSystem {
+          inherit system;
+          inherit pkgs;
+          modules = [ 
+            nixos-hardware.nixosModules.lenovo-legion-16achg6-hybrid
+            ./configs/scaffold/configuration.nix
+
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = {
+                inherit extra;
+              };
+              home-manager.users.beko = {
+                imports = [
+                  ./configs/scaffold/home.nix
+                ];
+              };
+            }
+          ];
+        };
       };
-  };
+    };
 }
