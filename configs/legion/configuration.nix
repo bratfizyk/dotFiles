@@ -68,10 +68,8 @@
     };
   };
 
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
+  services.gnome.gnome-keyring.enable = true;
+  programs.ssh.startAgent = true;
 
   environment.systemPackages = with pkgs; [
     appimage-run git lshw
