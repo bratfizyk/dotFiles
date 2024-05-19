@@ -20,7 +20,9 @@
 
   system.stateVersion = "23.11";
 
-  home-manager.backupFileExtension = "backup";
+  home-manager = {
+    backupFileExtension = "backup";
+  };
 
   nix = {
     gc = {
