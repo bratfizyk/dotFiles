@@ -22,7 +22,7 @@
     udiskie
 
     # file explorer
-    pcmanfm
+    cinnamon.nemo
 
     # calculator
     qalculate-gtk

@@ -30,7 +30,7 @@
     "$mod, F8, exec, busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500"
     
     "$mod, D, exec, rofi -show drun -show-icons -icon-theme Kora"
-    "$mod, E, exec, pcmanfm"
+    "$mod, E, exec, nemo"
     "$mod, F, exec, firefox"
     "$mod, G, exec, gnucash"
     "$mod, I, exec, swaync-client -t -sw"
