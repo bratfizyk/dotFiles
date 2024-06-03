@@ -6,7 +6,6 @@
   imports = [
     ../../apps/alacritty.nix
     ../../apps/chromium.nix
-    ../../apps/crypto.nix
     ../../apps/firefox
     ../../apps/git.nix
     ../../apps/haskell.nix
@@ -18,13 +17,19 @@
   ++ (lib.optionals (osConfig.programs.zsh.enable) [ ../../apps/zsh ])
   ++ (lib.optionals (osConfig.programs.virt-manager.enable) [ ../../apps/virt-manager.nix ])
   ++ (lib.optionals (osConfig.programs.hyprland.enable) [ ../../apps/hyprland ]);
-  
+
+  xdg.mimeApps.defaultApplications = {
+    "image/png" = [ "loupe.desktop" ];
+    "image/jpeg" = [ "loupe.desktop" ];
+  };
+
   home = {
     username = "beko";
     homeDirectory = "/home/beko";
-    stateVersion = "23.11";
+    stateVersion = "24.05";
 
     packages = with pkgs; [
+      brave
       calc
       calcurse
       discord

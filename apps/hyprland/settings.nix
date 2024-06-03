@@ -5,8 +5,12 @@
       "eDP-1,1920x1200@165,0x0,1"
       "HDMI-A-1,1920x1200,1920x0,1"
     ];
-    no_cursor_warps = true;
   };
+
+  # cursor = {
+  #   no_warps = true;
+  #   default_monitor = "HDMI-A-1";
+  # };
 
   debug = {
     disable_logs = false;
@@ -21,6 +25,11 @@
     kb_layout = "pl";
     kb_options = "compose:menu,kpdl:dot";
     numlock_by_default = true;
+  };
+
+  misc = {
+    initial_workspace_tracking = 2;
+    new_window_takes_over_fullscreen = 2;
   };
 
   bind = [

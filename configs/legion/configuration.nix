@@ -7,7 +7,6 @@
       ../../hardware/monitors/flat.nix
 
       ../../modules/audio.nix
-      ../../modules/crypto.nix
       ../../modules/ecryptfs.nix
       ../../modules/kde.nix
       ../../modules/hyprland.nix
@@ -18,7 +17,7 @@
       ../../profiles/beko.nix
     ];
 
-  system.stateVersion = "23.11";
+  system.stateVersion = "24.05";
 
   home-manager = {
     backupFileExtension = "backup";
