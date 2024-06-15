@@ -29,7 +29,6 @@
     stateVersion = "24.05";
 
     packages = with pkgs; [
-      brave
       calc
       calcurse
       discord
