@@ -114,7 +114,6 @@
     "nm-applet --indicator"
     "pasystray --notify=none --volume-max=150 &"
     "udiskie --no-automount --tray &"
-    "swaybg -i ${../../assets/wallpapers/Elementary-OS.jpg} &"
   ];
 
   env = [

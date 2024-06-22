@@ -43,9 +43,6 @@
     pipewire
     wireplumber
 
-    # wallpaper
-    swaybg
-
     # notifications
     swaynotificationcenter
 

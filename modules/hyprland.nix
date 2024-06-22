@@ -9,10 +9,6 @@
     };
   };
 
-  programs.thunar = {
-    enable = true;
-  }; 
-
   # for mounting USB drives
   services = {
     gvfs.enable = true;

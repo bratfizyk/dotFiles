@@ -29,8 +29,6 @@
     stateVersion = "24.05";
 
     packages = with pkgs; [
-      calc
-      calcurse
       discord
       efibootmgr
       ffmpeg_5-full
