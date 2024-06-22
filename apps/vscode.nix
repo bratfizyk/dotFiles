@@ -15,10 +15,10 @@
         jnoortheen.nix-ide
         pkief.material-icon-theme
       ];
-      userSettings = {
+      userSettings = with config.stylix; {
         terminal = {
           integrated = {
-            fontFamily = "MesloLGS NF";
+            fontFamily = fonts.monospace.name;
             fontSize = 16;
             cursorBlinking = true;
           };
@@ -32,6 +32,7 @@
         editor = {
           fontSize = 16;
           tabSize = 2;
+          fontFamily = fonts.monospace.name;
         };
 
         explorer = {

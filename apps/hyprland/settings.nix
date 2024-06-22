@@ -38,7 +38,7 @@
     "$mod, F7, exec, busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 1500"
     "$mod, F8, exec, busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500"
     
-    "$mod, D, exec, rofi -show drun -show-icons -icon-theme Kora"
+    "$mod, D, exec, ags -t applauncher"
     "$mod, E, exec, nemo"
     "$mod, F, exec, firefox"
     "$mod, G, exec, gnucash"
@@ -108,8 +108,7 @@
   ];
 
   exec-once = [
-    "waybar &"
-    "swaync &"
+    "ags"
     "wl-gammarelay-rs &"
     "nm-applet --indicator"
     "pasystray --notify=none --volume-max=150 &"
@@ -120,9 +119,6 @@
     "LIBVA_DRIVER_NAME,nvidia"
     "XDG_SESSION_TYPE,wayland"
     "WLR_NO_HARDWARE_CURSORS,1"
-    #"__GLX_VENDOR_LIBRARY_NAME,nvidia"
-    #"GBM_BACKEND=nvidia-drm"
-    #"NIXOS_OZONE_WL,1"
   ];
 
   windowrulev2 = [

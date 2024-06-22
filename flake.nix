@@ -14,9 +14,10 @@
     };
     nur.url = "github:nix-community/NUR";
     stylix.url = "github:danth/stylix";
+    ags.url = "github:Aylur/ags";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, nixvim, nur, stylix, ...  }:
+  outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, nixvim, nur, stylix, ags, ...  }:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -33,7 +34,7 @@
           modules = [ 
             nixos-hardware.nixosModules.lenovo-legion-16achg6-hybrid
             ./configs/legion/configuration.nix
-	    stylix.nixosModules.stylix
+            stylix.nixosModules.stylix
 
             home-manager.nixosModules.home-manager
             {
@@ -46,6 +47,7 @@
                 imports = [
                   nixvim.homeManagerModules.nixvim
                   nur.nixosModules.nur
+                  ags.homeManagerModules.default 
                   ./configs/legion/home.nix
                 ];
               };

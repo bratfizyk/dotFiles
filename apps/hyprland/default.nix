@@ -2,9 +2,8 @@
 
 {
   imports = [
-    ../rofi
+    ../ags
     ../swaylock.nix
-    ../waybar
     ../wlogout
   ];
 
@@ -42,9 +41,6 @@
     # screen sharing
     pipewire
     wireplumber
-
-    # notifications
-    swaynotificationcenter
 
     # night vision (blue filter)
     wl-gammarelay-rs
