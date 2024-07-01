@@ -23,6 +23,9 @@
 
   home-manager = {
     backupFileExtension = "backup";
+    sharedModules = [{
+      stylix.targets.kde.enable = false;
+    }];
   };
 
   nix = {

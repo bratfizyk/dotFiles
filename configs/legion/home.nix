@@ -23,10 +23,19 @@
     "image/jpeg" = [ "loupe.desktop" ];
   };
 
+  gtk = {
+    enable = true;
+    iconTheme = {
+        name = "kora";
+        package = pkgs.kora-icon-theme;
+    };
+  };
+
   home = {
     username = "beko";
     homeDirectory = "/home/beko";
     stateVersion = "24.05";
+
 
     packages = with pkgs; [
       discord
