@@ -10,7 +10,7 @@
 
       ../../modules/audio.nix
       ../../modules/ecryptfs.nix
-      ../../modules/kde.nix
+      ../../modules/gnome.nix
       ../../modules/hyprland.nix
       ../../modules/locale.nix
       ../../modules/virt-manager.nix

@@ -13,6 +13,7 @@
       khelpcenter
       plasma-browser-integration
       print-manager
+      konsole
     ];
     
     systemPackages = with pkgs.libsForQt5; [
