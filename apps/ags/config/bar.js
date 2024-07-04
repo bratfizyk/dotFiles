@@ -1,17 +1,15 @@
 const hyprland = await Service.import("hyprland")
-const notifications = await Service.import("notifications")
-const mpris = await Service.import("mpris")
 const audio = await Service.import("audio")
 const battery = await Service.import("battery")
 const systemtray = await Service.import("systemtray")
 
 const date = Variable("", {
-    poll: [1000, 'date "+%d-%b-%Y %H:%M"'],
-})
+    poll: [1000, 'date "+%d-%b-%Y"'],
+});
 
-// widgets can be only assigned as a child in one container
-// so to make a reuseable widget, make it a function
-// then you can simply instantiate one by calling it
+const time = Variable("", {
+    poll: [1000, 'date "+%H:%M"'],
+});
 
 function Workspaces() {
     const activeId = hyprland.active.workspace.bind("id")
@@ -33,7 +31,6 @@ function Workspaces() {
     })
 }
 
-
 function ClientTitle() {
     return Widget.Label({
         class_name: "client-title",
@@ -41,53 +38,19 @@ function ClientTitle() {
     })
 }
 
-
-function Clock() {
+function Calendar() {
     return Widget.Label({
-        class_name: "clock",
+        class_name: "calendar",
         label: date.bind(),
     })
 }
 
-
-// we don't need dunst or any other notification daemon
-// because the Notifications module is a notification daemon itself
-function Notification() {
-    const popups = notifications.bind("popups")
-    return Widget.Box({
-        class_name: "notification",
-        visible: popups.as(p => p.length > 0),
-        children: [
-            Widget.Icon({
-                icon: "preferences-system-notifications-symbolic",
-            }),
-            Widget.Label({
-                label: popups.as(p => p[0]?.summary || ""),
-            }),
-        ],
+function Clock() {
+    return Widget.Label({
+        class_name: "clock",
+        label: time.bind()
     })
 }
-
-
-function Media() {
-    const label = Utils.watch("", mpris, "player-changed", () => {
-        if (mpris.players[0]) {
-            const { track_artists, track_title } = mpris.players[0]
-            return `${track_artists.join(", ")} - ${track_title}`
-        } else {
-            return "Nothing is playing"
-        }
-    })
-
-    return Widget.Button({
-        class_name: "media",
-        on_primary_click: () => mpris.getPlayer("")?.playPause(),
-        on_scroll_up: () => mpris.getPlayer("")?.next(),
-        on_scroll_down: () => mpris.getPlayer("")?.previous(),
-        child: Widget.Label({ label }),
-    })
-}
-
 
 function Volume() {
     const icons = {
@@ -127,7 +90,6 @@ function Volume() {
     })
 }
 
-
 function BatteryLabel() {
     const value = battery.bind("percent").as(p => p > 0 ? p / 100 : 0)
     const icon = battery.bind("percent").as(p =>
@@ -147,7 +109,6 @@ function BatteryLabel() {
     })
 }
 
-
 function SysTray() {
     const items = systemtray.bind("items")
         .as(items => items.map(item => 
@@ -164,13 +125,19 @@ function SysTray() {
     });
 }
 
+function Separator() {
+    return Widget.Separator({
+        class_name: "separator",
+        vertical: false,
+    });
+}
 
-// layout of the bar
 function Left() {
     return Widget.Box({
         spacing: 8,
         children: [
             Workspaces(),
+            Separator(),
             ClientTitle()
         ],
     })
@@ -180,7 +147,7 @@ function Center() {
     return Widget.Box({
         spacing: 8,
         children: [
-            Clock()
+            Calendar()
         ],
     })
 }
@@ -190,9 +157,13 @@ function Right() {
         hpack: "end",
         spacing: 8,
         children: [
+            SysTray(),
+            Separator(),
             Volume(),
+            Separator(),
             BatteryLabel(),
-            SysTray()
+            Separator(),
+            Clock()
         ],
     })
 }

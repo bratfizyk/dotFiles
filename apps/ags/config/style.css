@@ -39,6 +39,16 @@ window.notification-popups box.notifications {
   padding: .5em;
 }
 
+.clock {
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.battery, .volume {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 .icon {
   min-width: 68px;
   min-height: 68px;
