@@ -39,10 +39,26 @@ function ClientTitle() {
 }
 
 function Calendar() {
-    return Widget.Label({
-        class_name: "calendar",
-        label: date.bind(),
-    })
+    const menu = Widget.Menu({
+        children: [
+            Widget.MenuItem({
+                child: Widget.Calendar({
+                    showDayNames: true,
+                    showDetails: true,
+                    showHeading: true,
+                    showWeekNumbers: true
+                })
+            })
+        ]
+    });
+
+    return Widget.Button({
+        child: Widget.Label({
+            class_name: "calendar",
+            label: date.bind(),
+        }),
+        on_primary_click: (_,ev) => menu.popup_at_pointer(ev)
+    });
 }
 
 function Clock() {
