@@ -4,7 +4,7 @@
   stylix = {
     enable = true;
     image = ../../assets/wallpapers/Elementary-OS.jpg;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-hard.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-city-dark.yaml";
     fonts = {
       sansSerif = {
         package = pkgs.noto-fonts;
