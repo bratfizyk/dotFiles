@@ -4,6 +4,8 @@
   programs.home-manager.enable = true;
 
   imports = [
+    ./defaultApps.nix
+
     ../../apps/alacritty.nix
     ../../apps/chromium.nix
     ../../apps/firefox
@@ -17,11 +19,6 @@
   ++ (lib.optionals (osConfig.programs.zsh.enable) [ ../../apps/zsh ])
   ++ (lib.optionals (osConfig.programs.virt-manager.enable) [ ../../apps/virt-manager.nix ])
   ++ (lib.optionals (osConfig.programs.hyprland.enable) [ ../../apps/hyprland ]);
-
-  xdg.mimeApps.defaultApplications = {
-    "image/png" = [ "loupe.desktop" ];
-    "image/jpeg" = [ "loupe.desktop" ];
-  };
 
   gtk = {
     enable = true;

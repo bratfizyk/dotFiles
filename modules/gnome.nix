@@ -6,18 +6,17 @@
   };
 
   environment.gnome.excludePackages = (with pkgs; [
-    gnome-photos
-    gnome-tour
-    gedit
-  ]) ++ (with pkgs.gnome; [
     cheese
-    gnome-music
+    gnome-photos
     gnome-terminal
-    epiphany
+    gnome-tour
     geary
-    evince
-    gnome-characters
+    gedit
+    epiphany
     totem
+  ]) ++ (with pkgs.gnome; [
+    gnome-music
+    gnome-characters
     tali
     iagno
     hitori
