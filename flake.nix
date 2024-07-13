@@ -3,21 +3,28 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixos-hardware.url = "github:nixos/nixos-hardware/master";
-    nixvim = {
-      url = "github:nix-community/nixvim";
+
+    ags = {
+      url = "github:Aylur/ags";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
+
+    nixos-hardware.url = "github:nixos/nixos-hardware/master";
     nur.url = "github:nix-community/NUR";
-    stylix.url = "github:danth/stylix";
-    ags.url = "github:Aylur/ags";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, nixvim, nur, stylix, ags, ...  }:
+  outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, nur, stylix, ags, ...  }:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -45,7 +52,6 @@
               };
               home-manager.users.beko = {
                 imports = [
-                  nixvim.homeManagerModules.nixvim
                   nur.nixosModules.nur
                   ags.homeManagerModules.default 
                   ./configs/legion/home.nix
