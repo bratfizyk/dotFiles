@@ -45,11 +45,13 @@
       lxappearance-gtk2
       mpv
       nano
+      neovim
       nh
       peazip
       protonvpn-gui
       ranger
       signal-desktop
+      sqlitebrowser
       thunderbird
       whatsapp-for-linux
       yarn
