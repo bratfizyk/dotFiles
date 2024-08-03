@@ -35,9 +35,10 @@
     packages = with pkgs; [
       discord
       efibootmgr
-      ffmpeg_5-full
+      ffmpeg_7-full
       gimp
       gnucash
+      gnumake
       jq
       keepassxc
       loupe
@@ -45,7 +46,6 @@
       lxappearance-gtk2
       mpv
       nano
-      neovim
       nh
       peazip
       protonvpn-gui
@@ -59,7 +59,7 @@
     ];
 
     sessionVariables = {
-      EDITOR = "nvim";
+      EDITOR = "lvim";
       TERMINAL = "alacritty";
       BROWSER = "firefox";
       FLAKE = "/home/beko/Projects/dotFiles";

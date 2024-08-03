@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -10,8 +10,9 @@
 
       ../../modules/audio.nix
       ../../modules/ecryptfs.nix
-      ../../modules/gnome.nix
+      #../../modules/gnome.nix
       ../../modules/hyprland.nix
+      ../../modules/kde.nix
       ../../modules/locale.nix
       ../../modules/virt-manager.nix
       ../../modules/zsh.nix
@@ -73,7 +74,9 @@
   };
   
   services.gnome.gnome-keyring.enable = true;
-  programs.ssh.startAgent = true;
+  programs.ssh = {
+    startAgent = true;
+  };
 
   environment.systemPackages = with pkgs; [
     appimage-run git lshw
