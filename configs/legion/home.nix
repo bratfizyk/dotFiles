@@ -39,6 +39,7 @@
       gimp
       gnucash
       gnumake
+      godot_4
       jq
       keepassxc
       loupe
@@ -48,7 +49,9 @@
       nano
       nh
       peazip
+      protonmail-desktop
       protonvpn-gui
+      #proton-pass
       ranger
       signal-desktop
       sqlitebrowser

@@ -3,7 +3,7 @@
 {
   stylix = {
     enable = true;
-    image = ../../assets/wallpapers/Elementary-OS.jpg;
+    image = ../../assets/wallpapers/Gedeon.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-city-dark.yaml";
     fonts = {
       sansSerif = {
