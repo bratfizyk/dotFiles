@@ -33,6 +33,7 @@
     stateVersion = "24.05";
 
     packages = with pkgs; [
+      brave
       discord
       efibootmgr
       ffmpeg_7-full
@@ -49,9 +50,8 @@
       nano
       nh
       peazip
-      protonmail-desktop
       protonvpn-gui
-      #proton-pass
+      proton-pass
       ranger
       signal-desktop
       sqlitebrowser

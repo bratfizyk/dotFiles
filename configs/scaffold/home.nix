@@ -15,7 +15,7 @@
   home = {
     username = "beko";
     homeDirectory = "/home/beko";
-    stateVersion = "23.11";
+    stateVersion = "24.05";
 
     packages = with pkgs; [
       efibootmgr
