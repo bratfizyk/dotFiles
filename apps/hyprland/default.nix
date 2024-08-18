@@ -21,7 +21,7 @@
     udiskie
 
     # file explorer
-    cinnamon.nemo
+    nemo
 
     # calculator
     qalculate-gtk

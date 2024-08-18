@@ -42,7 +42,7 @@
   };
 
   boot = {
-    kernelPackages = pkgs.linuxKernel.packages.linux_6_1;
+    kernelPackages = pkgs.linuxKernel.packages.linux_6_10;
     loader = {
       systemd-boot = {
         enable = true;
