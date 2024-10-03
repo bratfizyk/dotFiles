@@ -50,12 +50,14 @@
       nano
       nh
       peazip
-      protonvpn-gui
       proton-pass
+      #protonmail-desktop
+      protonvpn-gui
       ranger
       signal-desktop
       sqlitebrowser
       thunderbird
+      veracrypt
       whatsapp-for-linux
       yarn
       zoom-us
