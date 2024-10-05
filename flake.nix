@@ -60,6 +60,34 @@
             }
           ];
         };
+        beko-yoga = lib.nixosSystem {
+          inherit system;
+          inherit pkgs;
+          specialArgs = {
+            inherit extra;
+          };
+          modules = [ 
+            #nixos-hardware.nixosModules.lenovo-legion-16achg6-hybrid
+            ./configs/yoga/configuration.nix
+            stylix.nixosModules.stylix
+
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = {
+                inherit extra;
+              };
+              home-manager.users.beko = {
+                imports = [
+                  nur.nixosModules.nur
+                  ags.homeManagerModules.default
+                  ./configs/yoga/home.nix
+                ];
+              };
+            }
+          ];
+        };
         beko-scaffold = lib.nixosSystem {
           inherit system;
           inherit pkgs;
