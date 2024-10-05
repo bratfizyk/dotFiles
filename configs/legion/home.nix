@@ -36,6 +36,7 @@
       brave
       discord
       efibootmgr
+      evince
       ffmpeg_7-full
       gimp
       gnucash
