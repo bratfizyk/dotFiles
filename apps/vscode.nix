@@ -14,6 +14,7 @@
         haskell.haskell
         jnoortheen.nix-ide
         pkief.material-icon-theme
+        nonylene.dark-molokai-theme
       ];
       userSettings = with config.stylix; {
         terminal = {
@@ -25,7 +26,7 @@
         };
 
         workbench = {
-          colorTheme = "Dark Modern";
+          colorTheme = "Dark (Molokai)";
           iconTheme = "material-icon-theme";
         };
 

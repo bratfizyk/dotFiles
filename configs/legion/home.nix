@@ -45,27 +45,29 @@
       jq
       keepassxc
       loupe
-      lunarvim
       lxappearance-gtk2
       mpv
       nano
+      neovim
+      newsflash
       nh
-      peazip
       proton-pass
       #protonmail-desktop
       protonvpn-gui
-      ranger
       signal-desktop
-      sqlitebrowser
+      texliveMedium
       thunderbird
       veracrypt
       whatsapp-for-linux
-      yarn
       zoom-us
+    ] ++ [
+      dotnetCorePackages.dotnet_8.sdk
+      jetbrains.rider
+      sqlitebrowser
     ];
 
     sessionVariables = {
-      EDITOR = "lvim";
+      EDITOR = "nvim";
       TERMINAL = "alacritty";
       BROWSER = "firefox";
       FLAKE = "/home/beko/Projects/dotFiles";

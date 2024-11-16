@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../ags
+    ../rofi
     ../swaylock.nix
     ../wlogout
   ];

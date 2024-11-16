@@ -26,6 +26,8 @@
     backupFileExtension = "backup";
     sharedModules = [{
       stylix.targets.kde.enable = false;
+      stylix.targets.vscode.enable = false;
+      stylix.targets.rofi.enable = false;
     }];
   };
 
