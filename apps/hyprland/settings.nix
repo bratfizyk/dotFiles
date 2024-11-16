@@ -108,10 +108,12 @@
   ];
 
   exec-once = [
+    "waybar"
     "wl-gammarelay-rs &"
     "nm-applet --indicator"
     "pasystray --notify=none --volume-max=150 &"
     "udiskie --no-automount --tray &"
+    "systemctl --user start hyprpolkitagent"
     "protonvpn-app &"
   ];
 

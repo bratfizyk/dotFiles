@@ -4,6 +4,7 @@
   imports = [
     ../rofi
     ../swaylock.nix
+    ../waybar
     ../wlogout
   ];
 
@@ -19,6 +20,9 @@
     networkmanagerapplet
     pasystray
     udiskie
+
+    # Polkit agent
+    hyprpolkitagent
 
     # file explorer
     nemo
