@@ -7,10 +7,10 @@
     ];
   };
 
-  # cursor = {
-  #   no_warps = true;
-  #   default_monitor = "HDMI-A-1";
-  # };
+  cursor = {
+    no_warps = true;
+    default_monitor = "HDMI-A-1";
+  };
 
   debug = {
     disable_logs = false;

@@ -4,7 +4,7 @@ let
   inherit (config.lib.formats.rasi) mkLiteral;
 in
 {
-  theme = with config.lib.stylix; with config.stylix; {
+  theme = with config.lib.stylix; {
     configuration = {
       modi = "drun";
       show-icons = true;

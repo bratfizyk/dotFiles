@@ -8,6 +8,13 @@
     ../wlogout
   ];
 
+  services.mako = {
+    enable = true;
+    icons = true;
+    borderSize = 3;
+    borderRadius = 5;
+  };
+
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
