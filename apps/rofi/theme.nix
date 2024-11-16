@@ -112,31 +112,31 @@ in
     };
 
     scrollbar = {
-        handle-width = mkLiteral "5px"; 
-        handle-color = mkLiteral "@selected";
-        border-radius = mkLiteral "0px"; 
-        background-color = mkLiteral "@background-alt";
+      handle-width = mkLiteral "5px"; 
+      handle-color = mkLiteral "@selected";
+      border-radius = mkLiteral "0px"; 
+      background-color = mkLiteral "@background-alt";
     };
 
     element = {
-        enabled = true; 
-        spacing = mkLiteral "10px"; 
-        margin = mkLiteral "0px"; 
-        padding = mkLiteral "5px"; 
-        border = mkLiteral "0px solid"; 
-        border-radius = mkLiteral "12px"; 
-        border-color = mkLiteral "@selected";
-        background-color = mkLiteral "transparent"; 
-        text-color = mkLiteral "@foreground";
-        cursor = mkLiteral "pointer"; 
+      enabled = true; 
+      spacing = mkLiteral "10px"; 
+      margin = mkLiteral "0px"; 
+      padding = mkLiteral "5px"; 
+      border = mkLiteral "0px solid"; 
+      border-radius = mkLiteral "12px"; 
+      border-color = mkLiteral "@selected";
+      background-color = mkLiteral "transparent"; 
+      text-color = mkLiteral "@foreground";
+      cursor = mkLiteral "pointer"; 
     };
 
-    "element-normal.normal"= {
+    "element normal.normal"= {
         background-color = mkLiteral "@background";
         text-color = mkLiteral "@foreground";
     };
 
-    "element-selected.normal"= {
+    "element selected.normal"= {
         background-color = mkLiteral "@selected";
         text-color = mkLiteral "@background";
     };
