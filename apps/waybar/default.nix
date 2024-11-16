@@ -34,8 +34,8 @@
         };
 
         tray = {
-            "icon-size" = 15;
-            "spacing" = 10;
+          "icon-size" = 20;
+          "spacing" = 10;
         };
 
         clock = {
@@ -43,7 +43,7 @@
           "format-alt" = "{:%A, %B %d, %Y (%R)}";
           "tooltip-format"= "<tt><small>{calendar}</small></tt>";
           "calendar" = {
-            "mode" = "year";
+            "mode" = "month";
             "mode-mon-col" = 3;
             "weeks-pos" = "right";
             "on-scroll" = 1;
@@ -60,8 +60,8 @@
             "on-click-right" = "mode";
             "on-click-forward" = "tz_up";
             "on-click-backward" = "tz_down";
-            "on-scroll-up" = "shift_up";
-            "on-scroll-down" = "shift_down";
+            "on-scroll-up" = "shift_down";
+            "on-scroll-down" = "shift_up";
           };
         };
 

@@ -1,6 +1,9 @@
 {
   "$mod" = "SUPER";
   general = {
+    gaps_in = 5;
+    gaps_out = 10;
+    layout = "master";
     monitor = [
       "eDP-1,1920x1200@165,0x0,1"
       "HDMI-A-1,1920x1200,1920x0,1"
@@ -18,7 +21,7 @@
   };
 
   decoration = {
-    rounding = 3;
+    rounding = 2;
   };
 
   input = {
