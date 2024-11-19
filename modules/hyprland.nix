@@ -9,6 +9,10 @@
     };
   };
 
+  environment.systemPackages = with pkgs; [
+    hyprpolkitagent
+  ];
+
   # for mounting USB drives
   services = {
     gvfs.enable = true;
