@@ -54,6 +54,7 @@
       proton-pass
       #protonmail-desktop
       protonvpn-gui
+      session-desktop
       signal-desktop
       texliveMedium
       thunderbird
