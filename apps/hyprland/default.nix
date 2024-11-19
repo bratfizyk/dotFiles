@@ -13,6 +13,7 @@
     icons = true;
     borderSize = 3;
     borderRadius = 5;
+    defaultTimeout = 3000;
   };
 
   wayland.windowManager.hyprland = {
@@ -27,12 +28,9 @@
     networkmanagerapplet
     pasystray
     udiskie
-
-    # Polkit agent
-    hyprpolkitagent
-
+    
     # file explorer
-    nemo
+    nemo-with-extensions
 
     # calculator
     qalculate-gtk
