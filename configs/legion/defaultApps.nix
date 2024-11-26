@@ -3,10 +3,10 @@
 {
   xdg = {
     desktopEntries = {
-      loupe = {
-        name = "Loupe";
+      nomacs = {
+        name = "nomacs";
         genericName = "Photo Viewer";
-        exec = "loupe %U";
+        exec = "nomacs %U";
         terminal = false;
         categories = [ "Application" ];
         mimeType = [ "image/png" "image/jpeg" ];
@@ -25,8 +25,8 @@
     mimeApps = {
       enable = true;
       defaultApplications = {
-        "image/png" = [ "loupe.desktop" ];
-        "image/jpeg" = [ "loupe.desktop" ];
+        "image/png" = [ "nomacs.desktop" ];
+        "image/jpeg" = [ "nomacs.desktop" ];
         "application/pdf" = [ "evince.desktop" ];
         "x-scheme-handler/http" = [ "firefox.desktop" ];
         "x-scheme-handler/https" = [ "firefox.desktop" ];

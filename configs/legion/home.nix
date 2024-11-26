@@ -44,7 +44,7 @@
       godot_4
       jq
       keepassxc
-      loupe
+      nomacs
       lxappearance-gtk2
       mpv
       nano
