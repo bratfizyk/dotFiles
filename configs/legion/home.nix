@@ -12,6 +12,7 @@
     ../../apps/git.nix
     ../../apps/haskell.nix
     ../../apps/libreoffice.nix
+    ../../apps/nixvim
     ../../apps/obs.nix
     ../../apps/vscode.nix
   ]
@@ -42,17 +43,15 @@
       gnucash
       gnumake
       godot_4
+      jetbrains-toolbox
       jq
       keepassxc
       nomacs
       lxappearance-gtk2
       mpv
       nano
-      neovim
       newsflash
       nh
-      proton-pass
-      #protonmail-desktop
       protonvpn-gui
       session-desktop
       signal-desktop
