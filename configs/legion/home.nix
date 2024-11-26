@@ -43,7 +43,6 @@
       gnucash
       gnumake
       godot_4
-      jetbrains-toolbox
       jq
       keepassxc
       nomacs
@@ -61,8 +60,8 @@
       whatsapp-for-linux
       zoom-us
     ] ++ [
-      dotnetCorePackages.dotnet_8.sdk
-      jetbrains.rider
+      #dotnetCorePackages.dotnet_8.sdk
+      #jetbrains.rider
       sqlitebrowser
     ];
 
