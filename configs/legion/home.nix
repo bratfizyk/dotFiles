@@ -60,8 +60,8 @@
       whatsapp-for-linux
       zoom-us
     ] ++ [
-      #dotnetCorePackages.dotnet_8.sdk
-      #jetbrains.rider
+      dotnetCorePackages.dotnet_9.sdk
+      jetbrains-toolbox
       sqlitebrowser
     ];
 
