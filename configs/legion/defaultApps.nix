@@ -9,7 +9,7 @@
         exec = "nomacs %U";
         terminal = false;
         categories = [ "Application" ];
-        mimeType = [ "image/png" "image/jpeg" ];
+        mimeType = [ "image/png" "image/jpeg" "image/webp" ];
       };
 
       evince = {
@@ -27,6 +27,7 @@
       defaultApplications = {
         "image/png" = [ "nomacs.desktop" ];
         "image/jpeg" = [ "nomacs.desktop" ];
+        "image/webp" = [ "nomacs.desktop" ];
         "application/pdf" = [ "evince.desktop" ];
         "x-scheme-handler/http" = [ "firefox.desktop" ];
         "x-scheme-handler/https" = [ "firefox.desktop" ];
