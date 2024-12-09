@@ -20,8 +20,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
     nixos-hardware.url = "github:nixos/nixos-hardware/master";
-    nur.url = "github:nix-community/NUR";
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, nixvim, nixos-hardware, nur, stylix, ...  }:
@@ -43,6 +47,7 @@
             ./configs/legion/configuration.nix
             stylix.nixosModules.stylix
             nixvim.nixosModules.nixvim
+            nur.modules.nixos.default
 
             home-manager.nixosModules.home-manager
             {
@@ -53,7 +58,6 @@
               };
               home-manager.users.beko = {
                 imports = [
-                  nur.nixosModules.nur
                   nixvim.homeManagerModules.nixvim
                   ./configs/legion/home.nix
                 ];
