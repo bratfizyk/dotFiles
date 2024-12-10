@@ -56,6 +56,7 @@
       signal-desktop
       texliveMedium
       thunderbird
+      vcmi
       veracrypt
       whatsapp-for-linux
       zoom-us
