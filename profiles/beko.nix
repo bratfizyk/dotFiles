@@ -12,6 +12,10 @@
       if (config.programs.virt-manager.enable == true)
         then [ "libvirtd" ]
         else [ ]
+    ) ++ (
+      if (config.virtualisation.docker.enable == true)
+        then [ "docker" ]
+        else [ ]
     );
   };
 }

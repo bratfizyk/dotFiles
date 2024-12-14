@@ -44,6 +44,8 @@
     };
   };
 
+  virtualisation.docker.enable = true;
+
   boot = {
     kernelPackages = pkgs.linuxKernel.packages.linux_6_12;
     loader = {
