@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixos-hardware.url = "github:nixos/nixos-hardware/master";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -24,8 +25,12 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hyprland-qtutils = {
+      url = "github:hyprwm/hyprland-qtutils";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     
-    nixos-hardware.url = "github:nixos/nixos-hardware/master";
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, nixvim, nixos-hardware, nur, stylix, ...  }:
@@ -33,7 +38,9 @@
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
-      extra = { };
+      extra = { 
+        hyprland-qtutils = inputs.hyprland-qtutils.packages.${system}.hyprland-qtutils;
+      };
     in {
       nixosConfigurations = {
         beko-nixos = lib.nixosSystem {

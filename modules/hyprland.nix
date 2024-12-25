@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, extra, ... }:
 
 {
   programs.hyprland = {
@@ -11,6 +11,7 @@
 
   environment.systemPackages = with pkgs; [
     hyprpolkitagent
+    extra.hyprland-qtutils
   ];
 
   # for mounting USB drives
@@ -24,7 +25,7 @@
     packages = with pkgs; [
       meslo-lgs-nf
       font-awesome
-      terminus-nerdfont
+      nerd-fonts.terminess-ttf
     ];
   };
 
