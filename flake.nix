@@ -37,7 +37,16 @@
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
-      pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
+      pkgs = import nixpkgs {
+        inherit system;
+        config = {
+          allowUnfree = true;
+          permittedInsecurePackages = [
+            # For godot_4-mono
+            "dotnet-sdk-6.0.428"
+          ];
+        };
+      };
       extra = { 
         hyprland-qtutils = inputs.hyprland-qtutils.packages.${system}.hyprland-qtutils;
       };
@@ -46,9 +55,7 @@
         beko-nixos = lib.nixosSystem {
           inherit system;
           inherit pkgs;
-          specialArgs = {
-            inherit extra;
-          };
+          specialArgs = { inherit extra; };
           modules = [ 
             nixos-hardware.nixosModules.lenovo-legion-16achg6-hybrid
             ./configs/legion/configuration.nix
@@ -60,9 +67,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = {
-                inherit extra;
-              };
+              home-manager.extraSpecialArgs = { inherit extra; };
               home-manager.users.beko = {
                 imports = [
                   nixvim.homeManagerModules.nixvim

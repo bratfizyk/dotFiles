@@ -42,7 +42,7 @@
       gimp
       gnucash
       gnumake
-      godot_4
+      godot_4-mono
       jq
       keepassxc
       nomacs
@@ -62,7 +62,8 @@
       zoom-us
     ] ++ [
       dotnetCorePackages.dotnet_9.sdk
-      jetbrains-toolbox
+      #jetbrains-toolbox
+      jetbrains.rider
       sqlitebrowser
     ];
 
