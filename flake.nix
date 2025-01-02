@@ -25,12 +25,6 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    hyprland-qtutils = {
-      url = "github:hyprwm/hyprland-qtutils";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, nixvim, nixos-hardware, nur, stylix, ...  }:
@@ -47,9 +41,7 @@
           ];
         };
       };
-      extra = { 
-        hyprland-qtutils = inputs.hyprland-qtutils.packages.${system}.hyprland-qtutils;
-      };
+      extra = { };
     in {
       nixosConfigurations = {
         beko-nixos = lib.nixosSystem {

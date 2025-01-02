@@ -1,4 +1,4 @@
-{ config, pkgs, extra, ... }:
+{ config, pkgs, ... }:
 
 {
   programs.hyprland = {
@@ -11,7 +11,7 @@
 
   environment.systemPackages = with pkgs; [
     hyprpolkitagent
-    extra.hyprland-qtutils
+    hyprland-qtutils
   ];
 
   # for mounting USB drives

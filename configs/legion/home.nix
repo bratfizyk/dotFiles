@@ -1,4 +1,4 @@
-{ config, pkgs, lib, osConfig, ... }:
+{ pkgs, lib, osConfig, ... }:
 
 {
   programs.home-manager.enable = true;
@@ -12,7 +12,6 @@
     ../../apps/git.nix
     ../../apps/haskell.nix
     ../../apps/libreoffice.nix
-    ../../apps/nixvim
     ../../apps/obs.nix
     ../../apps/vscode.nix
   ]
