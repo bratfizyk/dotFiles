@@ -48,6 +48,7 @@
       lxappearance-gtk2
       mpv
       nano
+      neovim
       newsflash
       nh
       protonvpn-gui
