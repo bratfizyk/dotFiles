@@ -11,17 +11,21 @@
     colorschemes.tokyonight.enable = true;
     plugins = {
       lualine.enable = true;
-      barbar.enable = true;
+      bufferline.enable = true;
 
       telescope.enable = true;
       gitsigns.enable = true;
-      neo-tree.enable = true;
+      nvim-tree = {
+        enable = true;
+	hijackUnnamedBufferWhenOpening = true;
+	openOnSetup = true;
+      };
       web-devicons.enable = true;
     };
 
     keymaps = [
       {
-        action = "<cmd>Neotree toggle<CR>";
+        action = "<cmd>NvimTreeToggle<CR>";
         key = "<C-b>";
         mode = "n";
         options = {
