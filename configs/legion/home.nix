@@ -12,6 +12,7 @@
     ../../apps/git.nix
     ../../apps/haskell.nix
     ../../apps/libreoffice.nix
+    ../../apps/nixvim
     ../../apps/obs.nix
     ../../apps/vscode.nix
   ]
@@ -48,7 +49,6 @@
       lxappearance-gtk2
       mpv
       nano
-      neovim
       newsflash
       nh
       protonvpn-gui
