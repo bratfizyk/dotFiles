@@ -1,12 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  hardware = {
+  services = {
     pulseaudio = {
       enable = false;
     };
-  };
-  services = {
     pipewire = {
       enable = true;
       alsa.enable = true;

@@ -1,4 +1,4 @@
-{ pkgs, lib, osConfig, ... }:
+{ pkgs, lib, osConfig, extra, ... }:
 
 {
   programs.home-manager.enable = true;
@@ -12,7 +12,6 @@
     ../../apps/git.nix
     ../../apps/haskell.nix
     ../../apps/libreoffice.nix
-    ../../apps/nixvim
     ../../apps/obs.nix
     ../../apps/vscode.nix
   ]
@@ -62,9 +61,11 @@
       zoom-us
     ] ++ [
       dotnetCorePackages.dotnet_9.sdk
-      #jetbrains-toolbox
-      jetbrains.rider
+      jetbrains-toolbox
+      #jetbrains.rider
       sqlitebrowser
+    ] ++ [
+      extra.beKode
     ];
 
     sessionVariables = {

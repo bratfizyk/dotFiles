@@ -16,18 +16,18 @@
       inputs.home-manager.follows = "home-manager";
     };
 
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nur = {
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    beKode = {
+      url = "github:bratfizyk/beKode";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, nixos-hardware, nur, stylix, ...  }:
+  outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, nur, stylix, ...  }:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -41,7 +41,9 @@
           ];
         };
       };
-      extra = { };
+      extra = {
+        beKode = inputs.beKode.packages.${system}.default;
+      };
     in {
       nixosConfigurations = {
         beko-nixos = lib.nixosSystem {
@@ -52,7 +54,6 @@
             nixos-hardware.nixosModules.lenovo-legion-16achg6-hybrid
             ./configs/legion/configuration.nix
             stylix.nixosModules.stylix
-            nixvim.nixosModules.nixvim
             nur.modules.nixos.default
 
             home-manager.nixosModules.home-manager
@@ -62,7 +63,6 @@
               home-manager.extraSpecialArgs = { inherit extra; };
               home-manager.users.beko = {
                 imports = [
-                  nixvim.homeManagerModules.nixvim
                   ./configs/legion/home.nix
                 ];
               };
