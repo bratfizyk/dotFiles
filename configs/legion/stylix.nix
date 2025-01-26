@@ -3,7 +3,7 @@
 {
   stylix = {
     enable = true;
-    image = ../../assets/wallpapers/Forest-Autumn.jpg;
+    image = ../../assets/wallpapers/digitalsmoke.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
     fonts = {
       sansSerif = {
