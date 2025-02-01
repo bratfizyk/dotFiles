@@ -10,7 +10,7 @@
       package = pkgs.gitAndTools.gitFull;
       enable = true;
       userName = "Alojzy Leszcz";
-      userEmail = "aleszcz@pm.me";
+      userEmail = "alojzy.leszcz.semester130@passinbox.com";
       extraConfig = {
         core = {
             editor = "nvim";
