@@ -34,6 +34,7 @@
 
     packages = with pkgs; [
       brave
+      calibre
       discord
       efibootmgr
       evince
