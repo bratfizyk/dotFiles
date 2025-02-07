@@ -25,6 +25,11 @@
       url = "github:bratfizyk/beKode";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hyprland = {
+      url = "github:hyprwm/Hyprland/v0.46.2-b";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, nur, stylix, ...  }:
@@ -43,6 +48,7 @@
       };
       extra = {
         beKode = inputs.beKode.packages.${system}.default;
+        hypr = inputs.hyprland.packages.${system}.default;
       };
     in {
       nixosConfigurations = {

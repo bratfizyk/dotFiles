@@ -1,9 +1,9 @@
-{ config, pkgs, ... }:
+{ config, pkgs, extra, ... }:
 
 {
   programs.hyprland = {
     enable = true;
-    package = pkgs.hyprland;
+    package = extra.hypr;
     xwayland = {
       enable  = true;
     };
