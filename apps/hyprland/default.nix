@@ -38,8 +38,8 @@
     # icons
     flat-remix-icon-theme
     numix-icon-theme
-    qogir-icon-theme
-    kora-icon-theme
+    #vimix-icon-theme
+    #kora-icon-theme
 
     # screenshots
     grim

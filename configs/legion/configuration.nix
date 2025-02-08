@@ -10,9 +10,10 @@
 
       ../../modules/audio.nix
       ../../modules/ecryptfs.nix
-      #../../modules/gnome.nix
+      ../../modules/gnome.nix
+      ../../modules/i3.nix
       ../../modules/hyprland.nix
-      ../../modules/kde.nix
+      #../../modules/kde.nix
       ../../modules/locale.nix
       ../../modules/virt-manager.nix
       ../../modules/zsh.nix
@@ -74,7 +75,8 @@
       };
     };
     displayManager = {
-      defaultSession = "hyprland";
+      #defaultSession = "hyprland";
+      defaultSession = "none+i3";
     };
   };
   

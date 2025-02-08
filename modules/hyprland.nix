@@ -3,7 +3,7 @@
 {
   programs.hyprland = {
     enable = true;
-    package = extra.hypr;
+    #package = pkgs.hyprland;
     xwayland = {
       enable  = true;
     };
