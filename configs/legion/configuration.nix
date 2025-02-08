@@ -74,8 +74,7 @@
       };
     };
     displayManager = {
-      #defaultSession = "hyprland";
-      defaultSession = "none+i3";
+      defaultSession = "hyprland";
     };
   };
   
