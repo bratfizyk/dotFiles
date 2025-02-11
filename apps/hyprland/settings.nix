@@ -5,8 +5,8 @@
     gaps_out = 10;
     layout = "master";
     monitor = [
-      "eDP-1,1920x1200@165,0x0,1"
-      "HDMI-A-1,1920x1200,1920x0,1"
+      "eDP-1,2560x1600@165,0x0,1"
+      "HDMI-A-1,1920x1200,2560x0,1"
     ];
   };
 
@@ -22,6 +22,8 @@
 
   decoration = {
     rounding = 2;
+    blur.enabled = false;
+    shadow.enabled = false;
   };
 
   input = {
@@ -33,6 +35,7 @@
   misc = {
     initial_workspace_tracking = 2;
     new_window_takes_over_fullscreen = 2;
+    vfr = true;
   };
 
   bind = [
@@ -123,7 +126,9 @@
   env = [
     "LIBVA_DRIVER_NAME,nvidia"
     "XDG_SESSION_TYPE,wayland"
-    "WLR_NO_HARDWARE_CURSORS,1"
+    #"WLR_NO_HARDWARE_CURSORS,1"
+    "NIXOS_OZONE_WL,1"
+    "AQ_DRM_DEVICES,/dev/dri/card0:/dev/dri/card1"
   ];
 
   windowrulev2 = [
