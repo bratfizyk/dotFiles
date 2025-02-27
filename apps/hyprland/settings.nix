@@ -44,9 +44,10 @@
     "$mod, F7, exec, busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 1500"
     "$mod, F8, exec, busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500"
     
+    "$mod, B, exec, brave"
     "$mod, C, exec, chromium"
     "$mod, D, exec, rofi -show drun -me-select-entry '' -me-accept-entry MousePrimary"
-    "$mod, E, exec, nemo"
+    "$mod, E, exec, nautilus"
     "$mod, F, exec, firefox"
     "$mod, G, exec, gnucash"
     "$mod, K, exec, keepassxc"
