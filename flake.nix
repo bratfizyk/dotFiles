@@ -3,6 +3,8 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs-old.url = "nixpkgs/2ff53fe64443980e139eaa286017f53f88336dd0";
+
     nixos-hardware.url = "github:nixos/nixos-hardware/master";
 
     home-manager = {
@@ -30,6 +32,7 @@
   outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, nur, stylix, ...  }:
     let
       lib = nixpkgs.lib;
+      old-pkgs = import inputs.nixpkgs-old { inherit system; };
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
@@ -43,6 +46,7 @@
       };
       extra = {
         beKode = inputs.beKode.packages.${system}.default;
+        gnucash = old-pkgs.gnucash;
       };
     in {
       nixosConfigurations = {

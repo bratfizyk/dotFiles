@@ -40,7 +40,6 @@
       evince
       ffmpeg_7-full
       gimp
-      gnucash
       gnumake
       #godot_4-mono
       jq
@@ -67,6 +66,7 @@
       sqlitebrowser
     ] ++ [
       extra.beKode
+      extra.gnucash
     ];
 
     sessionVariables = {
