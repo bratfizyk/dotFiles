@@ -20,8 +20,8 @@
       };
     };
     cursor = {
-      package = pkgs.vimix-cursor-theme;
-      name = "Vimix-Cursors";
+      package = pkgs.graphite-cursors;
+      name = "graphite-dark-nord";
     };
     opacity.terminal = 0.8;
     polarity = "dark";
