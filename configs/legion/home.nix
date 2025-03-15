@@ -40,6 +40,7 @@
       evince
       ffmpeg_7-full
       gimp
+      gnucash
       gnumake
       #godot_4-mono
       jq
@@ -64,11 +65,9 @@
     ] ++ [
       dotnetCorePackages.dotnet_9.sdk
       jetbrains-toolbox
-      #jetbrains.rider
       sqlitebrowser
     ] ++ [
       extra.beKode
-      extra.gnucash
     ];
 
     sessionVariables = {

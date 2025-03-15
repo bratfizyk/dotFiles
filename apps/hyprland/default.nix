@@ -28,6 +28,7 @@
     networkmanagerapplet
     pasystray
     udiskie
+    blueberry
     
     # file explorer
     nemo-with-extensions
