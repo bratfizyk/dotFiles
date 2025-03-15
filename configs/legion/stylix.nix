@@ -22,6 +22,7 @@
     cursor = {
       package = pkgs.graphite-cursors;
       name = "graphite-dark-nord";
+      size = 14;
     };
     opacity.terminal = 0.8;
     polarity = "dark";

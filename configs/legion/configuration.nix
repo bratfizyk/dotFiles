@@ -14,6 +14,7 @@
       ../../modules/hyprland.nix
       #../../modules/kde.nix
       ../../modules/locale.nix
+      ../../modules/psql.nix
       ../../modules/virt-manager.nix
       ../../modules/zsh.nix
 
