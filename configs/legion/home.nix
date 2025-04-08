@@ -51,6 +51,7 @@
       nano
       newsflash
       nh
+      pavucontrol
       proton-pass
       protonmail-desktop
       protonvpn-gui
