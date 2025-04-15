@@ -55,6 +55,7 @@
       proton-pass
       protonmail-desktop
       protonvpn-gui
+      qjackctl
       session-desktop
       signal-desktop
       texliveMedium

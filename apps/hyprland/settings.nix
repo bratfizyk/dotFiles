@@ -129,6 +129,8 @@
     "XDG_SESSION_TYPE,wayland"
     #"WLR_NO_HARDWARE_CURSORS,1"
     #"NIXOS_OZONE_WL,1"
+    # For GnuCash
+    "WEBKIT_DISABLE_DMABUF_RENDERER,1"
     "AQ_DRM_DEVICES,/dev/dri/card0:/dev/dri/card1"
   ];
 

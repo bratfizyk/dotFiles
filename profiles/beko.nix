@@ -8,6 +8,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "jackaudio"
     ] ++ (
       if (config.programs.virt-manager.enable == true)
         then [ "libvirtd" ]
