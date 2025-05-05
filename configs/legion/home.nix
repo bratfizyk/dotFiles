@@ -12,6 +12,7 @@
     ../../apps/git.nix
     ../../apps/haskell.nix
     ../../apps/libreoffice.nix
+    ../../apps/llm.nix
     ../../apps/obs.nix
     ../../apps/vscode.nix
   ]
@@ -77,6 +78,7 @@
       TERMINAL = "alacritty";
       BROWSER = "firefox";
       FLAKE = "/home/beko/Projects/dotFiles";
+      NH_FLAKE = "/home/beko/Projects/dotFiles";
     };
   };
 }
