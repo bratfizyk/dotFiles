@@ -35,10 +35,7 @@
         inherit system;
         config = {
           allowUnfree = true;
-          permittedInsecurePackages = [
-            # For godot_4-mono
-            "dotnet-sdk-6.0.428"
-          ];
+          permittedInsecurePackages = [ ];
         };
       };
       extra = {

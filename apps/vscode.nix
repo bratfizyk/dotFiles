@@ -13,10 +13,13 @@
         default = {
           extensions = with pkgs.vscode-extensions; [
             bbenoist.nix
+            continue.continue
             haskell.haskell
+            james-yu.latex-workshop
             jnoortheen.nix-ide
-            pkief.material-icon-theme
+            justusadam.language-haskell
             nonylene.dark-molokai-theme
+            pkief.material-icon-theme
           ];
 
           userSettings = with config.stylix; {

@@ -43,9 +43,10 @@
       gimp
       gnucash
       gnumake
-      #godot_4-mono
+      godot_4-mono
       jq
       keepassxc
+      n8n
       nomacs
       lxappearance-gtk2
       mpv
