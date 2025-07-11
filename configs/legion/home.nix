@@ -12,7 +12,7 @@
     ../../apps/git.nix
     ../../apps/haskell.nix
     ../../apps/libreoffice.nix
-    ../../apps/llm.nix
+    # ../../apps/llm.nix
     ../../apps/obs.nix
     ../../apps/vscode.nix
   ]

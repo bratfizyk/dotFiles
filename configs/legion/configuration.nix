@@ -52,7 +52,7 @@
     loader = {
       systemd-boot = {
         enable = true;
-        configurationLimit = 2;
+        configurationLimit = 5;
       };
       efi.canTouchEfiVariables = true;
     };
@@ -65,24 +65,21 @@
   };
 
   services = {
-    xserver = {
-      enable = true;
-      displayManager = {
-        gdm = {
-          enable = true;
-          wayland = true;
-        };
-      };
-    };
+    xserver.enable = true;
     displayManager = {
       defaultSession = "hyprland";
+      gdm = {
+        enable = true;
+        wayland = true;
+      };
     };
   };
   
   services.gnome.gnome-keyring.enable = true;
-  programs.ssh = {
-    startAgent = true;
-  };
+  # Not needed if GNOME is installed
+  # programs.ssh = {
+  #   startAgent = true;
+  # };
 
   environment.systemPackages = with pkgs; [
     appimage-run git lshw

@@ -11,9 +11,12 @@
   services.mako = {
     enable = true;
     icons = true;
-    borderSize = 3;
-    borderRadius = 5;
     defaultTimeout = 3000;
+
+    settings = {
+      border-size = 3;
+      border-radius = 5;
+    };
   };
 
   wayland.windowManager.hyprland = {
