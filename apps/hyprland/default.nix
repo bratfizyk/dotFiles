@@ -10,12 +10,11 @@
 
   services.mako = {
     enable = true;
-    icons = true;
-    defaultTimeout = 3000;
-
     settings = {
       border-size = 3;
       border-radius = 5;
+      default-timeout = 3000;
+      icons = true;
     };
   };
 

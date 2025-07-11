@@ -2,8 +2,7 @@
   description = "Beko Legion NixOS config";
 
   inputs = {
-    #nixpkgs.url = "nixpkgs/nixos-unstable";
-    nixpkgs.url = "nixpkgs/3016b4b15d13f3089db8a41ef937b13a9e33a8df";
+    nixpkgs.url = "nixpkgs/nixos-unstable";
 
     nixos-hardware.url = "github:nixos/nixos-hardware/master";
 
