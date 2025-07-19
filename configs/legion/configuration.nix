@@ -48,11 +48,11 @@
   virtualisation.docker.enable = true;
 
   boot = {
-    kernelPackages = pkgs.linuxKernel.packages.linux_6_12;
+    #kernelPackages = pkgs.linuxKernel.packages.linux_6_12;
     loader = {
       systemd-boot = {
         enable = true;
-        configurationLimit = 5;
+        configurationLimit = 2;
       };
       efi.canTouchEfiVariables = true;
     };
