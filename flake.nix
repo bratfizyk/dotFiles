@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-
     nixos-hardware.url = "github:nixos/nixos-hardware/master";
 
     home-manager = {
@@ -29,7 +28,6 @@
 
   outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, nur, stylix, ...  }:
     let
-      lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
@@ -43,7 +41,7 @@
       };
     in {
       nixosConfigurations = {
-        beko-nixos = lib.nixosSystem {
+        beko-nixos = nixpkgs.lib.nixosSystem {
           inherit system;
           inherit pkgs;
           specialArgs = { inherit extra; };
