@@ -2,9 +2,13 @@
 
 {
   home.packages = with pkgs; [
-    (ollama.override {
-      acceleration = "cuda";
-    })
-    oterm
+    ollama-cuda
+    n8n
+    searxng
+
+    # (extra.ollama.override {
+    #   acceleration = "cuda";
+    # })
+    # pkgs.oterm
   ];
 }

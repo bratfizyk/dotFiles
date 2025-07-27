@@ -12,7 +12,7 @@
     ../../apps/git.nix
     ../../apps/haskell.nix
     ../../apps/libreoffice.nix
-    # ../../apps/llm.nix
+    ../../apps/llm.nix
     ../../apps/obs.nix
     ../../apps/vscode.nix
   ]
@@ -46,7 +46,6 @@
       godot_4-mono
       jq
       keepassxc
-      n8n
       nomacs
       lxappearance-gtk2
       mpv
