@@ -1,8 +1,9 @@
 { pkgs, ... }:
 
 let
-  dbUser = "fortpolio";
   dbName = "fortpolio";
+  n8nMemoryDbName = "n8n-memory";
+  n8nDataDbName = "n8n-data";
 in
 {
   services.postgresql = {
@@ -16,11 +17,21 @@ in
 
     ensureDatabases = [
       dbName
+      n8nMemoryDbName
+      n8nDataDbName
     ];
 
     ensureUsers = [
       {
-        name = dbUser;
+        name = dbName;
+        ensureDBOwnership = true;
+      }
+      {
+        name = n8nMemoryDbName;
+        ensureDBOwnership = true;
+      }
+      {
+        name = n8nDataDbName;
         ensureDBOwnership = true;
       }
     ];
@@ -28,9 +39,11 @@ in
     initdbArgs = [ "--data-checksums" ];
 
     authentication = ''
-      #type database  DBuser    auth-method
-      local ${dbName} ${dbUser} md5
-      local all       postgres  trust
+      #type database           DBuser             auth-method
+      local ${dbName}          ${dbName}          md5
+      local ${n8nMemoryDbName} ${n8nMemoryDbName} md5
+      local ${n8nDataDbName}   ${n8nDataDbName}   md5
+      local all                postgres           trust
     '';
   };
 
@@ -52,7 +65,7 @@ in
         echo "HWDP_DB_PASS=$RANDOM.$RANDOM.$RANDOM.$RANDOM.$RANDOM.$RANDOM" > /run/db-credentials-env
         source /run/db-credentials-env
         su - postgres -c psql <<EOF
-        ALTER USER "${dbUser}" WITH PASSWORD '$HWDP_DB_PASS';
+        ALTER USER "${dbName}" WITH PASSWORD '$HWDP_DB_PASS';
         EOF
       '';
     };
