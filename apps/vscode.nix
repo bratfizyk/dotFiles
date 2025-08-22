@@ -13,7 +13,7 @@
         default = {
           extensions = with pkgs.vscode-extensions; [
             bbenoist.nix
-            continue.continue
+            rooveterinaryinc.roo-cline
             haskell.haskell
             james-yu.latex-workshop
             jnoortheen.nix-ide
