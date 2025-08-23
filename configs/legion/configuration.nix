@@ -9,7 +9,7 @@
       ./stylix.nix
 
       ../../modules/audio.nix
-      ../../modules/cinnamon.nix
+      ../../modules/cosmic.nix
       ../../modules/ecryptfs.nix
       #../../modules/gnome.nix
       ../../modules/hyprland.nix
