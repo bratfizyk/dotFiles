@@ -49,7 +49,7 @@
     "$mod, B, exec, brave"
     "$mod, C, exec, chromium"
     "$mod, D, exec, rofi -show drun -me-select-entry '' -me-accept-entry MousePrimary"
-    "$mod, E, exec, nautilus"
+    "$mod, E, exec, cosmic-files"
     "$mod, F, exec, firefox"
     "$mod, G, exec, gnucash"
     "$mod, K, exec, keepassxc"

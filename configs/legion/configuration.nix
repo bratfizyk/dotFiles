@@ -9,8 +9,9 @@
       ./stylix.nix
 
       ../../modules/audio.nix
+      ../../modules/cinnamon.nix
       ../../modules/ecryptfs.nix
-      ../../modules/gnome.nix
+      #../../modules/gnome.nix
       ../../modules/hyprland.nix
       #../../modules/kde.nix
       ../../modules/locale.nix

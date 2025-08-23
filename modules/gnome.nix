@@ -20,6 +20,5 @@
     hitori
     tali
     totem
-  ]) ++ (with pkgs.gnome; [
   ]);
 }
