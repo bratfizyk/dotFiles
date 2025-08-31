@@ -25,39 +25,41 @@
     plugins = with pkgs; [ ];
   };
 
-  home.packages = with pkgs; [
-    # applets
-    networkmanagerapplet
-    pasystray
-    udiskie
-    blueberry
-    
-    # file explorer
-    nemo-with-extensions
+  home = {
+    packages = with pkgs; [
+      # applets
+      networkmanagerapplet
+      pasystray
+      udiskie
+      blueberry
+      
+      # file explorer
+      nemo-with-extensions
 
-    # calculator
-    qalculate-gtk
+      # calculator
+      qalculate-gtk
 
-    # icons
-    flat-remix-icon-theme
-    numix-icon-theme
-    #vimix-icon-theme
-    #kora-icon-theme
+      # icons
+      flat-remix-icon-theme
+      numix-icon-theme
+      #vimix-icon-theme
+      #kora-icon-theme
 
-    # screenshots
-    grim
-    slurp
-    swappy
-    wl-clipboard
+      # screenshots
+      grim
+      slurp
+      swappy
+      wl-clipboard
 
-    # screen sharing
-    pipewire
-    wireplumber
+      # screen sharing
+      pipewire
+      wireplumber
 
-    # night vision (blue filter)
-    wl-gammarelay-rs
+      # night vision (blue filter)
+      wl-gammarelay-rs
 
-    # A tool for reading key codes
-    wev
-  ];
+      # A tool for reading key codes
+      wev
+    ];
+  };
 }
