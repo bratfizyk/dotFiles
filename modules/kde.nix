@@ -6,7 +6,7 @@
   };
 
   environment = {
-    plasma6.excludePackages = with pkgs.libsForQt5; [
+    plasma6.excludePackages = with pkgs.kdePackages; [
       elisa
       gwenview
       oxygen
@@ -16,7 +16,7 @@
       konsole
     ];
     
-    systemPackages = with pkgs.libsForQt5; [
+    systemPackages = with pkgs.kdePackages; [
       kate
     ];
   };

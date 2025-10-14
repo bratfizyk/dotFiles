@@ -8,6 +8,7 @@
   environment.gnome.excludePackages = (with pkgs; [
     atomix
     cheese
+    epiphany
     gnome-characters
     gnome-music
     gnome-photos
@@ -15,9 +16,10 @@
     gnome-tour
     geary
     gedit
-    iagno
-    epiphany
     hitori
+    iagno
+    qgnomeplatform
+    qgnomeplatform-qt6
     tali
     totem
   ]);
