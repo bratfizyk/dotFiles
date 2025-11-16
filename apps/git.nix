@@ -7,7 +7,7 @@
     
   programs = {
     git = {
-      package = pkgs.gitAndTools.gitFull;
+      #package = pkgs.gitAndTools.gitFull;
       enable = true;
       userName = "Alojzy Leszcz";
       userEmail = "alojzy.leszcz.semester130@passinbox.com";

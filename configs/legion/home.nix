@@ -42,15 +42,12 @@
       ffmpeg_7-full
       gimp
       gnucash
-      gnumake
-      godot_4-mono
       jq
       keepassxc
       nomacs
       lxappearance-gtk2
       mpv
       nano
-      newsflash
       nh
       pavucontrol
       proton-pass
@@ -63,10 +60,12 @@
       thunderbird
       vcmi
       veracrypt
-      whatsapp-for-linux
+      wechat
       zoom-us
     ] ++ [
       dotnetCorePackages.dotnet_9.sdk
+      gnumake
+      godot_4-mono
       jetbrains-toolbox
       sqlitebrowser
     ] ++ [
