@@ -80,6 +80,7 @@
         wayland = true;
       };
     };
+    orca.enable = false;
   };
   
   services.gnome.gnome-keyring.enable = true;
