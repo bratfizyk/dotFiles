@@ -2,8 +2,8 @@
   description = "Beko Legion NixOS config";
 
   inputs = {
-    #nixpkgs.url = "nixpkgs/nixos-unstable";
-    nixpkgs.url = "nixpkgs/ebb6e6a83649d4660051436ba2f654e2c63be383";
+    nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs-old.url = "nixpkgs/ebb6e6a83649d4660051436ba2f654e2c63be383";
     nixos-hardware.url = "github:nixos/nixos-hardware/master";
 
     home-manager = {
@@ -38,8 +38,15 @@
           permittedInsecurePackages = [ ];
         };
       };
+      oldPkgs = import inputs.nixpkgs-old {
+        inherit system;
+        config = {
+          allowUnfree = true;
+        };
+      };
       extra = {
         beKode = inputs.beKode.packages.${system}.default;
+        wechat = oldPkgs.wechat;
       };
     in {
       nixosConfigurations = {
