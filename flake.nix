@@ -65,10 +65,17 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = { inherit extra; };
-              home-manager.users.beko = {
-                imports = [
-                  ./configs/legion/home.nix
-                ];
+              home-manager.users = {
+                beko = {
+                  imports = [
+                    ./configs/legion/home.nix
+                  ];
+                };
+                steam = {
+                  imports = [
+                    ./configs/legion/steam.nix
+                  ];
+                };
               };
             }
           ];

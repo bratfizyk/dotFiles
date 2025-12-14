@@ -21,6 +21,7 @@
       ../../modules/zsh.nix
 
       ../../profiles/beko.nix
+      ../../profiles/steam.nix
     ];
 
   system.stateVersion = "24.05";

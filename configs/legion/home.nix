@@ -60,7 +60,6 @@
       thunderbird
       vcmi
       veracrypt
-      extra.wechat
       zoom-us
     ] ++ [
       dotnetCorePackages.dotnet_9.sdk
