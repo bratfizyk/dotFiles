@@ -51,7 +51,7 @@
   virtualisation.docker.enable = true;
 
   boot = {
-    #kernelPackages = pkgs.linuxKernel.packages.linux_6_12;
+    #kernelPackages = pkgs.linuxKernel.packages.linux_6_18;
     loader = {
       systemd-boot = {
         enable = true;
