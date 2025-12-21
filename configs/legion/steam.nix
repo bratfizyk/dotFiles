@@ -30,10 +30,11 @@
       discord
       nano
       pavucontrol
+      protonvpn-gui
       session-desktop
       steam
       vcmi
-      extra.wechat
+      # wechat
     ];
 
     sessionVariables = {
