@@ -47,6 +47,7 @@
       nomacs
       lxappearance-gtk2
       mpv
+      musescore
       nano
       nh
       pavucontrol
