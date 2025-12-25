@@ -54,7 +54,6 @@
       protonmail-desktop
       protonvpn-gui
       qjackctl
-      session-desktop
       signal-desktop
       texliveMedium
       thunderbird
@@ -62,9 +61,8 @@
       veracrypt
       zoom-us
     ] ++ [
-      dotnetCorePackages.dotnet_9.sdk
       gnumake
-      godot_4-mono
+      godot_4
       jetbrains-toolbox
       sqlitebrowser
     ] ++ [

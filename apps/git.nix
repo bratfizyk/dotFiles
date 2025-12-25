@@ -7,11 +7,12 @@
     
   programs = {
     git = {
-      #package = pkgs.gitAndTools.gitFull;
       enable = true;
-      userName = "Alojzy Leszcz";
-      userEmail = "alojzy.leszcz.semester130@passinbox.com";
-      extraConfig = {
+      settings = {
+        user = {
+          name = "Alojzy Leszcz";
+          email = "alojzy.leszcz.semester130@passinbox.com";
+        };
         core = {
             editor = "nvim";
         };
@@ -21,9 +22,9 @@
         difftool = {
             prompt = false;
         };
-	pull = {
-	    rebase = false;
-	};
+	      pull = {
+	        rebase = false;
+	      };
       };
     };
 
