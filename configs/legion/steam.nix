@@ -31,7 +31,7 @@
       nano
       pavucontrol
       protonvpn-gui
-      session-desktop
+      signal-desktop
       steam
       vcmi
       # wechat
