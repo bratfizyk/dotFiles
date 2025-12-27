@@ -9,6 +9,7 @@
     ../../apps/alacritty.nix
     ../../apps/firefox
     ../../apps/libreoffice.nix
+    ../../apps/obs.nix
   ]
   ++ (lib.optionals (osConfig.programs.zsh.enable) [ ../../apps/zsh ])
   ++ (lib.optionals (osConfig.programs.hyprland.enable) [ ../../apps/hyprland ]);
