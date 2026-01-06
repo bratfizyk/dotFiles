@@ -1,4 +1,4 @@
-{ pkgs, config, extra, ... }:
+{ pkgs, config, lib, extra, ... }:
 
 {
   imports = [
@@ -18,11 +18,19 @@
     };
   };
 
+  # Disabling temporarily until hyprpaper is fixed
+  services.hyprpaper = {
+    enable = lib.mkForce false;
+  };
+
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
     settings = import ./settings.nix;
     plugins = with pkgs; [ ];
+    extraConfig = ''
+      exec-once = sleep 2 && swaybg -i "${config.stylix.image}" -m fill &
+    '';
   };
 
   home = {
@@ -60,6 +68,9 @@
 
       # A tool for reading key codes
       wev
+
+      # An alternative for hyprpaper as it looks broken
+      swaybg
     ];
   };
 }

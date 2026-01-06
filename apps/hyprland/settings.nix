@@ -36,7 +36,6 @@
 
   misc = {
     initial_workspace_tracking = 2;
-    new_window_takes_over_fullscreen = 2;
     vfr = true;
   };
 
