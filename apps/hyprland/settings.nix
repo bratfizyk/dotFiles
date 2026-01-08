@@ -23,9 +23,40 @@
   };
 
   decoration = {
-    rounding = 2;
-    blur.enabled = false;
-    shadow.enabled = false;
+    rounding = 10;
+    active_opacity = 0.94;
+    inactive_opacity = 0.84;
+    fullscreen_opacity = 1.0;
+    dim_inactive = true;
+    dim_strength = 0.15;
+    blur = {
+      enabled = true;
+      size = 6;
+      passes = 3;
+      new_optimizations = true;
+      ignore_opacity = false;
+    };
+    shadow = {
+      enabled = true;
+      range = 20;
+      render_power = 3;
+      offset = "0 5";
+    };
+  };
+
+  animations = {
+    enabled = true;
+    
+    bezier = [
+      "easeOut, 0.05, 0.9, 0.1, 1.0"
+    ];
+    
+    animation = [
+      "windows, 1, 5, easeOut, popin"
+      "border, 1, 5, easeOut"
+      "fade, 1, 5, easeOut"
+      "workspaces, 1, 5, easeOut, slide"
+    ];
   };
 
   input = {
