@@ -10,6 +10,7 @@
     ../../apps/chromium.nix
     ../../apps/firefox
     ../../apps/git.nix
+    ../../apps/ghostty.nix
     # ../../apps/haskell.nix
     ../../apps/libreoffice.nix
     # ../../apps/llm.nix
