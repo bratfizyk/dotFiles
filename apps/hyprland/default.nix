@@ -19,18 +19,18 @@
   };
 
   # Disabling temporarily until hyprpaper is fixed
-  services.hyprpaper = {
-    enable = lib.mkForce false;
-  };
+  #services.hyprpaper = {
+  #enable = lib.mkForce false;
+  #};
 
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
     settings = import ./settings.nix;
     plugins = with pkgs; [ ];
-    extraConfig = ''
-      exec-once = sleep 2 && swaybg -i "${config.stylix.image}" -m fill &
-    '';
+    #extraConfig = ''
+    #exec-once = sleep 2 && swaybg -i "${config.stylix.image}" -m fill &
+    #'';
   };
 
   home = {
