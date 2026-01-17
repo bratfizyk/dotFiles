@@ -7,14 +7,14 @@
       ../../hardware/monitors/flat.nix
       
       ./stylix.nix
-
-      ../../modules/audio.nix
       #../../modules/cinnamon.nix
       #../../modules/cosmic.nix
-      ../../modules/ecryptfs.nix
+      #../../modules/kde.nix
+
+      ../../modules/audio.nix
+      ../../modules/fscrypt.nix
       ../../modules/gnome.nix
       ../../modules/hyprland.nix
-      #../../modules/kde.nix
       ../../modules/locale.nix
       ../../modules/psql.nix
       ../../modules/virt-manager.nix
@@ -29,7 +29,7 @@
   home-manager = {
     backupFileExtension = "backup";
     sharedModules = [{
-      stylix.targets.kde.enable = false;
+      stylix.targets.gnome.enable = false;
       stylix.targets.vscode.enable = false;
       stylix.targets.rofi.enable = false;
       stylix.targets.waybar.enable = false;
