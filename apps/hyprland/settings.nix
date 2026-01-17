@@ -1,4 +1,30 @@
 {
+  workspace = [
+    # eDP-1: prefix with "A" and use named workspaces
+    "name:A1,monitor:eDP-1"
+    "name:A2,monitor:eDP-1"
+    "name:A3,monitor:eDP-1"
+    "name:A4,monitor:eDP-1"
+    "name:A5,monitor:eDP-1"
+    "name:A6,monitor:eDP-1"
+    "name:A7,monitor:eDP-1"
+    "name:A8,monitor:eDP-1"
+    "name:A9,monitor:eDP-1"
+    "name:A10,monitor:eDP-1"
+
+    # HDMI-A-1: subtract 10 from each workspace number
+    "1,monitor:HDMI-A-1"
+    "2,monitor:HDMI-A-1"
+    "3,monitor:HDMI-A-1"
+    "4,monitor:HDMI-A-1"
+    "5,monitor:HDMI-A-1"
+    "6,monitor:HDMI-A-1"
+    "7,monitor:HDMI-A-1"
+    "8,monitor:HDMI-A-1"
+    "9,monitor:HDMI-A-1"
+    "10,monitor:HDMI-A-1"
+  ];
+
   "$mod" = "SUPER";
   general = {
     gaps_in = 5;
@@ -24,23 +50,21 @@
 
   decoration = {
     rounding = 10;
-    active_opacity = 0.94;
-    inactive_opacity = 0.84;
+    active_opacity = 0.95;
+    inactive_opacity = 0.85;
     fullscreen_opacity = 1.0;
     dim_inactive = true;
     dim_strength = 0.15;
     blur = {
       enabled = true;
-      size = 6;
+      size = 8;
       passes = 3;
       new_optimizations = true;
-      ignore_opacity = false;
     };
     shadow = {
       enabled = true;
       range = 20;
       render_power = 3;
-      offset = "0 5";
     };
   };
 
@@ -106,6 +130,17 @@
     "$mod, 8, workspace, 8"
     "$mod, 9, workspace, 9"
     "$mod, 0, workspace, 10"
+
+    "$mod CONTROL, 1, workspace, name:A1"
+    "$mod CONTROL, 2, workspace, name:A2"
+    "$mod CONTROL, 3, workspace, name:A3"
+    "$mod CONTROL, 4, workspace, name:A4"
+    "$mod CONTROL, 5, workspace, name:A5"
+    "$mod CONTROL, 6, workspace, name:A6"
+    "$mod CONTROL, 7, workspace, name:A7"
+    "$mod CONTROL, 8, workspace, name:A8"
+    "$mod CONTROL, 9, workspace, name:A9"
+    "$mod CONTROL, 0, workspace, name:A10"
 
     "$mod, Left, workspace, e-1"
     "$mod, Right, workspace, e+1"
