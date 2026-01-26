@@ -12,6 +12,7 @@
       #../../modules/kde.nix
 
       ../../modules/audio.nix
+      ../../modules/dms.nix
       ../../modules/fscrypt.nix
       ../../modules/gnome.nix
       ../../modules/hyprland.nix

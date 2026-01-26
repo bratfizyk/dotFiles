@@ -181,7 +181,7 @@
   ];
 
   exec-once = [
-    "waybar"
+    #"waybar"
     "wl-gammarelay-rs &"
     "nm-applet --indicator"
     "pasystray --notify=none --volume-max=150 &"
