@@ -78,6 +78,7 @@
       "border, 1, 5, easeOut"
       "fade, 1, 5, easeOut"
       "workspaces, 1, 5, easeOut, slide"
+      "layers, 1, 5, easeOut, slide"
     ];
   };
 
