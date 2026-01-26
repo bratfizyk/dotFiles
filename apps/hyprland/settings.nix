@@ -1,7 +1,6 @@
 {
   workspace = [
-    # eDP-1: prefix with "A" and use named workspaces
-    "name:A1,monitor:eDP-1"
+    "name:A1,monitor:eDP-1,default:true"
     "name:A2,monitor:eDP-1"
     "name:A3,monitor:eDP-1"
     "name:A4,monitor:eDP-1"
@@ -12,8 +11,7 @@
     "name:A9,monitor:eDP-1"
     "name:A10,monitor:eDP-1"
 
-    # HDMI-A-1: subtract 10 from each workspace number
-    "1,monitor:HDMI-A-1"
+    "1,monitor:HDMI-A-1,default:true"
     "2,monitor:HDMI-A-1"
     "3,monitor:HDMI-A-1"
     "4,monitor:HDMI-A-1"
@@ -190,6 +188,7 @@
     "udiskie --no-automount --tray &"
     "systemctl --user start hyprpolkitagent"
     "protonvpn-app &"
+    "blueman-applet &"
   ];
 
   env = [
