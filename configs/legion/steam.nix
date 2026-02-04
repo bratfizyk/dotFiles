@@ -29,6 +29,7 @@
 
     packages = with pkgs; [
       discord
+      lutris-free
       nano
       pavucontrol
       protonvpn-gui

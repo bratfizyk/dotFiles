@@ -10,10 +10,10 @@
 
   services.mako = {
     enable = true;
-    iconPath = "${pkgs.papirus-icon-theme}/share/icons/Papirus";
-    maxIconSize = 64;
 
     settings = {
+      icon-path = "${pkgs.papirus-icon-theme}/share/icons/Papirus";
+      max-icon-size = 64;
       text-color = "#cdd6f4";
       border-color = "#89b4fa";
       border-size = 2;
