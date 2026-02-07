@@ -202,13 +202,5 @@
     "AQ_DRM_DEVICES,/dev/dri/card0:/dev/dri/card1"
   ];
 
-  windowrulev2 = [
-    # Firefox picture-in-picture fix
-    "float,class:^(firefox)$,title:^(Firefox)$"
-    "float,class:^(firefox)$,title:^(Picture-in-Picture)$"
-    "size 35% 35%,class:^(firefox)$,title:^(Firefox)$"
-    "size 35% 35%,class:^(firefox)$,title:^(Picture-in-Picture)$"
-  ];
-  
   plugin = { };
 }
