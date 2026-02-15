@@ -34,9 +34,35 @@
       pavucontrol
       protonvpn-gui
       signal-desktop
-      steam
       vcmi
       # wechat
+    ] ++ [
+      steam
+      steam-run
+      cef-binary
+      libcxx
+      ffmpeg
+      libxft
+      llvmPackages.libc
+      gccNGPackages_15.libatomic
+      llvmPackages_20.clang
+      gst_all_1.gstreamer
+      gst_all_1.gst-plugins-base
+      gst_all_1.gst-plugins-good
+      gst_all_1.gst-plugins-bad
+      gst_all_1.gst-plugins-ugly
+      gst_all_1.gst-libav
+      nss
+      gnutls
+      libpng12
+      zlib
+      # proton-ge-bin
+      # pkgsi686Linux.nss
+      # pkgsi686Linux.gnutls
+      # pkgsi686Linux.freetype
+      # pkgsi686Linux.libpng
+      # pkgsi686Linux.libpng12
+      # pkgsi686Linux.zlib
     ];
 
     sessionVariables = {
