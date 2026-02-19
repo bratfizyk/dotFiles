@@ -56,13 +56,9 @@
       gnutls
       libpng12
       zlib
-      # proton-ge-bin
-      # pkgsi686Linux.nss
-      # pkgsi686Linux.gnutls
-      # pkgsi686Linux.freetype
-      # pkgsi686Linux.libpng
-      # pkgsi686Linux.libpng12
-      # pkgsi686Linux.zlib
+      wine64
+      wine-wayland
+      winetricks
     ];
 
     sessionVariables = {

@@ -53,7 +53,6 @@
       nh
       pavucontrol
       proton-pass
-      protonmail-desktop
       protonvpn-gui
       qjackctl
       signal-desktop
