@@ -29,7 +29,6 @@
   home-manager = {
     backupFileExtension = "backup";
     sharedModules = [{
-      stylix.targets.gnome.enable = false;
       stylix.targets.vscode.enable = false;
       stylix.targets.rofi.enable = false;
       stylix.targets.waybar.enable = false;

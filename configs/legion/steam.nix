@@ -65,6 +65,7 @@
       EDITOR = "nano";
       TERMINAL = "alacritty";
       BROWSER = "firefox";
+      XDG_SESSION_DESKTOP = "GNOME";
     };
   };
 }

@@ -75,6 +75,7 @@
       TERMINAL = "alacritty";
       BROWSER = "firefox";
       FLAKE = "/home/beko/Projects/dotFiles";
+      XDG_SESSION_DESKTOP = "hyprland";
       NH_FLAKE = "/home/beko/Projects/dotFiles";
     };
   };
