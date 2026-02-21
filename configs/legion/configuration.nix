@@ -51,14 +51,36 @@
   virtualisation.docker.enable = true;
 
   boot = {
-    # 6.18 still doesn't work well for me
-    kernelPackages = pkgs.linuxKernel.packages.linux_6_12;
+    #kernelPackages = pkgs.linuxKernel.packages.linux_6_12;
     loader = {
       systemd-boot = {
         enable = true;
-        configurationLimit = 2;
+        configurationLimit = 3;
       };
       efi.canTouchEfiVariables = true;
+    };
+  };
+
+  # 6.18 has a backlight issue
+  systemd.services.fixBacklight = {
+    description = "Force maximum display brightness at boot";
+    wantedBy = [ "multi-user.target" ];
+    after = [ "sysinit.target" ];
+
+    # Use 'script' at top level — *not* inside serviceConfig
+    script = ''
+      #!/bin/sh
+      set -e
+      for dev in /sys/class/backlight/amdgpu_bl*; do
+        if [ -d "$dev" ]; then
+          max=$(cat "$dev/max_brightness")
+          printf "%s" "$max" > "$dev/brightness"
+        fi
+      done
+    '';
+
+    serviceConfig = {
+      Type = "oneshot";
     };
   };
 
