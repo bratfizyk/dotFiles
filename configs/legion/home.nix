@@ -13,7 +13,7 @@
     ../../apps/ghostty.nix
     # ../../apps/haskell.nix
     ../../apps/libreoffice.nix
-    # ../../apps/llm.nix
+    ../../apps/llm.nix
     ../../apps/obs.nix
     ../../apps/vscode.nix
   ]
@@ -62,6 +62,7 @@
       veracrypt
       zoom-us
     ] ++ [
+      dotnet-sdk_10
       gnumake
       godot_4
       jetbrains-toolbox
