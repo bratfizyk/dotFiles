@@ -2,8 +2,8 @@
 
 {
   home.packages = with pkgs; [
-    ollama-cuda
-    n8n
+    #ollama-cuda
+    #n8n
     searxng
     claude-code
     opencode
