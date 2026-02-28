@@ -9,6 +9,8 @@
       "networkmanager"
       "wheel"
       "jackaudio"
+      "audio"
+      "rtkit"
     ] ++ (
       if (config.programs.virt-manager.enable == true)
         then [ "libvirtd" ]
