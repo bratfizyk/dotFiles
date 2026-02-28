@@ -36,7 +36,6 @@ in
     homeDirectory = "/home/steam";
     stateVersion = "24.05";
     packages = with pkgs; [
-      steamWithExtras
       discord
       lutris-free
       nano
@@ -46,7 +45,7 @@ in
       vcmi
       # wechat
     ] ++ [
-      steam
+      steamWithExtras
       steam-run
       cef-binary
       libcxx
