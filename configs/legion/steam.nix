@@ -1,5 +1,14 @@
 { pkgs, lib, osConfig, extra, ... }:
-
+let
+  steamWithExtras = pkgs.steam.override {
+    extraLibraries = pkgs: [
+      pkgs.pkgsi686Linux.pipewire.jack   # 32‑bit PipeWire‑JACK
+    ];
+    extraPkgs = pkgs: [
+      pkgs.wineasio
+    ];
+  };
+in
 {
   programs.home-manager.enable = true;
 
@@ -26,8 +35,8 @@
     username = "steam";
     homeDirectory = "/home/steam";
     stateVersion = "24.05";
-
     packages = with pkgs; [
+      steamWithExtras
       discord
       lutris-free
       nano
@@ -59,6 +68,10 @@
       wine64
       wine-wayland
       winetricks
+    ] ++ [
+      qjackctl
+      pavucontrol
+      qpwgraph
     ];
 
     sessionVariables = {
@@ -66,6 +79,7 @@
       TERMINAL = "alacritty";
       BROWSER = "firefox";
       XDG_SESSION_DESKTOP = "GNOME";
+      PATH = "${steamWithExtras}/bin:${pkgs.lib.makeBinPath [ steamWithExtras ]}:$PATH";
     };
   };
 }
