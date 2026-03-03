@@ -66,6 +66,7 @@
       gnumake
       godot_4
       jetbrains-toolbox
+      nodejs
       sqlitebrowser
     ] ++ [
       extra.beKode
