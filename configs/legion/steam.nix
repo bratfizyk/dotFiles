@@ -16,6 +16,7 @@ in
     ./defaultApps.nix
 
     ../../apps/alacritty.nix
+    ../../apps/chromium.nix
     ../../apps/firefox
     ../../apps/libreoffice.nix
     ../../apps/obs.nix
