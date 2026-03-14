@@ -43,10 +43,6 @@
     '';
   };
 
-  services.blueman-applet = {
-    enable = true;
-  };
-
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -60,7 +56,6 @@
       networkmanagerapplet
       pasystray
       udiskie
-      blueberry
       
       # file explorer
       thunar

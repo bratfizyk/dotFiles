@@ -188,7 +188,6 @@
     "udiskie --no-automount --tray &"
     "systemctl --user start hyprpolkitagent"
     "protonvpn-app &"
-    "blueman-applet &"
   ];
 
   env = [
