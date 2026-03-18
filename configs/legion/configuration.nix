@@ -12,6 +12,7 @@
       #../../modules/kde.nix
 
       ../../modules/audio.nix
+      ../../modules/bluetooth.nix
       ../../modules/fscrypt.nix
       ../../modules/gnome.nix
       ../../modules/hyprland.nix
@@ -105,13 +106,8 @@
     };
     orca.enable = false;
   };
-  
-  services.gnome.gnome-keyring.enable = true;
-  # Not needed if GNOME is installed
-  # programs.ssh = {
-  #   startAgent = true;
-  # };
 
+  services.gnome.gnome-keyring.enable = true;
   environment.systemPackages = with pkgs; [
     appimage-run git lshw
   ];

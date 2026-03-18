@@ -188,6 +188,9 @@
     "udiskie --no-automount --tray &"
     "systemctl --user start hyprpolkitagent"
     "protonvpn-app &"
+    # sudo rfkill unblock bluetooth
+    # rfkill list
+    "blueman-applet &"
   ];
 
   env = [
