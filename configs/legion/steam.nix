@@ -42,7 +42,7 @@ in
       lutris-free
       nano
       pavucontrol
-      protonvpn-gui
+      proton-vpn
       signal-desktop
       vcmi
       # wechat

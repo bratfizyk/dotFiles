@@ -53,7 +53,7 @@
       nh
       pavucontrol
       proton-pass
-      protonvpn-gui
+      proton-vpn
       qjackctl
       signal-desktop
       texliveMedium
