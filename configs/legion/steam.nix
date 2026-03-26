@@ -38,6 +38,7 @@ in
     stateVersion = "24.05";
     packages = with pkgs; [
       discord
+      keepassxc
       lutris-free
       nano
       pavucontrol
