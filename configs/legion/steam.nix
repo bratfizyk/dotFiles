@@ -33,6 +33,15 @@ in
     gtk4.theme = null;
   };
 
+  stylix = {
+    targets = {
+      firefox = {
+        enable = false;
+      };
+    };
+  };
+
+
   home = {
     username = "steam";
     homeDirectory = "/home/steam";

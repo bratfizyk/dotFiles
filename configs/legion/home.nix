@@ -29,6 +29,14 @@
     };
     gtk4.theme = null;
   };
+  
+  stylix = {
+    targets = {
+      firefox = {
+        profileNames = [ "beko" ];
+      };
+    };
+  };
 
   home = {
     username = "beko";

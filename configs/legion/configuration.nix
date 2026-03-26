@@ -30,9 +30,14 @@
   home-manager = {
     backupFileExtension = "backup";
     sharedModules = [{
-      stylix.targets.vscode.enable = false;
-      stylix.targets.rofi.enable = false;
-      stylix.targets.waybar.enable = false;
+      stylix = {
+        targets = {
+          vscode.enable = false;
+          rofi.enable = false;
+          waybar.enable = false;
+          qt.platform = "qtct";
+        };
+      };
     }];
   };
 
