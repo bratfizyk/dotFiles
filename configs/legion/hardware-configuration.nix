@@ -32,6 +32,11 @@
       fsType = "ext4";
     };
 
+  fileSystems."/steam" =
+    { device = "/dev/disk/by-label/steam";
+      fsType = "ext4";
+    };
+
   fileSystems."/boot" =
     { device = "/dev/disk/by-label/SYSTEM_DRV";
       fsType = "vfat";

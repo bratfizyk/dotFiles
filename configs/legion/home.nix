@@ -63,6 +63,7 @@
       pavucontrol
       proton-pass
       proton-vpn
+      proton-vpn-cli
       qjackctl
       signal-desktop
       texliveMedium
