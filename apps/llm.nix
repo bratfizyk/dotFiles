@@ -5,7 +5,7 @@
     #ollama-cuda
     #n8n
     searxng
-    claude-code
+    #claude-code
     opencode
 
     # (extra.ollama.override {
