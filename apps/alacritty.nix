@@ -11,6 +11,7 @@
       settings = {
         window = {
           startup_mode = "Maximized";
+          decorations_theme_variant = "Dark";
           padding = { x = 10; y = 10; };
         };
 
