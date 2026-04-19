@@ -108,7 +108,9 @@
     "$mod, K, exec, keepassxc"
     "$mod, L, exec, swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2"
     "$mod, Q, exec, qalculate-gtk"
+    "$mod, S, exec, signal-desktop --password-store=\"gnome-libsecret\""
     "$mod, T, exec, thunderbird"
+    "$mod, V, exec, SDL_VIDEODRIVER=x11 vcmiclient"
 
     "$mod SHIFT, B, exec, virsh --connect qemu:///system start Bank && virt-viewer --connect qemu:///system Bank"
     "$mod SHIFT, F, fullscreen,"

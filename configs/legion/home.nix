@@ -66,7 +66,7 @@
       proton-vpn-cli
       qjackctl
       signal-desktop
-      texliveMedium
+      texliveFull
       thunderbird
       vcmi
       veracrypt
