@@ -1,9 +1,10 @@
 { lib, pkgs, osConfig, ... }:
 
 {
-  home.packages = [
-    pkgs.hunspellDicts.en-gb-ize
-    pkgs.hunspellDicts.pl-pl
-    pkgs.libreoffice
+  home.packages = with pkgs; [
+    hunspellDicts.en-gb-ize
+    hunspellDicts.pl-pl
+    #libreoffice
+    onlyoffice-desktopeditors
   ];
 }
