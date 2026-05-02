@@ -3,7 +3,6 @@
 {
   imports = [
     ../rofi
-    ../swaylock.nix
     ../waybar
     ../wlogout
   ];
@@ -48,6 +47,11 @@
     xwayland.enable = true;
     settings = import ./settings.nix;
     plugins = [ ];
+  };
+
+  programs.hyprlock = {
+    enable = true;
+    settings = import ./hyprlock.nix;
   };
 
   home = {

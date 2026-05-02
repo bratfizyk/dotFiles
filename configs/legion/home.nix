@@ -11,8 +11,7 @@
     ../../apps/firefox
     ../../apps/git.nix
     ../../apps/ghostty.nix
-    # ../../apps/haskell.nix
-    ../../apps/libreoffice.nix
+    ../../apps/office.nix
     ../../apps/llm.nix
     ../../apps/obs.nix
     ../../apps/vscode.nix
@@ -45,7 +44,6 @@
 
     packages = with pkgs; [
       brave
-      #calibre
       discord
       efibootmgr
       evince
@@ -68,9 +66,8 @@
       signal-desktop
       texliveFull
       thunderbird
-      vcmi
-      veracrypt
-      zoom-us
+      # vcmi
+      # veracrypt
     ] ++ [
       dotnet-sdk_10
       gnumake

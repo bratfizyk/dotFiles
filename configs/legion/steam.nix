@@ -18,7 +18,7 @@ in
     ../../apps/alacritty.nix
     ../../apps/chromium.nix
     ../../apps/firefox
-    ../../apps/libreoffice.nix
+    ../../apps/office.nix
     ../../apps/obs.nix
   ]
   ++ (lib.optionals (osConfig.programs.zsh.enable) [ ../../apps/zsh ])

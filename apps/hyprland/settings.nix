@@ -29,8 +29,6 @@
     gaps_out = 10;
     layout = "master";
     monitor = [
-      # "eDP-1,2560x1600@165,0x0,1"
-      #"HDMI-A-1,1920x1200,2560x0,1"
       "eDP-1,1920x1200@165,0x0,1"
       "HDMI-A-1,1920x1200,1920x0,1"
     ];
@@ -106,7 +104,7 @@
     "$mod, F, exec, firefox"
     "$mod, G, exec, gnucash"
     "$mod, K, exec, keepassxc"
-    "$mod, L, exec, swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2"
+    "$mod, L, exec, hyprlock"
     "$mod, Q, exec, qalculate-gtk"
     "$mod, S, exec, signal-desktop --password-store=\"gnome-libsecret\""
     "$mod, T, exec, thunderbird"
