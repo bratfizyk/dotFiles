@@ -2,15 +2,9 @@
 
 {
   home.packages = with pkgs; [
-    #ollama-cuda
+    aider-chat-full
+    ollama-cuda
     #n8n
-    searxng
-    #claude-code
-    opencode
-
-    # (extra.ollama.override {
-    #   acceleration = "cuda";
-    # })
-    # pkgs.oterm
+    #searxng
   ];
 }

@@ -49,12 +49,12 @@ in
     packages = with pkgs; [
       discord
       keepassxc
-      lutris-free
+      lutris
       nano
       pavucontrol
       proton-vpn
       signal-desktop
-      vcmi
+      # vcmi
       # wechat
     ] ++ [
       steamWithExtras
