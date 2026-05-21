@@ -32,11 +32,15 @@
     sharedModules = [{
       stylix = {
         targets = {
-          vscode.enable = false;
+          kde.enable = false;
           rofi.enable = false;
+          vscode.enable = false;
           waybar.enable = false;
-          qt.platform = "qtct";
         };
+      };
+      qt = {
+        enable = true;
+        platformTheme.name = lib.mkForce "adwaita";
       };
     }];
   };

@@ -6,7 +6,7 @@
   ];
 
   programs = {
-    vscode = {
+    vscodium = {
       enable = true;
       package = pkgs.vscodium-fhs;
       profiles = {
