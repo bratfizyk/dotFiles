@@ -88,7 +88,7 @@
 
   misc = {
     initial_workspace_tracking = 2;
-    vfr = true;
+    vrr = true;
   };
 
   bind = [

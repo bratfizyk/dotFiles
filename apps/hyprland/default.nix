@@ -46,6 +46,7 @@
     enable = true;
     xwayland.enable = true;
     settings = import ./settings.nix;
+    configType = "hyprlang";
     plugins = [ ];
   };
 
