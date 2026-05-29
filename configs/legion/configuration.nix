@@ -110,7 +110,6 @@
       defaultSession = "hyprland";
       gdm = {
         enable = true;
-        wayland = true;
       };
     };
     orca.enable = false;
