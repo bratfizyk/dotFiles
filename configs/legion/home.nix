@@ -26,7 +26,7 @@
       name = "Flat-Remix-Blue-Dark";
       package = pkgs.flat-remix-icon-theme;
     };
-    gtk4.theme = null;
+    # gtk4.theme = null;
   };
   
   stylix = {
