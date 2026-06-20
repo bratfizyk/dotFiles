@@ -5,5 +5,6 @@
     hunspellDicts.en-gb-ize
     hunspellDicts.pl-pl
     libreoffice-fresh
+    onlyoffice-desktopeditors
   ];
 }
