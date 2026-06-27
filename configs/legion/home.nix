@@ -67,11 +67,12 @@
       texliveFull
       thunderbird
       # vcmi
-      # veracrypt
+      veracrypt
     ] ++ [
       dotnet-sdk_10
       gnumake
-      godot_4
+      godotPackages_4_7.godot
+      #godot_4
       jetbrains-toolbox
       nodejs
       sqlitebrowser

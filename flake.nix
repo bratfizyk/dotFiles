@@ -38,11 +38,11 @@
           permittedInsecurePackages = [ ];
         };
         overlays = [
-          (final: prev: {
-            openldap = prev.openldap.overrideAttrs (old: {
-              doCheck = false;
-            });
-          })
+          # (final: prev: {
+          #   openldap = prev.openldap.overrideAttrs (old: {
+          #     doCheck = false;
+          #   });
+          # })
         ];
       };
       # oldPkgs = import inputs.nixpkgs-old {
