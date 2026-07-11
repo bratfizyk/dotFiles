@@ -59,11 +59,13 @@
       nano
       nh
       pavucontrol
+      peazip
       proton-pass
       proton-vpn
       proton-vpn-cli
       qjackctl
       signal-desktop
+      strawberry
       texliveFull
       thunderbird
       # vcmi
@@ -71,8 +73,7 @@
     ] ++ [
       dotnet-sdk_10
       gnumake
-      godotPackages_4_7.godot
-      #godot_4
+      godot_4
       jetbrains-toolbox
       nodejs
       sqlitebrowser
