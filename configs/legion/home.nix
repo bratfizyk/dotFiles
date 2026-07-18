@@ -55,7 +55,7 @@
       nomacs
       lxappearance-gtk2
       mpv
-      musescore
+      #musescore
       nano
       nh
       pavucontrol
@@ -68,7 +68,7 @@
       strawberry
       texliveFull
       thunderbird
-      # vcmi
+      vcmi
       veracrypt
     ] ++ [
       dotnet-sdk_10
