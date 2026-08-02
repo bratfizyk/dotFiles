@@ -10,7 +10,6 @@
     ../../apps/chromium.nix
     ../../apps/firefox
     ../../apps/git.nix
-    ../../apps/ghostty.nix
     ../../apps/office.nix
     ../../apps/llm.nix
     ../../apps/obs.nix
@@ -26,7 +25,6 @@
       name = "Flat-Remix-Blue-Dark";
       package = pkgs.flat-remix-icon-theme;
     };
-    # gtk4.theme = null;
   };
   
   stylix = {
@@ -41,6 +39,10 @@
     username = "beko";
     homeDirectory = "/home/beko";
     stateVersion = "24.05";
+
+    pointerCursor = {
+      enable = true;
+    };
 
     packages = with pkgs; [
       brave
@@ -62,7 +64,6 @@
       peazip
       proton-pass
       proton-vpn
-      proton-vpn-cli
       qjackctl
       signal-desktop
       strawberry
@@ -71,7 +72,6 @@
       vcmi
       veracrypt
     ] ++ [
-      dotnet-sdk_10
       gnumake
       godot_4
       jetbrains-toolbox

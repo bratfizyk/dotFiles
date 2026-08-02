@@ -30,7 +30,6 @@ in
       name = "Flat-Remix-Blue-Dark";
       package = pkgs.flat-remix-icon-theme;
     };
-    # gtk4.theme = null;
   };
 
   stylix = {
@@ -41,11 +40,15 @@ in
     };
   };
 
-
   home = {
     username = "steam";
     homeDirectory = "/home/steam";
     stateVersion = "24.05";
+
+    pointerCursor = {
+      enable = true;
+    };
+
     packages = with pkgs; [
       discord
       keepassxc
@@ -54,7 +57,6 @@ in
       pavucontrol
       proton-vpn
       signal-desktop
-      # vcmi
       # wechat
     ] ++ [
       steamWithExtras
@@ -79,10 +81,6 @@ in
       wine64
       wine-wayland
       winetricks
-    ] ++ [
-      qjackctl
-      pavucontrol
-      qpwgraph
     ];
 
     sessionVariables = {
