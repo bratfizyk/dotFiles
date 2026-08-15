@@ -55,7 +55,7 @@
       jq
       keepassxc
       nomacs
-      lxappearance-gtk2
+      lxappearance
       mpv
       #musescore
       nano
