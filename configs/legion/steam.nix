@@ -66,7 +66,7 @@ in
       ffmpeg
       libxft
       # llvmPackages.libc
-      gccNGPackages_15.libatomic
+      # gccNGPackages_15.libatomic
       # llvmPackages_20.clang
       gst_all_1.gstreamer
       gst_all_1.gst-plugins-base
