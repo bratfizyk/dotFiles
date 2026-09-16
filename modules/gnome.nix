@@ -6,12 +6,8 @@
   };
 
   environment.gnome.excludePackages = (with pkgs; [
-    atomix
-    cheese
     epiphany
     gnome-characters
-    gnome-music
-    gnome-photos
     gnome-terminal
     gnome-tour
     geary

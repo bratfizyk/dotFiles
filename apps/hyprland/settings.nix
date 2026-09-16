@@ -109,6 +109,7 @@
     "$mod, S, exec, signal-desktop --password-store=\"gnome-libsecret\""
     "$mod, T, exec, thunderbird"
     "$mod, V, exec, SDL_VIDEODRIVER=x11 vcmiclient"
+    "$mod, X, exec, gnome-text-editor"
 
     "$mod SHIFT, B, exec, virsh --connect qemu:///system start Bank && virt-viewer --connect qemu:///system Bank"
     "$mod SHIFT, F, fullscreen,"
