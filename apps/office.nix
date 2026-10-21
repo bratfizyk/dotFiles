@@ -2,8 +2,13 @@
 
 {
   home.packages = with pkgs; [
-    hunspellDicts.en-gb-ize
-    hunspellDicts.pl-pl
     libreoffice-stable
+    hunspell
+    hunspellDicts.en_US
+    hunspellDicts.pl_PL
+    hyphenDicts.en_US
+    hyphenDicts.pl_PL
+
+    onlyoffice-desktopeditors
   ];
 }

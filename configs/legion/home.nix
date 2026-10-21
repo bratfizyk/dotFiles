@@ -50,6 +50,7 @@
       efibootmgr
       evince
       ffmpeg_7-full
+      freetube
       gimp
       gnucash
       jq
