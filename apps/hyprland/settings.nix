@@ -99,7 +99,8 @@
     
     "$mod, B, exec, brave"
     "$mod, C, exec, chromium"
-    "$mod, D, exec, rofi -show drun -me-select-entry '' -me-accept-entry MousePrimary"
+    # "$mod, D, exec, rofi -show drun -me-select-entry '' -me-accept-entry MousePrimary"
+    "$mod, D, exec, noctalia msg panel-toggle launcher"
     "$mod, E, exec, nautilus"
     "$mod, F, exec, firefox"
     "$mod, G, exec, gnucash"
@@ -182,16 +183,17 @@
   ];
 
   exec-once = [
-    "waybar"
+    # "waybar"
+    "noctalia"
     "wl-gammarelay-rs &"
-    "nm-applet --indicator"
-    "pasystray --notify=none --volume-max=150 &"
-    "udiskie --no-automount --tray &"
+    # "nm-applet --indicator"
+    # "pasystray --notify=none --volume-max=150 &"
+    # "udiskie --no-automount --tray &"
     "systemctl --user start hyprpolkitagent"
     "protonvpn-app &"
     # sudo rfkill unblock bluetooth
     # rfkill list
-    "blueman-applet &"
+    # "blueman-applet &"
   ];
 
   env = [

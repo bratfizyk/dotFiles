@@ -2,8 +2,8 @@
 
 {
   imports = [
-    ../rofi
-    ../waybar
+    #../rofi
+    #../waybar
     ../wlogout
   ];
 
@@ -55,12 +55,31 @@
     settings = import ./hyprlock.nix;
   };
 
+  programs.noctalia = {
+    enable = true;
+
+    settings = {
+      bar = {
+        order = [ "main" ];
+        main = {
+          enabled = true;
+          position = "top";
+          margin_ends = 0;
+          start = [ "workspaces" ];
+          center = [ "clock" ];
+          end = [ "tray" "volume" "network" "battery" "bluetooth" ];
+        };
+      };
+    };
+  };
+
   home = {
     packages = with pkgs; [
       # applets
-      networkmanagerapplet
-      pasystray
-      udiskie
+      # networkmanagerapplet
+      # pasystray
+      # udiskie
+      noctalia
       
       # file explorer
       thunar
