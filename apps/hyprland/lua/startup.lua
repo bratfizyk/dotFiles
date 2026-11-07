@@ -1,0 +1,7 @@
+hl.on("hyprland.start", function()
+    hl.exec_cmd("noctalia")
+    hl.exec_cmd("wl-gammarelay-rs")
+    hl.exec_cmd("udiskie --no-automount --tray")
+    hl.exec_cmd("systemctl --user start hyprpolkitagent")
+    hl.exec_cmd("protonvpn-app")
+end)

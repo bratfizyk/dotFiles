@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   imports = [
@@ -8,9 +8,21 @@
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-    settings = import ./settings.nix;
-    configType = "hyprlang";
+    settings = import ./settings.nix { inherit lib; };
+    configType = "lua";
     plugins = [ ];
+
+    extraLuaFiles = {
+      bindings = {
+        content = ./lua/bindings.lua;
+        autoLoad = true;
+      };
+
+      startup = {
+        content = ./lua/startup.lua;
+        autoLoad = true;
+      };
+    };
   };
 
   programs.hyprlock = {

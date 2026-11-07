@@ -11,7 +11,7 @@
 
   environment.systemPackages = with pkgs; [
     hyprpolkitagent
-    hyprland-qtutils
+    # hyprland-qtutils
   ];
 
   # for mounting USB drives
