@@ -13,7 +13,8 @@ in
   config = {
     general = {
       gaps_in = 5;
-      gaps_out = 10;
+      gaps_out = 8;
+      border_size = 2;
       layout = "master";
     };
 
@@ -28,24 +29,33 @@ in
     };
 
     decoration = {
-      rounding = 10;
+      rounding = 12;
+      rounding_power = 3;
+
       active_opacity = 0.95;
       inactive_opacity = 0.85;
       fullscreen_opacity = 1.0;
+
       dim_inactive = true;
-      dim_strength = 0.15;
+      dim_strength = 0.12;
 
       blur = {
         enabled = true;
-        size = 8;
+        size = 6;
         passes = 3;
+        ignore_opacity = true;
         new_optimizations = true;
+        xray = true;
+        brightness = 0.85;
+        contrast = 1.1;
+        vibrancy = 0.18;
       };
 
       shadow = {
         enabled = true;
-        range = 20;
+        range = 18;
         render_power = 3;
+        offset = "0 5";
       };
     };
 

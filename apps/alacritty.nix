@@ -11,14 +11,18 @@
       settings = {
         window = {
           startup_mode = "Maximized";
+          decorations = "None";
           decorations_theme_variant = "Dark";
-          padding = { x = 10; y = 10; };
+          padding = { x = 16; y = 14; };
+          dynamic_padding = true;
         };
 
-        # font = {
-        #   normal.family = "Meslo LGS NF";
-        #   size = 12;
-        # };
+        cursor = {
+          style = {
+            shape = "Beam";
+            blinking = "On";
+          };
+        };
 
         scrolling = {
           history = 10000;
