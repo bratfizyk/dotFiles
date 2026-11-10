@@ -45,7 +45,7 @@
     };
 
     packages = with pkgs; [
-      brave
+      # brave
       discord
       efibootmgr
       evince

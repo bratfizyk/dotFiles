@@ -9,7 +9,6 @@ end
 
 -- Applications
 app("RETURN", "alacritty")
-app("B", "brave")
 app("C", "chromium")
 app("D", "noctalia msg panel-toggle launcher")
 app("E", "nautilus")

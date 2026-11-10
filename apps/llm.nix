@@ -3,8 +3,8 @@
 {
   home.packages = with pkgs; [
     #aider-chat-full
-    #ollama-cuda
-    #opencode
+    ollama-cuda
+    opencode
     #n8n
     #searxng
   ];
