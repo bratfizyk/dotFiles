@@ -11,7 +11,7 @@
     ../../apps/firefox
     ../../apps/git.nix
     ../../apps/office.nix
-    ../../apps/llm.nix
+    # ../../apps/llm.nix
     ../../apps/obs.nix
     ../../apps/vscode.nix
   ]
@@ -59,7 +59,6 @@
       lxappearance
       mpv
       #musescore
-      nano
       nh
       pavucontrol
       peazip

@@ -73,7 +73,6 @@ in
       gst_all_1.gst-libav
       nss
       gnutls
-      # libpng12
       zlib
       wine64
       wine-wayland
